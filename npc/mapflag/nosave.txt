@@ -33,24 +33,24 @@ job_sage	mapflag	nosave	SavePoint
 // Ext
 job_star	mapflag	nosave	SavePoint
 job_soul	mapflag	nosave	SavePoint
-job3_sha01	mapflag	nosave	SavePoint
-job_ko	mapflag	nosave	SavePoint
+//job3_sha01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job_ko	mapflag	nosave	SavePoint	 // [DESABILITADO]
 // 3-1
-job3_arch01	mapflag	nosave	SavePoint
-job3_arch02	mapflag	nosave	SavePoint
-job3_arch03	mapflag	nosave	SavePoint
-job3_guil01	mapflag	nosave	SavePoint
-job3_guil02	mapflag	nosave	SavePoint
-job3_guil03	mapflag	nosave	SavePoint
-job3_rang01	mapflag	nosave	SavePoint
-job3_rang02	mapflag	nosave	SavePoint
-job3_rune01	mapflag	nosave	SavePoint
-job3_rune02	mapflag	nosave	SavePoint
-job3_rune03	mapflag	nosave	SavePoint
-job3_war01	mapflag	nosave	SavePoint
-job3_war02	mapflag	nosave	SavePoint
+//job3_arch01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_arch02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_arch03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_guil01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_guil02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_guil03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_rang01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_rang02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_rune01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_rune02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_rune03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_war01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//job3_war02	mapflag	nosave	SavePoint	 // [DESABILITADO]
 // 3-2
-job3_gen01	mapflag	nosave	SavePoint
+//job3_gen01	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Special Quests Places =====
 ama_test	mapflag	nosave	SavePoint
@@ -58,7 +58,7 @@ gef_dun03	mapflag	nosave	SavePoint
 que_god01	mapflag	nosave	SavePoint
 que_god02	mapflag	nosave	SavePoint
 que_sign01	mapflag	nosave	SavePoint
-que_sign02	mapflag	nosave	SavePoint
+//que_sign02	mapflag	nosave	SavePoint	 // [DESABILITADO]
 que_thor	mapflag	nosave	SavePoint
 que_ng	mapflag	nosave	SavePoint
 gon_test	mapflag	nosave	SavePoint
@@ -74,17 +74,17 @@ guild_vs4	mapflag	nosave	SavePoint
 guild_vs5	mapflag	nosave	SavePoint
 
 // Izlude Arena ========================
-force_1-1	mapflag	nosave	SavePoint
-force_1-2	mapflag	nosave	SavePoint
-force_1-3	mapflag	nosave	SavePoint
-force_2-1	mapflag	nosave	SavePoint
-force_2-2	mapflag	nosave	SavePoint
-force_2-3	mapflag	nosave	SavePoint
-force_3-1	mapflag	nosave	SavePoint
-force_3-2	mapflag	nosave	SavePoint
-force_3-3	mapflag	nosave	SavePoint
-force_4-1	mapflag	nosave	SavePoint
-force_5-1	mapflag	nosave	SavePoint
+//force_1-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_1-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_1-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_2-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_2-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_2-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_3-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_3-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_3-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_4-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//force_5-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
 prt_are_in	mapflag	nosave	SavePoint
 
 // Juperos =============================
@@ -95,88 +95,88 @@ jupe_ele_r	mapflag	nosave	SavePoint
 jupe_gate	mapflag	nosave	SavePoint
 
 //PvP Arenas =================================
-pvp_y_room	mapflag	nosave	SavePoint
-pvp_y_1-1	mapflag	nosave	SavePoint
-pvp_y_1-2	mapflag	nosave	SavePoint
-pvp_y_1-3	mapflag	nosave	SavePoint
-pvp_y_1-4	mapflag	nosave	SavePoint
-pvp_y_1-5	mapflag	nosave	SavePoint
-pvp_y_2-1	mapflag	nosave	SavePoint
-pvp_y_2-2	mapflag	nosave	SavePoint
-pvp_y_2-3	mapflag	nosave	SavePoint
-pvp_y_2-4	mapflag	nosave	SavePoint
-pvp_y_2-5	mapflag	nosave	SavePoint
-pvp_y_3-1	mapflag	nosave	SavePoint
-pvp_y_3-2	mapflag	nosave	SavePoint
-pvp_y_3-3	mapflag	nosave	SavePoint
-pvp_y_3-4	mapflag	nosave	SavePoint
-pvp_y_3-5	mapflag	nosave	SavePoint
-pvp_y_4-1	mapflag	nosave	SavePoint
-pvp_y_4-2	mapflag	nosave	SavePoint
-pvp_y_4-3	mapflag	nosave	SavePoint
-pvp_y_4-4	mapflag	nosave	SavePoint
-pvp_y_4-5	mapflag	nosave	SavePoint
-pvp_y_5-1	mapflag	nosave	SavePoint
-pvp_y_5-2	mapflag	nosave	SavePoint
-pvp_y_5-3	mapflag	nosave	SavePoint
-pvp_y_5-4	mapflag	nosave	SavePoint
-pvp_y_5-5	mapflag	nosave	SavePoint
-pvp_y_6-1	mapflag	nosave	SavePoint
-pvp_y_6-2	mapflag	nosave	SavePoint
-pvp_y_6-3	mapflag	nosave	SavePoint
-pvp_y_6-4	mapflag	nosave	SavePoint
-pvp_y_6-5	mapflag	nosave	SavePoint
-pvp_y_7-1	mapflag	nosave	SavePoint
-pvp_y_7-2	mapflag	nosave	SavePoint
-pvp_y_7-3	mapflag	nosave	SavePoint
-pvp_y_7-4	mapflag	nosave	SavePoint
-pvp_y_7-5	mapflag	nosave	SavePoint
-pvp_y_8-1	mapflag	nosave	SavePoint
-pvp_y_8-2	mapflag	nosave	SavePoint
-pvp_y_8-3	mapflag	nosave	SavePoint
-pvp_y_8-4	mapflag	nosave	SavePoint
-pvp_y_8-5	mapflag	nosave	SavePoint
-pvp_n_room	mapflag	nosave	SavePoint
-pvp_n_1-1	mapflag	nosave	SavePoint
-pvp_n_1-2	mapflag	nosave	SavePoint
-pvp_n_1-3	mapflag	nosave	SavePoint
-pvp_n_1-4	mapflag	nosave	SavePoint
-pvp_n_1-5	mapflag	nosave	SavePoint
-pvp_n_2-1	mapflag	nosave	SavePoint
-pvp_n_2-2	mapflag	nosave	SavePoint
-pvp_n_2-3	mapflag	nosave	SavePoint
-pvp_n_2-4	mapflag	nosave	SavePoint
-pvp_n_2-5	mapflag	nosave	SavePoint
-pvp_n_3-1	mapflag	nosave	SavePoint
-pvp_n_3-2	mapflag	nosave	SavePoint
-pvp_n_3-3	mapflag	nosave	SavePoint
-pvp_n_3-4	mapflag	nosave	SavePoint
-pvp_n_3-5	mapflag	nosave	SavePoint
-pvp_n_4-1	mapflag	nosave	SavePoint
-pvp_n_4-2	mapflag	nosave	SavePoint
-pvp_n_4-3	mapflag	nosave	SavePoint
-pvp_n_4-4	mapflag	nosave	SavePoint
-pvp_n_4-5	mapflag	nosave	SavePoint
-pvp_n_5-1	mapflag	nosave	SavePoint
-pvp_n_5-2	mapflag	nosave	SavePoint
-pvp_n_5-3	mapflag	nosave	SavePoint
-pvp_n_5-4	mapflag	nosave	SavePoint
-pvp_n_5-5	mapflag	nosave	SavePoint
-pvp_n_6-1	mapflag	nosave	SavePoint
-pvp_n_6-2	mapflag	nosave	SavePoint
-pvp_n_6-3	mapflag	nosave	SavePoint
-pvp_n_6-4	mapflag	nosave	SavePoint
-pvp_n_6-5	mapflag	nosave	SavePoint
-pvp_n_7-1	mapflag	nosave	SavePoint
-pvp_n_7-2	mapflag	nosave	SavePoint
-pvp_n_7-3	mapflag	nosave	SavePoint
-pvp_n_7-4	mapflag	nosave	SavePoint
-pvp_n_7-5	mapflag	nosave	SavePoint
-pvp_n_8-1	mapflag	nosave	SavePoint
-pvp_n_8-2	mapflag	nosave	SavePoint
-pvp_n_8-3	mapflag	nosave	SavePoint
-pvp_n_8-4	mapflag	nosave	SavePoint
-pvp_n_8-5	mapflag	nosave	SavePoint
+//pvp_y_room	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_1-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_1-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_1-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_1-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_1-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_2-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_2-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_2-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_2-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_2-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_3-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_3-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_3-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_3-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_3-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_4-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_4-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_4-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_4-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_4-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_5-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_5-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_5-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_5-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_5-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_6-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_6-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_6-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_6-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_6-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_7-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_7-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_7-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_7-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_7-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_8-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_8-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_8-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_8-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_y_8-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_room	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_1-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_1-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_1-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_1-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_1-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_2-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_2-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_2-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_2-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_2-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_3-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_3-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_3-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_3-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_3-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_4-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_4-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_4-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_4-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_4-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_5-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_5-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_5-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_5-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_5-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_6-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_6-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_6-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_6-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_6-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_7-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_7-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_7-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_7-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_7-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_8-1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_8-2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_8-3	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_8-4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//pvp_n_8-5	mapflag	nosave	SavePoint	 // [DESABILITADO]
 pvp_2vs2	mapflag	nosave	SavePoint
 
 //WoE Castles =================================
@@ -200,131 +200,131 @@ prtg_cas02	mapflag	nosave	SavePoint
 prtg_cas03	mapflag	nosave	SavePoint
 prtg_cas04	mapflag	nosave	SavePoint
 prtg_cas05	mapflag	nosave	SavePoint
-schg_cas01	mapflag	nosave	SavePoint
-schg_cas02	mapflag	nosave	SavePoint
-schg_cas03	mapflag	nosave	SavePoint
-schg_cas04	mapflag	nosave	SavePoint
-schg_cas05	mapflag	nosave	SavePoint
-arug_cas01	mapflag	nosave	SavePoint
-arug_cas02	mapflag	nosave	SavePoint
-arug_cas03	mapflag	nosave	SavePoint
-arug_cas04	mapflag	nosave	SavePoint
-arug_cas05	mapflag	nosave	SavePoint
-nguild_alde	mapflag	nosave	SavePoint
-nguild_gef	mapflag	nosave	SavePoint
-nguild_pay	mapflag	nosave	SavePoint
-nguild_prt	mapflag	nosave	SavePoint
+//schg_cas01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//schg_cas02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//schg_cas03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//schg_cas04	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//schg_cas05	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_cas01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_cas02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_cas03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_cas04	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_cas05	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//nguild_alde	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//nguild_gef	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//nguild_pay	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//nguild_prt	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 //Guild Dungeons ==============================
 gld_dun01	mapflag	nosave	SavePoint
 gld_dun02	mapflag	nosave	SavePoint
 gld_dun03	mapflag	nosave	SavePoint
 gld_dun04	mapflag	nosave	SavePoint
-gld_dun01_2	mapflag	nosave	SavePoint
-gld_dun02_2	mapflag	nosave	SavePoint
-gld_dun03_2	mapflag	nosave	SavePoint
-gld_dun04_2	mapflag	nosave	SavePoint
-gld2_ald	mapflag	nosave	SavePoint
-gld2_gef	mapflag	nosave	SavePoint
-gld2_pay	mapflag	nosave	SavePoint
-gld2_prt	mapflag	nosave	SavePoint
+//gld_dun01_2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld_dun02_2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld_dun03_2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld_dun04_2	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld2_ald	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld2_gef	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld2_pay	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//gld2_prt	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 //Normal Maps =================================
 yggdrasil01	mapflag	nosave	SavePoint
 thana_boss	mapflag	nosave	SavePoint
 
 //Aldebaran Turbo Track
-turbo_n_1	mapflag	nosave	SavePoint
-turbo_n_4	mapflag	nosave	SavePoint
-turbo_n_8	mapflag	nosave	SavePoint
-turbo_n_16	mapflag	nosave	SavePoint
-turbo_e_4	mapflag	nosave	SavePoint
-turbo_e_8	mapflag	nosave	SavePoint
-turbo_e_16	mapflag	nosave	SavePoint
+//turbo_n_1	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//turbo_n_4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//turbo_n_8	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//turbo_n_16	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//turbo_e_4	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//turbo_e_8	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//turbo_e_16	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 //Monster Races ================
 p_track01	mapflag	nosave	SavePoint
-p_track02	mapflag	nosave	SavePoint
+//p_track02	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 //Vision of Okolnir ===========================
-que_qsch01	mapflag	nosave	SavePoint
-que_qsch02	mapflag	nosave	SavePoint
-que_qsch03	mapflag	nosave	SavePoint
-que_qsch04	mapflag	nosave	SavePoint
-que_qsch05	mapflag	nosave	SavePoint
-que_qaru01	mapflag	nosave	SavePoint
-que_qaru02	mapflag	nosave	SavePoint
-que_qaru03	mapflag	nosave	SavePoint
-que_qaru04	mapflag	nosave	SavePoint
-que_qaru05	mapflag	nosave	SavePoint
+//que_qsch01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qsch02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qsch03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qsch04	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qsch05	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qaru01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qaru02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qaru03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qaru04	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_qaru05	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Sealed Shrine ==================
-1@cata	mapflag	nosave	SavePoint
-2@cata	mapflag	nosave	SavePoint
+//1@cata	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//2@cata	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Endless Tower ==================
-e_tower	mapflag	nosave	SavePoint
-1@tower	mapflag	nosave	SavePoint
-2@tower	mapflag	nosave	SavePoint
-3@tower	mapflag	nosave	SavePoint
-4@tower	mapflag	nosave	SavePoint
-5@tower	mapflag	nosave	SavePoint
-6@tower	mapflag	nosave	SavePoint
+//e_tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//1@tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//2@tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//3@tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//4@tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//5@tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//6@tower	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Battle Grounds ==============
-bat_c01	mapflag	nosave	SavePoint
-bat_c02	mapflag	nosave	SavePoint
-bat_c03	mapflag	nosave	SavePoint
-bat_b01	mapflag	nosave	SavePoint
-bat_b02	mapflag	nosave	SavePoint
-bat_a01	mapflag	nosave	SavePoint
-bat_a02	mapflag	nosave	SavePoint
+//bat_c01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//bat_c02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//bat_c03	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//bat_b01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//bat_b02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//bat_a01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//bat_a02	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Episode 13 ====================
-moc_fild22b	mapflag	nosave	SavePoint
-que_dan01	mapflag	nosave	SavePoint
-que_dan02	mapflag	nosave	SavePoint
-schg_que01	mapflag	nosave	SavePoint
-schg_dun01	mapflag	nosave	SavePoint
-arug_que01	mapflag	nosave	SavePoint
-arug_dun01	mapflag	nosave	SavePoint
+//moc_fild22b	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_dan01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//que_dan02	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//schg_que01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//schg_dun01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_que01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//arug_dun01	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Orc's Memory ===================
-1@orcs	mapflag	nosave	SavePoint
-2@orcs	mapflag	nosave	SavePoint
+//1@orcs	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//2@orcs	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Nidhoggr's Instance ===========
-1@nyd	mapflag	nosave	SavePoint
-2@nyd	mapflag	nosave	SavePoint
+//1@nyd	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//2@nyd	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Misty Forest Labyrinth ===========
-1@mist	mapflag	nosave	SavePoint
+//1@mist	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Octopus Cave ===========
-1@cash	mapflag	nosave	SavePoint
+//1@cash	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Drain ===========
-1@pump	mapflag	nosave	SavePoint
-2@pump	mapflag	nosave	SavePoint
+//1@pump	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//2@pump	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Somatology Laboratory ===========
-que_lhz	mapflag	nosave	SavePoint
-1@lhz	mapflag	nosave	SavePoint
+//que_lhz	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//1@lhz	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Bangungot Hospital F2 ===========
-1@ma_h	mapflag	nosave	SavePoint
+//1@ma_h	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Buwaya Cave ===========
-1@ma_c	mapflag	nosave	SavePoint
+//1@ma_c	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Bakonawa Hideout ===========
-1@ma_b	mapflag	nosave	SavePoint
+//1@ma_b	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 // Inside Eclage ===========
-1@ecl	mapflag	nosave	SavePoint
+//1@ecl	mapflag	nosave	SavePoint	 // [DESABILITADO]
 
 //evt_zombie	mapflag	nosave	SavePoint
 
 // Poring War ====================
-poring_w01	mapflag	nosave	SavePoint
-poring_w02	mapflag	nosave	SavePoint
+//poring_w01	mapflag	nosave	SavePoint	 // [DESABILITADO]
+//poring_w02	mapflag	nosave	SavePoint	 // [DESABILITADO]

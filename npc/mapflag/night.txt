@@ -60,9 +60,9 @@ moc_fild16	mapflag	nightenabled
 moc_fild17	mapflag	nightenabled
 moc_fild18	mapflag	nightenabled
 moc_fild19	mapflag	nightenabled
-moc_fild20	mapflag	nightenabled
-moc_fild21	mapflag	nightenabled
-moc_fild22	mapflag	nightenabled
+//moc_fild20	mapflag	nightenabled	 // [DESABILITADO]
+//moc_fild21	mapflag	nightenabled	 // [DESABILITADO]
+//moc_fild22	mapflag	nightenabled	 // [DESABILITADO]
 moc_ruins	mapflag	nightenabled
 morocc	mapflag	nightenabled
 pay_arche	mapflag	nightenabled
@@ -91,46 +91,46 @@ prt_fild09	mapflag	nightenabled
 prt_fild10	mapflag	nightenabled
 prt_fild11	mapflag	nightenabled
 prt_monk	mapflag	nightenabled
-pvp_y_1-1	mapflag	nightenabled
-pvp_y_1-2	mapflag	nightenabled
-pvp_y_1-3	mapflag	nightenabled
-pvp_y_1-4	mapflag	nightenabled
-pvp_y_1-5	mapflag	nightenabled
-pvp_y_2-1	mapflag	nightenabled
-pvp_y_2-2	mapflag	nightenabled
-pvp_y_2-3	mapflag	nightenabled
-pvp_y_2-4	mapflag	nightenabled
-pvp_y_2-5	mapflag	nightenabled
-pvp_y_3-1	mapflag	nightenabled
-pvp_y_3-2	mapflag	nightenabled
-pvp_y_3-3	mapflag	nightenabled
-pvp_y_3-4	mapflag	nightenabled
-pvp_y_3-5	mapflag	nightenabled
-pvp_y_4-1	mapflag	nightenabled
-pvp_y_4-2	mapflag	nightenabled
-pvp_y_4-3	mapflag	nightenabled
-pvp_y_4-4	mapflag	nightenabled
-pvp_y_4-5	mapflag	nightenabled
-pvp_y_5-1	mapflag	nightenabled
-pvp_y_5-2	mapflag	nightenabled
-pvp_y_5-3	mapflag	nightenabled
-pvp_y_5-4	mapflag	nightenabled
-pvp_y_5-5	mapflag	nightenabled
-pvp_y_6-1	mapflag	nightenabled
-pvp_y_6-2	mapflag	nightenabled
-pvp_y_6-3	mapflag	nightenabled
-pvp_y_6-4	mapflag	nightenabled
-pvp_y_6-5	mapflag	nightenabled
-pvp_y_7-1	mapflag	nightenabled
-pvp_y_7-2	mapflag	nightenabled
-pvp_y_7-3	mapflag	nightenabled
-pvp_y_7-4	mapflag	nightenabled
-pvp_y_7-5	mapflag	nightenabled
-pvp_y_8-1	mapflag	nightenabled
-pvp_y_8-2	mapflag	nightenabled
-pvp_y_8-3	mapflag	nightenabled
-pvp_y_8-4	mapflag	nightenabled
-pvp_y_8-5	mapflag	nightenabled
+//pvp_y_1-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_1-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_1-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_1-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_1-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_2-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_2-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_2-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_2-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_2-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_3-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_3-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_3-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_3-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_3-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_4-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_4-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_4-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_4-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_4-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_5-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_5-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_5-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_5-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_5-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_6-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_6-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_6-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_6-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_6-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_7-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_7-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_7-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_7-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_7-5	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_8-1	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_8-2	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_8-3	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_8-4	mapflag	nightenabled	 // [DESABILITADO]
+//pvp_y_8-5	mapflag	nightenabled	 // [DESABILITADO]
 xmas	mapflag	nightenabled
 xmas_fild01	mapflag	nightenabled
 cmd_fild01	mapflag	nightenabled
@@ -204,7 +204,7 @@ yuno_fild06	mapflag	nightenabled
 tha_scene01	mapflag	nightenabled
 hugel	mapflag	nightenabled
 p_track01	mapflag	nightenabled
-p_track02	mapflag	nightenabled
+//p_track02	mapflag	nightenabled	 // [DESABILITADO]
 odin_tem01	mapflag	nightenabled
 odin_tem02	mapflag	nightenabled
 odin_tem03	mapflag	nightenabled
@@ -243,78 +243,78 @@ ve_fild07	mapflag	nightenabled
 //Episode 12 ====================
 poring_c01	mapflag	nightenabled
 poring_c02	mapflag	nightenabled
-nameless_i	mapflag	nightenabled
-nameless_n	mapflag	nightenabled
-poring_w01	mapflag	nightenabled
-poring_w02	mapflag	nightenabled
-moscovia	mapflag	nightenabled
-mosk_ship	mapflag	nightenabled
-mosk_fild01	mapflag	nightenabled
-mosk_fild02	mapflag	nightenabled
-mosk_dun01	mapflag	nightenabled
-mosk_dun02	mapflag	nightenabled
-mosk_dun03	mapflag	nightenabled
-que_temsky	mapflag	nightenabled
-sch_gld	mapflag	nightenabled
-moc_fild20	mapflag	nightenabled
-moc_fild21	mapflag	nightenabled
-moc_fild22	mapflag	nightenabled
-aru_gld	mapflag	nightenabled
-que_qsch01	mapflag	nightenabled
-que_qsch02	mapflag	nightenabled
-que_qsch03	mapflag	nightenabled
-que_qsch04	mapflag	nightenabled
-que_qsch05	mapflag	nightenabled
-que_qaru01	mapflag	nightenabled
-que_qaru02	mapflag	nightenabled
-que_qaru03	mapflag	nightenabled
-que_qaru04	mapflag	nightenabled
-que_qaru05	mapflag	nightenabled
+//nameless_i	mapflag	nightenabled	 // [DESABILITADO]
+//nameless_n	mapflag	nightenabled	 // [DESABILITADO]
+//poring_w01	mapflag	nightenabled	 // [DESABILITADO]
+//poring_w02	mapflag	nightenabled	 // [DESABILITADO]
+//moscovia	mapflag	nightenabled	 // [DESABILITADO]
+//mosk_ship	mapflag	nightenabled	 // [DESABILITADO]
+//mosk_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//mosk_fild02	mapflag	nightenabled	 // [DESABILITADO]
+//mosk_dun01	mapflag	nightenabled	 // [DESABILITADO]
+//mosk_dun02	mapflag	nightenabled	 // [DESABILITADO]
+//mosk_dun03	mapflag	nightenabled	 // [DESABILITADO]
+//que_temsky	mapflag	nightenabled	 // [DESABILITADO]
+//sch_gld	mapflag	nightenabled	 // [DESABILITADO]
+//moc_fild20	mapflag	nightenabled	 // [DESABILITADO]
+//moc_fild21	mapflag	nightenabled	 // [DESABILITADO]
+//moc_fild22	mapflag	nightenabled	 // [DESABILITADO]
+//aru_gld	mapflag	nightenabled	 // [DESABILITADO]
+//que_qsch01	mapflag	nightenabled	 // [DESABILITADO]
+//que_qsch02	mapflag	nightenabled	 // [DESABILITADO]
+//que_qsch03	mapflag	nightenabled	 // [DESABILITADO]
+//que_qsch04	mapflag	nightenabled	 // [DESABILITADO]
+//que_qsch05	mapflag	nightenabled	 // [DESABILITADO]
+//que_qaru01	mapflag	nightenabled	 // [DESABILITADO]
+//que_qaru02	mapflag	nightenabled	 // [DESABILITADO]
+//que_qaru03	mapflag	nightenabled	 // [DESABILITADO]
+//que_qaru04	mapflag	nightenabled	 // [DESABILITADO]
+//que_qaru05	mapflag	nightenabled	 // [DESABILITADO]
 
 // Battle Grounds ==============
-bat_c01	mapflag	nightenabled
-bat_c02	mapflag	nightenabled
-bat_c03	mapflag	nightenabled
+//bat_c01	mapflag	nightenabled	 // [DESABILITADO]
+//bat_c02	mapflag	nightenabled	 // [DESABILITADO]
+//bat_c03	mapflag	nightenabled	 // [DESABILITADO]
 
 //Endless Tower ==================
-e_tower	mapflag	nightenabled
+//e_tower	mapflag	nightenabled	 // [DESABILITADO]
 
 // Episode 13 ====================
-mid_camp	mapflag	nightenabled
-man_fild01	mapflag	nightenabled
-man_fild03	mapflag	nightenabled
-spl_fild02	mapflag	nightenabled
-spl_fild03	mapflag	nightenabled
-moc_fild22b	mapflag	nightenabled
-que_dan01	mapflag	nightenabled
-schg_que01	mapflag	nightenabled
-arug_que01	mapflag	nightenabled
-nyd_dun01	mapflag	nightenabled
-nyd_dun02	mapflag	nightenabled
-manuk	mapflag	nightenabled
-man_fild02	mapflag	nightenabled
-splendide	mapflag	nightenabled
-spl_fild01	mapflag	nightenabled
-brasilis	mapflag	nightenabled
-bra_fild01	mapflag	nightenabled
-dicastes01	mapflag	nightenabled
-dicastes02	mapflag	nightenabled
-dic_fild01	mapflag	nightenabled
-dic_fild02	mapflag	nightenabled
+//mid_camp	mapflag	nightenabled	 // [DESABILITADO]
+//man_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//man_fild03	mapflag	nightenabled	 // [DESABILITADO]
+//spl_fild02	mapflag	nightenabled	 // [DESABILITADO]
+//spl_fild03	mapflag	nightenabled	 // [DESABILITADO]
+//moc_fild22b	mapflag	nightenabled	 // [DESABILITADO]
+//que_dan01	mapflag	nightenabled	 // [DESABILITADO]
+//schg_que01	mapflag	nightenabled	 // [DESABILITADO]
+//arug_que01	mapflag	nightenabled	 // [DESABILITADO]
+//nyd_dun01	mapflag	nightenabled	 // [DESABILITADO]
+//nyd_dun02	mapflag	nightenabled	 // [DESABILITADO]
+//manuk	mapflag	nightenabled	 // [DESABILITADO]
+//man_fild02	mapflag	nightenabled	 // [DESABILITADO]
+//splendide	mapflag	nightenabled	 // [DESABILITADO]
+//spl_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//brasilis	mapflag	nightenabled	 // [DESABILITADO]
+//bra_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//dicastes01	mapflag	nightenabled	 // [DESABILITADO]
+//dicastes02	mapflag	nightenabled	 // [DESABILITADO]
+//dic_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//dic_fild02	mapflag	nightenabled	 // [DESABILITADO]
 
 // Episode 14 ====================
-bif_fild01	mapflag	nightenabled
-bif_fild02	mapflag	nightenabled
-dewata	mapflag	nightenabled
-dew_fild01	mapflag	nightenabled
-dew_dun02	mapflag	nightenabled
-malangdo	mapflag	nightenabled
-malaya	mapflag	nightenabled
-ma_fild01	mapflag	nightenabled
-ma_fild02	mapflag	nightenabled
-ma_scene01	mapflag	nightenabled
-eclage	mapflag	nightenabled
-ecl_fild01	mapflag	nightenabled
-ecl_hub01	mapflag	nightenabled
+//bif_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//bif_fild02	mapflag	nightenabled	 // [DESABILITADO]
+//dewata	mapflag	nightenabled	 // [DESABILITADO]
+//dew_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//dew_dun02	mapflag	nightenabled	 // [DESABILITADO]
+//malangdo	mapflag	nightenabled	 // [DESABILITADO]
+//malaya	mapflag	nightenabled	 // [DESABILITADO]
+//ma_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//ma_fild02	mapflag	nightenabled	 // [DESABILITADO]
+//ma_scene01	mapflag	nightenabled	 // [DESABILITADO]
+//eclage	mapflag	nightenabled	 // [DESABILITADO]
+//ecl_fild01	mapflag	nightenabled	 // [DESABILITADO]
+//ecl_hub01	mapflag	nightenabled	 // [DESABILITADO]
 
 //evt_zombie	mapflag	nightenabled

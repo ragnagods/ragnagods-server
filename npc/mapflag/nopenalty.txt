@@ -52,26 +52,26 @@ new_zone01	mapflag	nopenalty
 new_zone02	mapflag	nopenalty
 new_zone03	mapflag	nopenalty
 new_zone04	mapflag	nopenalty
-new_1-1	mapflag	nopenalty
-new_1-2	mapflag	nopenalty
-new_1-3	mapflag	nopenalty
-new_1-4	mapflag	nopenalty
-new_2-1	mapflag	nopenalty
-new_2-2	mapflag	nopenalty
-new_2-3	mapflag	nopenalty
-new_2-4	mapflag	nopenalty
-new_3-1	mapflag	nopenalty
-new_3-2	mapflag	nopenalty
-new_3-3	mapflag	nopenalty
-new_3-4	mapflag	nopenalty
-new_4-1	mapflag	nopenalty
-new_4-2	mapflag	nopenalty
-new_4-3	mapflag	nopenalty
-new_4-4	mapflag	nopenalty
-new_5-1	mapflag	nopenalty
-new_5-2	mapflag	nopenalty
-new_5-3	mapflag	nopenalty
-new_5-4	mapflag	nopenalty
+//new_1-1	mapflag	nopenalty	 // [DESABILITADO]
+//new_1-2	mapflag	nopenalty	 // [DESABILITADO]
+//new_1-3	mapflag	nopenalty	 // [DESABILITADO]
+//new_1-4	mapflag	nopenalty	 // [DESABILITADO]
+//new_2-1	mapflag	nopenalty	 // [DESABILITADO]
+//new_2-2	mapflag	nopenalty	 // [DESABILITADO]
+//new_2-3	mapflag	nopenalty	 // [DESABILITADO]
+//new_2-4	mapflag	nopenalty	 // [DESABILITADO]
+//new_3-1	mapflag	nopenalty	 // [DESABILITADO]
+//new_3-2	mapflag	nopenalty	 // [DESABILITADO]
+//new_3-3	mapflag	nopenalty	 // [DESABILITADO]
+//new_3-4	mapflag	nopenalty	 // [DESABILITADO]
+//new_4-1	mapflag	nopenalty	 // [DESABILITADO]
+//new_4-2	mapflag	nopenalty	 // [DESABILITADO]
+//new_4-3	mapflag	nopenalty	 // [DESABILITADO]
+//new_4-4	mapflag	nopenalty	 // [DESABILITADO]
+//new_5-1	mapflag	nopenalty	 // [DESABILITADO]
+//new_5-2	mapflag	nopenalty	 // [DESABILITADO]
+//new_5-3	mapflag	nopenalty	 // [DESABILITADO]
+//new_5-4	mapflag	nopenalty	 // [DESABILITADO]
 nif_in	mapflag	nopenalty
 pay_arche	mapflag	nopenalty
 payon	mapflag	nopenalty
@@ -95,8 +95,8 @@ yuno_in03	mapflag	nopenalty
 yuno_in04	mapflag	nopenalty
 yuno_in05	mapflag	nopenalty
 yuno_pre	mapflag	nopenalty
-y_airport	mapflag	nopenalty
-lhz_airport	mapflag	nopenalty
+//y_airport	mapflag	nopenalty	 // [DESABILITADO]
+//lhz_airport	mapflag	nopenalty	 // [DESABILITADO]
 lhz_in01	mapflag	nopenalty
 lhz_in02	mapflag	nopenalty
 lhz_in03	mapflag	nopenalty
@@ -128,45 +128,45 @@ veins	mapflag	nopenalty
 ve_in	mapflag	nopenalty
 ve_in02	mapflag	nopenalty
 thor_camp	mapflag	nopenalty
-moc_para01	mapflag	nopenalty
-mid_camp	mapflag	nopenalty
-mid_campin	mapflag	nopenalty
-moc_fild22b	mapflag	nopenalty
-manuk	mapflag	nopenalty
-man_in01	mapflag	nopenalty
-splendide	mapflag	nopenalty
-spl_in01	mapflag	nopenalty
-spl_in02	mapflag	nopenalty
-brasilis	mapflag	nopenalty
-bra_in01	mapflag	nopenalty
-dicastes01	mapflag	nopenalty
-dicastes02	mapflag	nopenalty
-dic_in01	mapflag	nopenalty
-s_atelier	mapflag	nopenalty
-mora	mapflag	nopenalty
-dewata	mapflag	nopenalty
-dew_in01	mapflag	nopenalty
-malangdo	mapflag	nopenalty
-mal_in01	mapflag	nopenalty
-mal_in02	mapflag	nopenalty
-malaya	mapflag	nopenalty
-ma_scene01	mapflag	nopenalty
-ma_in01	mapflag	nopenalty
-ma_zif01	mapflag	nopenalty
-ma_zif02	mapflag	nopenalty
-ma_zif03	mapflag	nopenalty
-ma_zif04	mapflag	nopenalty
-ma_zif05	mapflag	nopenalty
-ma_zif06	mapflag	nopenalty
-ma_zif07	mapflag	nopenalty
-ma_zif08	mapflag	nopenalty
-ma_zif09	mapflag	nopenalty
-eclage	mapflag	nopenalty
-ecl_in01	mapflag	nopenalty
-ecl_in02	mapflag	nopenalty
-ecl_in03	mapflag	nopenalty
-ecl_in04	mapflag	nopenalty
-ecl_hub01	mapflag	nopenalty
+//moc_para01	mapflag	nopenalty	 // [DESABILITADO]
+//mid_camp	mapflag	nopenalty	 // [DESABILITADO]
+//mid_campin	mapflag	nopenalty	 // [DESABILITADO]
+//moc_fild22b	mapflag	nopenalty	 // [DESABILITADO]
+//manuk	mapflag	nopenalty	 // [DESABILITADO]
+//man_in01	mapflag	nopenalty	 // [DESABILITADO]
+//splendide	mapflag	nopenalty	 // [DESABILITADO]
+//spl_in01	mapflag	nopenalty	 // [DESABILITADO]
+//spl_in02	mapflag	nopenalty	 // [DESABILITADO]
+//brasilis	mapflag	nopenalty	 // [DESABILITADO]
+//bra_in01	mapflag	nopenalty	 // [DESABILITADO]
+//dicastes01	mapflag	nopenalty	 // [DESABILITADO]
+//dicastes02	mapflag	nopenalty	 // [DESABILITADO]
+//dic_in01	mapflag	nopenalty	 // [DESABILITADO]
+//s_atelier	mapflag	nopenalty	 // [DESABILITADO]
+//mora	mapflag	nopenalty	 // [DESABILITADO]
+//dewata	mapflag	nopenalty	 // [DESABILITADO]
+//dew_in01	mapflag	nopenalty	 // [DESABILITADO]
+//malangdo	mapflag	nopenalty	 // [DESABILITADO]
+//mal_in01	mapflag	nopenalty	 // [DESABILITADO]
+//mal_in02	mapflag	nopenalty	 // [DESABILITADO]
+//malaya	mapflag	nopenalty	 // [DESABILITADO]
+//ma_scene01	mapflag	nopenalty	 // [DESABILITADO]
+//ma_in01	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif01	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif02	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif03	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif04	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif05	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif06	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif07	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif08	mapflag	nopenalty	 // [DESABILITADO]
+//ma_zif09	mapflag	nopenalty	 // [DESABILITADO]
+//eclage	mapflag	nopenalty	 // [DESABILITADO]
+//ecl_in01	mapflag	nopenalty	 // [DESABILITADO]
+//ecl_in02	mapflag	nopenalty	 // [DESABILITADO]
+//ecl_in03	mapflag	nopenalty	 // [DESABILITADO]
+//ecl_in04	mapflag	nopenalty	 // [DESABILITADO]
+//ecl_hub01	mapflag	nopenalty	 // [DESABILITADO]
 
 // Job Quests ========================
 job_sword1	mapflag	nopenalty
@@ -187,29 +187,29 @@ monk_in	mapflag	nopenalty
 in_rogue	mapflag	nopenalty
 job_sage	mapflag	nopenalty
 // 3-1 --------------------
-job3_arch01	mapflag	nopenalty
-job3_arch02	mapflag	nopenalty
-job3_arch03	mapflag	nopenalty
-job3_guil01	mapflag	nopenalty
-job3_guil02	mapflag	nopenalty
-job3_guil03	mapflag	nopenalty
-job3_rang01	mapflag	nopenalty
-job3_rang02	mapflag	nopenalty
-job3_rune01	mapflag	nopenalty
-job3_rune02	mapflag	nopenalty
-job3_rune03	mapflag	nopenalty
-job3_war01	mapflag	nopenalty
-job3_war02	mapflag	nopenalty
+//job3_arch01	mapflag	nopenalty	 // [DESABILITADO]
+//job3_arch02	mapflag	nopenalty	 // [DESABILITADO]
+//job3_arch03	mapflag	nopenalty	 // [DESABILITADO]
+//job3_guil01	mapflag	nopenalty	 // [DESABILITADO]
+//job3_guil02	mapflag	nopenalty	 // [DESABILITADO]
+//job3_guil03	mapflag	nopenalty	 // [DESABILITADO]
+//job3_rang01	mapflag	nopenalty	 // [DESABILITADO]
+//job3_rang02	mapflag	nopenalty	 // [DESABILITADO]
+//job3_rune01	mapflag	nopenalty	 // [DESABILITADO]
+//job3_rune02	mapflag	nopenalty	 // [DESABILITADO]
+//job3_rune03	mapflag	nopenalty	 // [DESABILITADO]
+//job3_war01	mapflag	nopenalty	 // [DESABILITADO]
+//job3_war02	mapflag	nopenalty	 // [DESABILITADO]
 // 3-2 --------------------
-job3_gen01	mapflag	nopenalty
+//job3_gen01	mapflag	nopenalty	 // [DESABILITADO]
 // Ext --------------------
-job3_sha01	mapflag	nopenalty
-job_ko	mapflag	nopenalty
+//job3_sha01	mapflag	nopenalty	 // [DESABILITADO]
+//job_ko	mapflag	nopenalty	 // [DESABILITADO]
 
 // Misc Quests =======================
-mosk_ship	mapflag	nopenalty
+//mosk_ship	mapflag	nopenalty	 // [DESABILITADO]
 que_sign01	mapflag	nopenalty
-que_sign02	mapflag	nopenalty
+//que_sign02	mapflag	nopenalty	 // [DESABILITADO]
 
 // GvG Arenas ===================
 guild_vs1	mapflag	nopenalty
@@ -223,96 +223,96 @@ sec_in01	mapflag	nopenalty
 sec_in02	mapflag	nopenalty
 
 // Izlude Arena ========================
-force_1-1	mapflag	nopenalty
-force_1-2	mapflag	nopenalty
-force_1-3	mapflag	nopenalty
-force_2-1	mapflag	nopenalty
-force_2-2	mapflag	nopenalty
-force_2-3	mapflag	nopenalty
-force_3-1	mapflag	nopenalty
-force_3-2	mapflag	nopenalty
-force_3-3	mapflag	nopenalty
+//force_1-1	mapflag	nopenalty	 // [DESABILITADO]
+//force_1-2	mapflag	nopenalty	 // [DESABILITADO]
+//force_1-3	mapflag	nopenalty	 // [DESABILITADO]
+//force_2-1	mapflag	nopenalty	 // [DESABILITADO]
+//force_2-2	mapflag	nopenalty	 // [DESABILITADO]
+//force_2-3	mapflag	nopenalty	 // [DESABILITADO]
+//force_3-1	mapflag	nopenalty	 // [DESABILITADO]
+//force_3-2	mapflag	nopenalty	 // [DESABILITADO]
+//force_3-3	mapflag	nopenalty	 // [DESABILITADO]
 
 // PvP Arenas =========================
-pvp_y_1-1	mapflag	nopenalty
-pvp_y_1-2	mapflag	nopenalty
-pvp_y_1-3	mapflag	nopenalty
-pvp_y_1-4	mapflag	nopenalty
-pvp_y_1-5	mapflag	nopenalty
-pvp_y_2-1	mapflag	nopenalty
-pvp_y_2-2	mapflag	nopenalty
-pvp_y_2-3	mapflag	nopenalty
-pvp_y_2-4	mapflag	nopenalty
-pvp_y_2-5	mapflag	nopenalty
-pvp_y_3-1	mapflag	nopenalty
-pvp_y_3-2	mapflag	nopenalty
-pvp_y_3-3	mapflag	nopenalty
-pvp_y_3-4	mapflag	nopenalty
-pvp_y_3-5	mapflag	nopenalty
-pvp_y_4-1	mapflag	nopenalty
-pvp_y_4-2	mapflag	nopenalty
-pvp_y_4-3	mapflag	nopenalty
-pvp_y_4-4	mapflag	nopenalty
-pvp_y_4-5	mapflag	nopenalty
-pvp_y_5-1	mapflag	nopenalty
-pvp_y_5-2	mapflag	nopenalty
-pvp_y_5-3	mapflag	nopenalty
-pvp_y_5-4	mapflag	nopenalty
-pvp_y_5-5	mapflag	nopenalty
-pvp_y_6-1	mapflag	nopenalty
-pvp_y_6-2	mapflag	nopenalty
-pvp_y_6-3	mapflag	nopenalty
-pvp_y_6-4	mapflag	nopenalty
-pvp_y_6-5	mapflag	nopenalty
-pvp_y_7-1	mapflag	nopenalty
-pvp_y_7-2	mapflag	nopenalty
-pvp_y_7-3	mapflag	nopenalty
-pvp_y_7-4	mapflag	nopenalty
-pvp_y_7-5	mapflag	nopenalty
-pvp_y_8-1	mapflag	nopenalty
-pvp_y_8-2	mapflag	nopenalty
-pvp_y_8-3	mapflag	nopenalty
-pvp_y_8-4	mapflag	nopenalty
-pvp_y_8-5	mapflag	nopenalty
+//pvp_y_1-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_1-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_1-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_1-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_1-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_2-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_2-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_2-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_2-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_2-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_3-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_3-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_3-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_3-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_3-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_4-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_4-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_4-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_4-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_4-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_5-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_5-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_5-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_5-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_5-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_6-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_6-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_6-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_6-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_6-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_7-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_7-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_7-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_7-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_7-5	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_8-1	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_8-2	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_8-3	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_8-4	mapflag	nopenalty	 // [DESABILITADO]
+//pvp_y_8-5	mapflag	nopenalty	 // [DESABILITADO]
 pvp_2vs2	mapflag	nopenalty
 
 //Aldebaran Turbo Track
 turbo_room	mapflag	nopenalty
-turbo_n_1	mapflag	nopenalty
-turbo_n_4	mapflag	nopenalty
-turbo_n_8	mapflag	nopenalty
-turbo_n_16	mapflag	nopenalty
-turbo_e_4	mapflag	nopenalty
-turbo_e_8	mapflag	nopenalty
-turbo_e_16	mapflag	nopenalty
+//turbo_n_1	mapflag	nopenalty	 // [DESABILITADO]
+//turbo_n_4	mapflag	nopenalty	 // [DESABILITADO]
+//turbo_n_8	mapflag	nopenalty	 // [DESABILITADO]
+//turbo_n_16	mapflag	nopenalty	 // [DESABILITADO]
+//turbo_e_4	mapflag	nopenalty	 // [DESABILITADO]
+//turbo_e_8	mapflag	nopenalty	 // [DESABILITADO]
+//turbo_e_16	mapflag	nopenalty	 // [DESABILITADO]
 
 //Monster Races ================
 p_track01	mapflag	nopenalty
-p_track02	mapflag	nopenalty
+//p_track02	mapflag	nopenalty	 // [DESABILITADO]
 
 //Vision of Okolnir =============
-que_qsch01	mapflag	nopenalty
-que_qsch02	mapflag	nopenalty
-que_qsch03	mapflag	nopenalty
-que_qsch04	mapflag	nopenalty
-que_qsch05	mapflag	nopenalty
-que_qaru01	mapflag	nopenalty
-que_qaru02	mapflag	nopenalty
-que_qaru03	mapflag	nopenalty
-que_qaru04	mapflag	nopenalty
-que_qaru05	mapflag	nopenalty
+//que_qsch01	mapflag	nopenalty	 // [DESABILITADO]
+//que_qsch02	mapflag	nopenalty	 // [DESABILITADO]
+//que_qsch03	mapflag	nopenalty	 // [DESABILITADO]
+//que_qsch04	mapflag	nopenalty	 // [DESABILITADO]
+//que_qsch05	mapflag	nopenalty	 // [DESABILITADO]
+//que_qaru01	mapflag	nopenalty	 // [DESABILITADO]
+//que_qaru02	mapflag	nopenalty	 // [DESABILITADO]
+//que_qaru03	mapflag	nopenalty	 // [DESABILITADO]
+//que_qaru04	mapflag	nopenalty	 // [DESABILITADO]
+//que_qaru05	mapflag	nopenalty	 // [DESABILITADO]
 
 // Battle Grounds ==============
-bat_c01	mapflag	nopenalty
-bat_c02	mapflag	nopenalty
-bat_c03	mapflag	nopenalty
-bat_room	mapflag	nopenalty
-bat_b01	mapflag	nopenalty
-bat_b02	mapflag	nopenalty
-bat_a01	mapflag	nopenalty
-bat_a02	mapflag	nopenalty
+//bat_c01	mapflag	nopenalty	 // [DESABILITADO]
+//bat_c02	mapflag	nopenalty	 // [DESABILITADO]
+//bat_c03	mapflag	nopenalty	 // [DESABILITADO]
+//bat_room	mapflag	nopenalty	 // [DESABILITADO]
+//bat_b01	mapflag	nopenalty	 // [DESABILITADO]
+//bat_b02	mapflag	nopenalty	 // [DESABILITADO]
+//bat_a01	mapflag	nopenalty	 // [DESABILITADO]
+//bat_a02	mapflag	nopenalty	 // [DESABILITADO]
 
 //evt_zombie	mapflag	nopenalty
 
 // Poring War ==================
-poring_w02	mapflag	nopenalty
+//poring_w02	mapflag	nopenalty	 // [DESABILITADO]

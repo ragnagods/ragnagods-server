@@ -120,63 +120,63 @@ prtg_cas02	mapflag	noicewall
 prtg_cas03	mapflag	noicewall
 prtg_cas04	mapflag	noicewall
 prtg_cas05	mapflag	noicewall
-schg_cas01	mapflag	noicewall
-schg_cas02	mapflag	noicewall
-schg_cas03	mapflag	noicewall
-schg_cas04	mapflag	noicewall
-schg_cas05	mapflag	noicewall
-arug_cas01	mapflag	noicewall
-arug_cas02	mapflag	noicewall
-arug_cas03	mapflag	noicewall
-arug_cas04	mapflag	noicewall
-arug_cas05	mapflag	noicewall
+//schg_cas01	mapflag	noicewall	 // [DESABILITADO]
+//schg_cas02	mapflag	noicewall	 // [DESABILITADO]
+//schg_cas03	mapflag	noicewall	 // [DESABILITADO]
+//schg_cas04	mapflag	noicewall	 // [DESABILITADO]
+//schg_cas05	mapflag	noicewall	 // [DESABILITADO]
+//arug_cas01	mapflag	noicewall	 // [DESABILITADO]
+//arug_cas02	mapflag	noicewall	 // [DESABILITADO]
+//arug_cas03	mapflag	noicewall	 // [DESABILITADO]
+//arug_cas04	mapflag	noicewall	 // [DESABILITADO]
+//arug_cas05	mapflag	noicewall	 // [DESABILITADO]
 // Novice Guild Castles ===
-nguild_alde	mapflag	noicewall
-nguild_gef	mapflag	noicewall
-nguild_pay	mapflag	noicewall
-nguild_prt	mapflag	noicewall
+//nguild_alde	mapflag	noicewall	 // [DESABILITADO]
+//nguild_gef	mapflag	noicewall	 // [DESABILITADO]
+//nguild_pay	mapflag	noicewall	 // [DESABILITADO]
+//nguild_prt	mapflag	noicewall	 // [DESABILITADO]
 
 //Endless Tower ==================
-1@tower	mapflag	noicewall
-2@tower	mapflag	noicewall
-3@tower	mapflag	noicewall
-4@tower	mapflag	noicewall
-5@tower	mapflag	noicewall
-6@tower	mapflag	noicewall
+//1@tower	mapflag	noicewall	 // [DESABILITADO]
+//2@tower	mapflag	noicewall	 // [DESABILITADO]
+//3@tower	mapflag	noicewall	 // [DESABILITADO]
+//4@tower	mapflag	noicewall	 // [DESABILITADO]
+//5@tower	mapflag	noicewall	 // [DESABILITADO]
+//6@tower	mapflag	noicewall	 // [DESABILITADO]
 
 // Orc's Memory ===================
-1@orcs	mapflag	noicewall
-2@orcs	mapflag	noicewall
+//1@orcs	mapflag	noicewall	 // [DESABILITADO]
+//2@orcs	mapflag	noicewall	 // [DESABILITADO]
 
 // Nidhoggr's Instance ===========
-1@nyd	mapflag	noicewall
-2@nyd	mapflag	noicewall
+//1@nyd	mapflag	noicewall	 // [DESABILITADO]
+//2@nyd	mapflag	noicewall	 // [DESABILITADO]
 
 // Misty Forest Labyrinth ===========
-1@mist	mapflag	noicewall
+//1@mist	mapflag	noicewall	 // [DESABILITADO]
 
 // Octopus Cave ===========
-1@cash	mapflag	noicewall
+//1@cash	mapflag	noicewall	 // [DESABILITADO]
 
 // Drain ===========
-1@pump	mapflag	noicewall
-2@pump	mapflag	noicewall
+//1@pump	mapflag	noicewall	 // [DESABILITADO]
+//2@pump	mapflag	noicewall	 // [DESABILITADO]
 
 // Somatology Laboratory ===========
-1@lhz	mapflag	noicewall
+//1@lhz	mapflag	noicewall	 // [DESABILITADO]
 
 // Bangungot Hospital F2 ===========
-1@ma_h	mapflag	noicewall
+//1@ma_h	mapflag	noicewall	 // [DESABILITADO]
 
 // Buwaya Cave ===========
-1@ma_c	mapflag	noicewall
+//1@ma_c	mapflag	noicewall	 // [DESABILITADO]
 
 // Bakonawa Hideout ===========
-1@ma_b	mapflag	noicewall
+//1@ma_b	mapflag	noicewall	 // [DESABILITADO]
 
 // Inside Eclage ===========
-1@ecl	mapflag	noicewall
+//1@ecl	mapflag	noicewall	 // [DESABILITADO]
 
 // Poring War ====================
-poring_w01	mapflag	noicewall
-poring_w02	mapflag	noicewall
+//poring_w01	mapflag	noicewall	 // [DESABILITADO]
+//poring_w02	mapflag	noicewall	 // [DESABILITADO]

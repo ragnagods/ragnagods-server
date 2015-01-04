@@ -31,10 +31,10 @@ louyang	mapflag	town
 hugel	mapflag	town
 rachel	mapflag	town
 veins	mapflag	town
-brasilis	mapflag	town
-dicastes01	mapflag	town
-mora	mapflag	town
-dewata	mapflag	town
-malangdo	mapflag	town
-malaya	mapflag	town
-eclage	mapflag	town
+//brasilis	mapflag	town	 // [DESABILITADO]
+//dicastes01	mapflag	town	 // [DESABILITADO]
+//mora	mapflag	town	 // [DESABILITADO]
+//dewata	mapflag	town	 // [DESABILITADO]
+//malangdo	mapflag	town	 // [DESABILITADO]
+//malaya	mapflag	town	 // [DESABILITADO]
+//eclage	mapflag	town	 // [DESABILITADO]
