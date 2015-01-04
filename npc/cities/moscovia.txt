@@ -1,5 +1,5 @@
 //===== Hercules Script ======================================
-//= Moscovia Town
+//= Moscovia Town // [DESABILITADO]
 //===== By: ==================================================
 //= Kisuka
 //===== Current Version: =====================================
@@ -14,7 +14,7 @@
 
 // Moscovia Transportation :: mosk_trans
 //============================================================
--	script	::PR_Officer_moscovia	-1,{
+alberta,245,66,4	script	Moscovia P.R. Officer#1	4_F_RUSWOMAN2,{
 	mes "[Moscovia P.R. Officer]";
 	mes "Moscovia! Do you know Moscovia?";
 	mes "the paradise spreading on the endless seas...";

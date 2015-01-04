@@ -1101,7 +1101,7 @@ alberta_in,23,104,4	script	Grandpa Turtle#tur	2_M_PHARMACIST,{
 	}
 }
 
--	script	::Sailor_alberta	-1,{
+alberta,247,122,4	script	Sailor#tur	4_M_SEAMAN,{
 	if (TURTLE || (MISC_QUEST & 65536)) {
 		mes "[Gotanblue]";
 		mes "Heh...";
@@ -1243,7 +1243,7 @@ tur_dun01,165,29,4	script	Sailor#tur2	4_M_SEAMAN,{
 	close;
 }
 
--	script	::Turtle_Scholar_alberta	-1,{
+alberta,248,89,4	script	Turtle Island Scholar	2_M_MOLGENSTEIN,{
 	mes "[Jornadan Niliria]";
 	mes "Every single place";
 	mes "has its own unique";
