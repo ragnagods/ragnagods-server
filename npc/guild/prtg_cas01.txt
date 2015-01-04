@@ -1,5 +1,5 @@
 //===== Hercules Script ======================================
-//= War of Emperium (Prontera)
+//= War of Emperium (Prontera) // [TRADUZIDO]
 //===== By: ==================================================
 //= L0ne_W0lf
 //===== Current Version: =====================================
@@ -21,25 +21,25 @@
 	.@GID = getcastledata("prtg_cas01",1);
 
 	if (.@GID == 0) {
-		mes "[ Edict of the Divine Rune-Midgarts Kingdom ]";
+		mes "[Decreto do Reino de Rune Midgard]";
 		mes " ";
-		mes "1. Follow the ordinance of The Divine Rune-Midgarts Kingdom, ";
-		mes "We declare that";
-		mes "there is no formal master of this castle.";
+		mes "1. Conforme o Pacto do Reino de Rune Midgard";
+		mes "e o Feudo das Valquírias,";
+		mes "declaro que este Castelo não possui um Senhor.";
 		mes " ";
-		mes "2. To the one who can ";
-		mes "overcome all trials";
-		mes "and destroy the Emperium,";
-		mes "the king will endow the one with";
-		mes "ownership of this castle.";
+		mes "2. Ao Clã que for bravo o bastante";
+		mes "e, superarando os terríveis desafios,";
+		mes "quebrar o Emperium,";
+		mes "será dada a posse deste Castelo";
+		mes "apoiado pelo nosso Rei.";
 		close;
 	}
 	if (getcharid(2) == .@GID) {
-		mes "[ Echoing Voice ]";
-		mes "Brave ones...";
-		mes "Do you wish to return to your honorable place?";
+		mes "[ Voz Ecoante ]";
+		mes "Bravo guerreiro......";
+		mes "Deseja retornar ao seu lugar de glória?";
 		next;
-		if(select("Return to the guild castle.:Quit.") == 1) {
+		if(select("Sim.: Não.") == 1) {
 			close2;
 			if (getcharid(2) == getcastledata("prtg_cas01",1)) {
 				warp "prtg_cas01",96,173;
@@ -49,16 +49,16 @@
 		}
 		close;
 	}
-	mes "[ Edict of the Divine Rune-Midgarts Kingdom ]";
+	mes "[Decreto do Reino de Rune Midgard]";
 	mes " ";
-	mes "1. Follow the ordinance of The Divine Rune-Midgarts Kingdom, ";
-	mes "we approve that this place is in";
-	mes "the private prossession of ^ff0000"+getguildname(.@GID)+"^000000 Guild.";
+	mes "1. Conforme o Pacto do Reino de Rune Midgard";
+	mes "e o Feudo das Valquírias,";
+	mes "declaro que este castelo pertence ao Clã ^ff0000" + GetGuildName(.@GID) + "^000000 .";
 	mes " ";
-	mes "2. The guild Master of ^ff0000"+getguildname(.@GID)+"^000000 Guild is";
-	mes "^ff0000"+getguildmaster(.@GID)+"^000000";
-	mes "If there is anyone who objects to this,";
-	mes "prove your strength and honor with a steel blade in your hand.";
+	mes "2. O Líder do Clã  ^ff0000" + GetGuildName(.@GID) + "^000000 se chama";
+	mes "^ff0000" + GetGuildMaster(.@GID) + "^000000.";
+	mes "Se alguém se opõe a este decreto";
+	mes "desembainhe sua espada para fazer valer sua vontade.";
 	close;
 
 OnRecvCastlePt01:
@@ -98,7 +98,7 @@ prontera,155,190,4	duplicate(InsideFlagsPR1)	Kriemhild#15	GUILD_FLAG
 
 // Kafra Employee
 //============================================================
-prtg_cas01,96,173,0	duplicate(guildkafra)	Kafra Staff#prtg_cas01	4_F_KAFRA1
+prtg_cas01,96,173,0	duplicate(guildkafra)	Kafra Recepcionista#prtg_cas01	4_F_KAFRA1
 
 // Steward
 //============================================================
@@ -109,9 +109,9 @@ prtg_cas01,112,181,0	duplicate(cm)	Ahvray#prtg_cas01	1_M_JOBTESTER
 prtg_cas01,15,208,0	script	#Lever_PR01	HIDDEN_NPC,{
 
 	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "Há uma pequena alavanca, você deseja acioná-la?";
 	next;
-	if(select("Pull.:Do not.") == 1) {
+	if(select("Acionar.:Não acionar.") == 1) {
 		close2;
 		warp "prtg_cas01",112,183;
 		end;
@@ -125,7 +125,7 @@ prtg_cas01,94,200,0	duplicate(gdlever)	#prtg_cas01	HIDDEN_NPC
 
 // Guild Treasure Spawns
 //============================================================
-prtg_cas01,11,208,0	duplicate(Gld_Trea_Spawn)	Treasure#prtg_cas01	-1
+prtg_cas01,11,208,0	duplicate(Gld_Trea_Spawn)	Tesouro#prtg_cas01	-1
 
 // AGIT Manager
 //============================================================
@@ -133,4 +133,4 @@ prtg_cas01,197,197,0	duplicate(Gld_Agit_Manager)	Agit#prtg_cas01	-1
 
 // Guardians
 //============================================================
-prtg_cas01,112,181,0	duplicate(Gld_Guard_Template)	Guardian#prtg_cas01	-1
+prtg_cas01,112,181,0	duplicate(Gld_Guard_Template)	Guardiao#prtg_cas01	-1
