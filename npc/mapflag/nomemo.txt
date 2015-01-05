@@ -52,26 +52,26 @@ new_zone01	mapflag	nomemo
 new_zone02	mapflag	nomemo
 new_zone03	mapflag	nomemo
 new_zone04	mapflag	nomemo
-//new_1-1	mapflag	nomemo	 // [DESABILITADO]
-//new_1-2	mapflag	nomemo	 // [DESABILITADO]
-//new_1-3	mapflag	nomemo	 // [DESABILITADO]
-//new_1-4	mapflag	nomemo	 // [DESABILITADO]
-//new_2-1	mapflag	nomemo	 // [DESABILITADO]
-//new_2-2	mapflag	nomemo	 // [DESABILITADO]
-//new_2-3	mapflag	nomemo	 // [DESABILITADO]
-//new_2-4	mapflag	nomemo	 // [DESABILITADO]
-//new_3-1	mapflag	nomemo	 // [DESABILITADO]
-//new_3-2	mapflag	nomemo	 // [DESABILITADO]
-//new_3-3	mapflag	nomemo	 // [DESABILITADO]
-//new_3-4	mapflag	nomemo	 // [DESABILITADO]
-//new_4-1	mapflag	nomemo	 // [DESABILITADO]
-//new_4-2	mapflag	nomemo	 // [DESABILITADO]
-//new_4-3	mapflag	nomemo	 // [DESABILITADO]
-//new_4-4	mapflag	nomemo	 // [DESABILITADO]
-//new_5-1	mapflag	nomemo	 // [DESABILITADO]
-//new_5-2	mapflag	nomemo	 // [DESABILITADO]
-//new_5-3	mapflag	nomemo	 // [DESABILITADO]
-//new_5-4	mapflag	nomemo	 // [DESABILITADO]
+new_1-1	mapflag	nomemo
+new_1-2	mapflag	nomemo
+new_1-3	mapflag	nomemo
+new_1-4	mapflag	nomemo
+new_2-1	mapflag	nomemo
+new_2-2	mapflag	nomemo
+new_2-3	mapflag	nomemo
+new_2-4	mapflag	nomemo
+new_3-1	mapflag	nomemo
+new_3-2	mapflag	nomemo
+new_3-3	mapflag	nomemo
+new_3-4	mapflag	nomemo
+new_4-1	mapflag	nomemo
+new_4-2	mapflag	nomemo
+new_4-3	mapflag	nomemo
+new_4-4	mapflag	nomemo
+new_5-1	mapflag	nomemo
+new_5-2	mapflag	nomemo
+new_5-3	mapflag	nomemo
+new_5-4	mapflag	nomemo
 pay_arche	mapflag	nomemo
 payon_in01	mapflag	nomemo
 payon_in02	mapflag	nomemo
@@ -91,11 +91,11 @@ yuno	mapflag	nomemo
 ein_in01	mapflag	nomemo
 airport	mapflag	nomemo
 airplane	mapflag	nomemo
-//airplane_01	mapflag	nomemo	 // [DESABILITADO]
+airplane_01	mapflag	nomemo
 lighthalzen	mapflag	nomemo
 yuno_pre	mapflag	nomemo
-//y_airport	mapflag	nomemo	 // [DESABILITADO]
-//lhz_airport	mapflag	nomemo	 // [DESABILITADO]
+y_airport	mapflag	nomemo
+lhz_airport	mapflag	nomemo
 einbroch	mapflag	nomemo
 einbech	mapflag	nomemo
 lhz_cube	mapflag	nomemo
@@ -200,7 +200,7 @@ ve_fild02	mapflag	nomemo
 ve_fild03	mapflag	nomemo
 ve_fild04	mapflag	nomemo
 ve_fild06	mapflag	nomemo
-//cave	mapflag	nomemo	 // [DESABILITADO]
+cave	mapflag	nomemo
 
 // Job Quests ================
 // First Job Class
@@ -485,15 +485,15 @@ guild_vs5	mapflag	nomemo
 
 // Arenas ====================
 arena_room	mapflag	nomemo
-//force_1-1	mapflag	nomemo	 // [DESABILITADO]
-//force_1-2	mapflag	nomemo	 // [DESABILITADO]
-//force_1-3	mapflag	nomemo	 // [DESABILITADO]
+force_1-1	mapflag	nomemo
+force_1-2	mapflag	nomemo
+force_1-3	mapflag	nomemo
 //force_2-1	mapflag	nomemo	 // [DESABILITADO]
 //force_3-1	mapflag	nomemo	 // [DESABILITADO]
 //force_4-1	mapflag	nomemo	 // [DESABILITADO]
 //force_5-1	mapflag	nomemo	 // [DESABILITADO]
-//ordeal_1-1	mapflag	nomemo	 // [DESABILITADO]
-//ordeal_1-2	mapflag	nomemo	 // [DESABILITADO]
+ordeal_1-1	mapflag	nomemo
+ordeal_1-2	mapflag	nomemo
 //ordeal_1-3	mapflag	nomemo
 //ordeal_2-1	mapflag	nomemo	 // [DESABILITADO]
 //ordeal_2-2	mapflag	nomemo	 // [DESABILITADO]
@@ -501,7 +501,7 @@ arena_room	mapflag	nomemo
 //ordeal_3-1	mapflag	nomemo	 // [DESABILITADO]
 //ordeal_3-2	mapflag	nomemo	 // [DESABILITADO]
 //ordeal_3-3	mapflag	nomemo
-//pvp_c_room	mapflag	nomemo	 // [DESABILITADO]
+pvp_c_room	mapflag	nomemo
 quiz_00	mapflag	nomemo
 quiz_01	mapflag	nomemo
 sec_in01	mapflag	nomemo
@@ -522,88 +522,88 @@ prt_are01	mapflag	nomemo
 //wizard_3-1	mapflag	nomemo
 
 // PvP Arenas ================
-//pvp_y_room	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_1-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_1-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_1-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_1-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_1-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_2-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_2-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_2-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_2-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_2-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_3-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_3-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_3-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_3-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_3-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_4-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_4-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_4-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_4-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_4-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_5-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_5-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_5-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_5-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_5-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_6-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_6-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_6-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_6-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_6-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_7-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_7-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_7-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_7-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_7-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_8-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_8-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_8-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_8-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_y_8-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_room	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_1-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_1-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_1-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_1-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_1-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_2-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_2-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_2-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_2-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_2-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_3-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_3-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_3-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_3-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_3-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_4-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_4-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_4-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_4-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_4-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_5-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_5-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_5-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_5-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_5-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_6-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_6-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_6-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_6-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_6-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_7-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_7-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_7-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_7-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_7-5	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_8-1	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_8-2	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_8-3	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_8-4	mapflag	nomemo	 // [DESABILITADO]
-//pvp_n_8-5	mapflag	nomemo	 // [DESABILITADO]
+pvp_y_room	mapflag	nomemo
+pvp_y_1-1	mapflag	nomemo
+pvp_y_1-2	mapflag	nomemo
+pvp_y_1-3	mapflag	nomemo
+pvp_y_1-4	mapflag	nomemo
+pvp_y_1-5	mapflag	nomemo
+pvp_y_2-1	mapflag	nomemo
+pvp_y_2-2	mapflag	nomemo
+pvp_y_2-3	mapflag	nomemo
+pvp_y_2-4	mapflag	nomemo
+pvp_y_2-5	mapflag	nomemo
+pvp_y_3-1	mapflag	nomemo
+pvp_y_3-2	mapflag	nomemo
+pvp_y_3-3	mapflag	nomemo
+pvp_y_3-4	mapflag	nomemo
+pvp_y_3-5	mapflag	nomemo
+pvp_y_4-1	mapflag	nomemo
+pvp_y_4-2	mapflag	nomemo
+pvp_y_4-3	mapflag	nomemo
+pvp_y_4-4	mapflag	nomemo
+pvp_y_4-5	mapflag	nomemo
+pvp_y_5-1	mapflag	nomemo
+pvp_y_5-2	mapflag	nomemo
+pvp_y_5-3	mapflag	nomemo
+pvp_y_5-4	mapflag	nomemo
+pvp_y_5-5	mapflag	nomemo
+pvp_y_6-1	mapflag	nomemo
+pvp_y_6-2	mapflag	nomemo
+pvp_y_6-3	mapflag	nomemo
+pvp_y_6-4	mapflag	nomemo
+pvp_y_6-5	mapflag	nomemo
+pvp_y_7-1	mapflag	nomemo
+pvp_y_7-2	mapflag	nomemo
+pvp_y_7-3	mapflag	nomemo
+pvp_y_7-4	mapflag	nomemo
+pvp_y_7-5	mapflag	nomemo
+pvp_y_8-1	mapflag	nomemo
+pvp_y_8-2	mapflag	nomemo
+pvp_y_8-3	mapflag	nomemo
+pvp_y_8-4	mapflag	nomemo
+pvp_y_8-5	mapflag	nomemo
+pvp_n_room	mapflag	nomemo
+pvp_n_1-1	mapflag	nomemo
+pvp_n_1-2	mapflag	nomemo
+pvp_n_1-3	mapflag	nomemo
+pvp_n_1-4	mapflag	nomemo
+pvp_n_1-5	mapflag	nomemo
+pvp_n_2-1	mapflag	nomemo
+pvp_n_2-2	mapflag	nomemo
+pvp_n_2-3	mapflag	nomemo
+pvp_n_2-4	mapflag	nomemo
+pvp_n_2-5	mapflag	nomemo
+pvp_n_3-1	mapflag	nomemo
+pvp_n_3-2	mapflag	nomemo
+pvp_n_3-3	mapflag	nomemo
+pvp_n_3-4	mapflag	nomemo
+pvp_n_3-5	mapflag	nomemo
+pvp_n_4-1	mapflag	nomemo
+pvp_n_4-2	mapflag	nomemo
+pvp_n_4-3	mapflag	nomemo
+pvp_n_4-4	mapflag	nomemo
+pvp_n_4-5	mapflag	nomemo
+pvp_n_5-1	mapflag	nomemo
+pvp_n_5-2	mapflag	nomemo
+pvp_n_5-3	mapflag	nomemo
+pvp_n_5-4	mapflag	nomemo
+pvp_n_5-5	mapflag	nomemo
+pvp_n_6-1	mapflag	nomemo
+pvp_n_6-2	mapflag	nomemo
+pvp_n_6-3	mapflag	nomemo
+pvp_n_6-4	mapflag	nomemo
+pvp_n_6-5	mapflag	nomemo
+pvp_n_7-1	mapflag	nomemo
+pvp_n_7-2	mapflag	nomemo
+pvp_n_7-3	mapflag	nomemo
+pvp_n_7-4	mapflag	nomemo
+pvp_n_7-5	mapflag	nomemo
+pvp_n_8-1	mapflag	nomemo
+pvp_n_8-2	mapflag	nomemo
+pvp_n_8-3	mapflag	nomemo
+pvp_n_8-4	mapflag	nomemo
+pvp_n_8-5	mapflag	nomemo
 pvp_2vs2	mapflag	nomemo
 
 //Aldebaran Turbo Track

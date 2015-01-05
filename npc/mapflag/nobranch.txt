@@ -43,26 +43,26 @@ new_zone01	mapflag	nobranch
 new_zone02	mapflag	nobranch
 new_zone03	mapflag	nobranch
 new_zone04	mapflag	nobranch
-//new_1-1	mapflag	nobranch	 // [DESABILITADO]
-//new_1-2	mapflag	nobranch	 // [DESABILITADO]
-//new_1-3	mapflag	nobranch	 // [DESABILITADO]
-//new_1-4	mapflag	nobranch	 // [DESABILITADO]
-//new_2-1	mapflag	nobranch	 // [DESABILITADO]
-//new_2-2	mapflag	nobranch	 // [DESABILITADO]
-//new_2-3	mapflag	nobranch	 // [DESABILITADO]
-//new_2-4	mapflag	nobranch	 // [DESABILITADO]
-//new_3-1	mapflag	nobranch	 // [DESABILITADO]
-//new_3-2	mapflag	nobranch	 // [DESABILITADO]
-//new_3-3	mapflag	nobranch	 // [DESABILITADO]
-//new_3-4	mapflag	nobranch	 // [DESABILITADO]
-//new_4-1	mapflag	nobranch	 // [DESABILITADO]
-//new_4-2	mapflag	nobranch	 // [DESABILITADO]
-//new_4-3	mapflag	nobranch	 // [DESABILITADO]
-//new_4-4	mapflag	nobranch	 // [DESABILITADO]
-//new_5-1	mapflag	nobranch	 // [DESABILITADO]
-//new_5-2	mapflag	nobranch	 // [DESABILITADO]
-//new_5-3	mapflag	nobranch	 // [DESABILITADO]
-//new_5-4	mapflag	nobranch	 // [DESABILITADO]
+new_1-1	mapflag	nobranch
+new_1-2	mapflag	nobranch
+new_1-3	mapflag	nobranch
+new_1-4	mapflag	nobranch
+new_2-1	mapflag	nobranch
+new_2-2	mapflag	nobranch
+new_2-3	mapflag	nobranch
+new_2-4	mapflag	nobranch
+new_3-1	mapflag	nobranch
+new_3-2	mapflag	nobranch
+new_3-3	mapflag	nobranch
+new_3-4	mapflag	nobranch
+new_4-1	mapflag	nobranch
+new_4-2	mapflag	nobranch
+new_4-3	mapflag	nobranch
+new_4-4	mapflag	nobranch
+new_5-1	mapflag	nobranch
+new_5-2	mapflag	nobranch
+new_5-3	mapflag	nobranch
+new_5-4	mapflag	nobranch
 nif_in	mapflag	nobranch
 payon_in01	mapflag	nobranch
 payon_in02	mapflag	nobranch
@@ -81,10 +81,10 @@ que_sign01	mapflag	nobranch
 ein_in01	mapflag	nobranch
 airport	mapflag	nobranch
 airplane	mapflag	nobranch
-//airplane_01	mapflag	nobranch	 // [DESABILITADO]
+airplane_01	mapflag	nobranch
 yuno_pre	mapflag	nobranch
-//y_airport	mapflag	nobranch	 // [DESABILITADO]
-//lhz_airport	mapflag	nobranch	 // [DESABILITADO]
+y_airport	mapflag	nobranch
+lhz_airport	mapflag	nobranch
 lhz_in01	mapflag	nobranch
 lhz_in02	mapflag	nobranch
 lhz_in03	mapflag	nobranch
@@ -100,7 +100,7 @@ ra_temsky	mapflag	nobranch
 ve_in	mapflag	nobranch
 ve_in02	mapflag	nobranch
 thor_camp	mapflag	nobranch
-//cave	mapflag	nobranch	 // [DESABILITADO]
+cave	mapflag	nobranch
 
 // Job Quests ==================
 job_sword1	mapflag	nobranch
@@ -194,11 +194,11 @@ guild_vs5	mapflag	nobranch
 
 // Arenas ======================
 arena_room	mapflag	nobranch
-//force_1-1	mapflag	nobranch	 // [DESABILITADO]
-//force_1-2	mapflag	nobranch	 // [DESABILITADO]
-//force_1-3	mapflag	nobranch	 // [DESABILITADO]
-//ordeal_1-1	mapflag	nobranch	 // [DESABILITADO]
-//ordeal_1-2	mapflag	nobranch	 // [DESABILITADO]
+force_1-1	mapflag	nobranch
+force_1-2	mapflag	nobranch
+force_1-3	mapflag	nobranch
+ordeal_1-1	mapflag	nobranch
+ordeal_1-2	mapflag	nobranch
 //ordeal_1-3	mapflag	nobranch
 //ordeal_2-1	mapflag	nobranch	 // [DESABILITADO]
 //ordeal_2-2	mapflag	nobranch	 // [DESABILITADO]
@@ -207,7 +207,7 @@ arena_room	mapflag	nobranch
 //ordeal_3-2	mapflag	nobranch	 // [DESABILITADO]
 //ordeal_3-3	mapflag	nobranch
 pvp_2vs2	mapflag	nobranch
-//pvp_c_room	mapflag	nobranch	 // [DESABILITADO]
+pvp_c_room	mapflag	nobranch
 quiz_00	mapflag	nobranch
 quiz_01	mapflag	nobranch
 sec_in01	mapflag	nobranch
@@ -227,8 +227,8 @@ prt_are01	mapflag	nobranch
 //wizard_3-1	mapflag	nobranch
 
 // PvP Arenas ==================
-//pvp_y_room	mapflag	nobranch	 // [DESABILITADO]
-//pvp_n_room	mapflag	nobranch	 // [DESABILITADO]
+pvp_y_room	mapflag	nobranch
+pvp_n_room	mapflag	nobranch
 
 // Main City maps ==============
 alberta	mapflag	nobranch

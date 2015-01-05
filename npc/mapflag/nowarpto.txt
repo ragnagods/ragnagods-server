@@ -57,7 +57,7 @@ ama_test	mapflag	nowarpto
 gon_test	mapflag	nowarpto
 que_rachel	mapflag	nowarpto
 //que_san04	mapflag	nowarpto	 // [DESABILITADO]
-//cave	mapflag	nowarpto	 // [DESABILITADO]
+cave	mapflag	nowarpto
 //Aldebaran Turbo Track ========
 //turbo_n_1	mapflag	nowarpto	 // [DESABILITADO]
 //turbo_n_4	mapflag	nowarpto	 // [DESABILITADO]
@@ -67,13 +67,13 @@ que_rachel	mapflag	nowarpto
 //turbo_e_8	mapflag	nowarpto	 // [DESABILITADO]
 //turbo_e_16	mapflag	nowarpto	 // [DESABILITADO]
 // Izlude Battle Arena =========
-//force_1-1	mapflag	nowarpto	 // [DESABILITADO]
+force_1-1	mapflag	nowarpto
 //force_2-1	mapflag	nowarpto	 // [DESABILITADO]
 //force_3-1	mapflag	nowarpto	 // [DESABILITADO]
 //force_4-1	mapflag	nowarpto	 // [DESABILITADO]
 //force_5-1	mapflag	nowarpto	 // [DESABILITADO]
-//force_1-2	mapflag	nowarpto	 // [DESABILITADO]
-//force_1-3	mapflag	nowarpto	 // [DESABILITADO]
+force_1-2	mapflag	nowarpto
+force_1-3	mapflag	nowarpto
 prt_are_in	mapflag	nowarpto
 
 //Monster Races ================

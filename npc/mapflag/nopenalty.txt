@@ -52,26 +52,26 @@ new_zone01	mapflag	nopenalty
 new_zone02	mapflag	nopenalty
 new_zone03	mapflag	nopenalty
 new_zone04	mapflag	nopenalty
-//new_1-1	mapflag	nopenalty	 // [DESABILITADO]
-//new_1-2	mapflag	nopenalty	 // [DESABILITADO]
-//new_1-3	mapflag	nopenalty	 // [DESABILITADO]
-//new_1-4	mapflag	nopenalty	 // [DESABILITADO]
-//new_2-1	mapflag	nopenalty	 // [DESABILITADO]
-//new_2-2	mapflag	nopenalty	 // [DESABILITADO]
-//new_2-3	mapflag	nopenalty	 // [DESABILITADO]
-//new_2-4	mapflag	nopenalty	 // [DESABILITADO]
-//new_3-1	mapflag	nopenalty	 // [DESABILITADO]
-//new_3-2	mapflag	nopenalty	 // [DESABILITADO]
-//new_3-3	mapflag	nopenalty	 // [DESABILITADO]
-//new_3-4	mapflag	nopenalty	 // [DESABILITADO]
-//new_4-1	mapflag	nopenalty	 // [DESABILITADO]
-//new_4-2	mapflag	nopenalty	 // [DESABILITADO]
-//new_4-3	mapflag	nopenalty	 // [DESABILITADO]
-//new_4-4	mapflag	nopenalty	 // [DESABILITADO]
-//new_5-1	mapflag	nopenalty	 // [DESABILITADO]
-//new_5-2	mapflag	nopenalty	 // [DESABILITADO]
-//new_5-3	mapflag	nopenalty	 // [DESABILITADO]
-//new_5-4	mapflag	nopenalty	 // [DESABILITADO]
+new_1-1	mapflag	nopenalty
+new_1-2	mapflag	nopenalty
+new_1-3	mapflag	nopenalty
+new_1-4	mapflag	nopenalty
+new_2-1	mapflag	nopenalty
+new_2-2	mapflag	nopenalty
+new_2-3	mapflag	nopenalty
+new_2-4	mapflag	nopenalty
+new_3-1	mapflag	nopenalty
+new_3-2	mapflag	nopenalty
+new_3-3	mapflag	nopenalty
+new_3-4	mapflag	nopenalty
+new_4-1	mapflag	nopenalty
+new_4-2	mapflag	nopenalty
+new_4-3	mapflag	nopenalty
+new_4-4	mapflag	nopenalty
+new_5-1	mapflag	nopenalty
+new_5-2	mapflag	nopenalty
+new_5-3	mapflag	nopenalty
+new_5-4	mapflag	nopenalty
 nif_in	mapflag	nopenalty
 pay_arche	mapflag	nopenalty
 payon	mapflag	nopenalty
@@ -95,8 +95,8 @@ yuno_in03	mapflag	nopenalty
 yuno_in04	mapflag	nopenalty
 yuno_in05	mapflag	nopenalty
 yuno_pre	mapflag	nopenalty
-//y_airport	mapflag	nopenalty	 // [DESABILITADO]
-//lhz_airport	mapflag	nopenalty	 // [DESABILITADO]
+y_airport	mapflag	nopenalty
+lhz_airport	mapflag	nopenalty
 lhz_in01	mapflag	nopenalty
 lhz_in02	mapflag	nopenalty
 lhz_in03	mapflag	nopenalty
@@ -223,9 +223,9 @@ sec_in01	mapflag	nopenalty
 sec_in02	mapflag	nopenalty
 
 // Izlude Arena ========================
-//force_1-1	mapflag	nopenalty	 // [DESABILITADO]
-//force_1-2	mapflag	nopenalty	 // [DESABILITADO]
-//force_1-3	mapflag	nopenalty	 // [DESABILITADO]
+force_1-1	mapflag	nopenalty
+force_1-2	mapflag	nopenalty
+force_1-3	mapflag	nopenalty
 //force_2-1	mapflag	nopenalty	 // [DESABILITADO]
 //force_2-2	mapflag	nopenalty	 // [DESABILITADO]
 //force_2-3	mapflag	nopenalty	 // [DESABILITADO]
@@ -234,46 +234,46 @@ sec_in02	mapflag	nopenalty
 //force_3-3	mapflag	nopenalty	 // [DESABILITADO]
 
 // PvP Arenas =========================
-//pvp_y_1-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_1-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_1-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_1-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_1-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_2-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_2-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_2-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_2-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_2-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_3-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_3-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_3-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_3-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_3-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_4-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_4-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_4-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_4-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_4-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_5-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_5-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_5-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_5-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_5-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_6-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_6-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_6-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_6-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_6-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_7-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_7-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_7-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_7-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_7-5	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_8-1	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_8-2	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_8-3	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_8-4	mapflag	nopenalty	 // [DESABILITADO]
-//pvp_y_8-5	mapflag	nopenalty	 // [DESABILITADO]
+pvp_y_1-1	mapflag	nopenalty
+pvp_y_1-2	mapflag	nopenalty
+pvp_y_1-3	mapflag	nopenalty
+pvp_y_1-4	mapflag	nopenalty
+pvp_y_1-5	mapflag	nopenalty
+pvp_y_2-1	mapflag	nopenalty
+pvp_y_2-2	mapflag	nopenalty
+pvp_y_2-3	mapflag	nopenalty
+pvp_y_2-4	mapflag	nopenalty
+pvp_y_2-5	mapflag	nopenalty
+pvp_y_3-1	mapflag	nopenalty
+pvp_y_3-2	mapflag	nopenalty
+pvp_y_3-3	mapflag	nopenalty
+pvp_y_3-4	mapflag	nopenalty
+pvp_y_3-5	mapflag	nopenalty
+pvp_y_4-1	mapflag	nopenalty
+pvp_y_4-2	mapflag	nopenalty
+pvp_y_4-3	mapflag	nopenalty
+pvp_y_4-4	mapflag	nopenalty
+pvp_y_4-5	mapflag	nopenalty
+pvp_y_5-1	mapflag	nopenalty
+pvp_y_5-2	mapflag	nopenalty
+pvp_y_5-3	mapflag	nopenalty
+pvp_y_5-4	mapflag	nopenalty
+pvp_y_5-5	mapflag	nopenalty
+pvp_y_6-1	mapflag	nopenalty
+pvp_y_6-2	mapflag	nopenalty
+pvp_y_6-3	mapflag	nopenalty
+pvp_y_6-4	mapflag	nopenalty
+pvp_y_6-5	mapflag	nopenalty
+pvp_y_7-1	mapflag	nopenalty
+pvp_y_7-2	mapflag	nopenalty
+pvp_y_7-3	mapflag	nopenalty
+pvp_y_7-4	mapflag	nopenalty
+pvp_y_7-5	mapflag	nopenalty
+pvp_y_8-1	mapflag	nopenalty
+pvp_y_8-2	mapflag	nopenalty
+pvp_y_8-3	mapflag	nopenalty
+pvp_y_8-4	mapflag	nopenalty
+pvp_y_8-5	mapflag	nopenalty
 pvp_2vs2	mapflag	nopenalty
 
 //Aldebaran Turbo Track

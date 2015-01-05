@@ -73,7 +73,7 @@ izlude	mapflag	pvp	off
 hugel	mapflag	pvp	off
 hu_in01	mapflag	pvp	off
 lighthalzen	mapflag	pvp	off
-//lhz_airport	mapflag	pvp	off	 // [DESABILITADO]
+lhz_airport	mapflag	pvp	off
 lhz_in01	mapflag	pvp	off
 lhz_in02	mapflag	pvp	off
 lhz_in03	mapflag	pvp	off
@@ -109,7 +109,7 @@ yuno_in04	mapflag	pvp	off
 yuno_in05	mapflag	pvp	off
 yuno	mapflag	pvp	off
 yuno_pre	mapflag	pvp	off
-//y_airport	mapflag	pvp	off	 // [DESABILITADO]
+y_airport	mapflag	pvp	off
 rachel	mapflag	pvp	off
 ra_in01	mapflag	pvp	off
 ra_temin	mapflag	pvp	off
@@ -122,7 +122,7 @@ ayothaya	mapflag	pvp	off
 veins	mapflag	pvp	off
 ve_in	mapflag	pvp	off
 ve_in02	mapflag	pvp	off
-//cave	mapflag	pvp	off	 // [DESABILITADO]
+cave	mapflag	pvp	off
 
 //e_tower	mapflag	pvp	off	 // [DESABILITADO]
 
