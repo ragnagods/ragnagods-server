@@ -136,7 +136,7 @@ pay_arche,85,30,2	script	Guia#2pay	4_M_PAY_SOLDIER,{
 			while(.@loop2) {
 				if (.@wait_button_chk == 0) .@wait_button_chk = 1;
 				else next;
-				switch(select("^FF0000Guilda dos Arqueiros.^000000","Loja de Ferramentas.","Caverna de Payon.","Cancelar.)) {
+				switch(select("^FF0000Guilda dos Arqueiros.^000000","Loja de Ferramentas.","Caverna de Payon.","Cancelar.")) {
 				case 1:
 					mes "[Guia de Payon]";
 					mes "A Guilda dos Arqueiros é o lugar onde Aprendizes podem tornar-se Arqueiros. Ela se encontra ao Norte da Vila dos Arqueiros. Para chegar na Vila dos Arqueiros, saia da cidade pela direção nordeste.";

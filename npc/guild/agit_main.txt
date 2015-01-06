@@ -139,7 +139,7 @@ OnAgitBreak:
 	if( agitcheck() )
 		donpcevent "Agit#"+strnpcinfo(2)+"::OnStartArena";
 	sleep 7000;
-	announce "O Clã [" + getguildName(.@GID) + "] conquistou o Castelo [" + getcastlename(strnpcinfo(2)) + "] .",bc_all|bc_woe,"0xFFFF00",FW_BOLD,12,0,40;
+	announce "O Clã [" + getguildname(.@GID) + "] conquistou o Castelo [" + getcastlename(strnpcinfo(2)) + "] .",bc_all|bc_woe,"0xFFFF00",FW_BOLD,12,0,40;
 	end;
 
 // War of Emperium has ended.
@@ -161,7 +161,7 @@ OnGuildBreak:
 	setcastledata strnpcinfo(2),1,0;
 	// Wait before refreshing guild information.
 	sleep 7000;
-	announce "O Castelo [" + GetCastleName(strnpcinfo(2)) + "] foi abandonado.",0;
+	announce "O Castelo [" + getcastlename(strnpcinfo(2)) + "] foi abandonado.",0;
 	donpcevent strnpcinfo(0)+"::OnRecvCastle";
 	end;
 
@@ -342,7 +342,7 @@ OnRecvCastle:
 	cutin "kafra_01",2;
 	if (getcharid(2) == .@GID) {
 		mes "[Kafra Recepcionista]";
-		mes "Bem-vindo membro do Clã ^ff0000" + GetGuildName(.@GID) + "^000000 .";
+		mes "Bem-vindo membro do Clã ^ff0000" + getguildname(.@GID) + "^000000 .";
 		mes "Nós sempre estamos ao seu lado.";
 		next;
 		switch (select("Usar Armazém:Usar Teleporte:Alugar um Carrinho:Cancelar")) {
@@ -430,7 +430,7 @@ OnRecvCastle:
 		}
 	}
 	mes "[Kafra Recepcionista]";
-	mes "Eu fui contratada pelo Clã ^ff0000"+GetGuildName(.@GID)+"^000000 e só posso atendê-los. Desculpe-me pelo inconveniente.";
+	mes "Eu fui contratada pelo Clã ^ff0000"+getguildname(.@GID)+"^000000 e só posso atendê-los. Desculpe-me pelo inconveniente.";
 	close2;
 	cutin "",255;
 	end;
@@ -585,7 +585,7 @@ OnRecvCastle:
 	}
 	if (getguildmaster(.@GID) != strcharinfo(0)) {
 		mes "[Administrador do Castelo]";
-		mes "Por mais que você me ameaçe, eu somente atenderei às ordens de Vossa Alteza, ^ff0000"+GetGuildMaster(.@GID)+"^000000! Guardiões! Tirem este vagabundo daqui!";
+		mes "Por mais que você me ameaçe, eu somente atenderei às ordens de Vossa Alteza, ^ff0000"+getguildmaster(.@GID)+"^000000! Guardiões! Tirem este vagabundo daqui!";
 		close;
 	}
 	mes "[Administrador do Castelo]";
@@ -597,13 +597,13 @@ OnRecvCastle:
 		mes "[Administrador do Castelo]";
 		mes "Eu lhe direi sobre as condições do Castelo.";
 		mes " ";
-		mes "   ^0000ffAtualmente, o Tesouro do Castelo é de "+GetCastleData(strnpcinfo(2),2)+".";
-		if (GetCastleData(strnpcinfo(2),4)) {
-			mes "  -Você investiu "+GetCastleData(strnpcinfo(2),4)+" no último dia.";
+		mes "   ^0000ffAtualmente, o Tesouro do Castelo é de "+getcastledata(strnpcinfo(2),2)+".";
+		if (getcastledata(strnpcinfo(2),4)) {
+			mes "  -Você investiu "+getcastledata(strnpcinfo(2),4)+" no último dia.";
 		}
-		mes "  A Defesa do Castelo é de "+GetCastleData(strnpcinfo(2),3)+".^000000";
-		if (GetCastleData(strnpcinfo(2),5)) {
-			mes "   ^0000ff-Você investiu "+GetCastleData(strnpcinfo(2),5)+" no último dia.^000000";
+		mes "  A Defesa do Castelo é de "+getcastledata(strnpcinfo(2),3)+".^000000";
+		if (getcastledata(strnpcinfo(2),5)) {
+			mes "   ^0000ff-Você investiu "+getcastledata(strnpcinfo(2),5)+" no último dia.^000000";
 		}
 		mes " ";
 		mes "É um prazer servi-lo.";
@@ -643,12 +643,12 @@ OnRecvCastle:
 			mes "^ff0000Vossa Alteza, você não precisa mais investir no Tesouro, ele está  em sua capacidade máxima, 100%.^000000";
 			close;
 		}
-		if (GetCastleData(strnpcinfo(2),4) >= 2) {
+		if (getcastledata(strnpcinfo(2),4) >= 2) {
 			mes " ";
 			mes "^ff0000Vossa Alteza, você já investiu duas vezes hoje. Eu sei que você, com eu, está ansioso pelo crescimento de nosso Clã..";
 			close;
 		}
-		if (GetCastleData(strnpcinfo(2),4) == 0) {
+		if (getcastledata(strnpcinfo(2),4) == 0) {
 			mes " ";
 			mes "Você precisa investir ^ff0000"+.@eco_invest+"^000000 zeny no tesouro. Você tem certeza que quer investir??";
 		}
@@ -709,12 +709,12 @@ OnRecvCastle:
 			mes "^ff0000Vossa Alteza, você não precisa mais investir na Defesa, ela está  em sua capacidade máxima, 100%.^000000";
 			close;
 		}
-		if (GetCastleData(strnpcinfo(2),5) >= 2) {
+		if (getcastledata(strnpcinfo(2),5) >= 2) {
 			mes " ";
 			mes "^ff0000Vossa Alteza, você já investiu duas vezes hoje. Eu sei que você, com eu, está ansioso pelo crescimento de nosso Clã..";
 			close;
 		}
-		if (GetCastleData(strnpcinfo(2),5) == 0) {
+		if (getcastledata(strnpcinfo(2),5) == 0) {
 			mes " ";
 			mes "Você precisa investir ^ff0000" + .@def_invest + "^000000 zeny no tesouro. Você tem certeza que quer investir??";
 		}
@@ -768,7 +768,7 @@ OnRecvCastle:
 				mes "Vossa Alteza, o seu Clã não possui o conhecimento necessário para comandar um Guardião. Seu Clã deve possuir a habilidade ^ff0000Comandar Guardião^000000.";
 				close;
 			}
-			if (GetCastleData(strnpcinfo(2),.@GDnum) == 1) {
+			if (getcastledata(strnpcinfo(2),.@GDnum) == 1) {
 				mes "[Administrador do Castelo]";
 				mes "Vossa Alteza, este Guardião já está posicionado.";
 				close;

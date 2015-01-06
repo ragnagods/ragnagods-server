@@ -68,7 +68,7 @@ OnTimer100000:
 	mapannounce "airplane","Estamos nos dirigindo a Lighthalzen.",bc_map,"0x70dbdb";
 	end;
 OnTimer130000:
-	mapannounce "airplane","Chegaremos em breve em Lighthalzen.,bc_map,"0x70dbdb";
+	mapannounce "airplane","Chegaremos em breve em Lighthalzen.",bc_map,"0x70dbdb";
 	end;
 OnTimer140000:
 	$@airplanelocation = 2;
@@ -253,7 +253,7 @@ airplane,71,91,7	script	Homem de Umbala#ein_p	4_M_UMSOLDIER,{
 	close;
 }
 
-airplane,250,58,2	script	Assist. do Aeroplano#airplane	1_F_02,{
+airplane,250,58,2	script	Assist. do Aeroplano#air	1_F_02,{
 	// Hugel quest addition
 	if (hg_ma1 == 3) {
 		mes "[Assistente do Aeroplano]";
@@ -435,7 +435,7 @@ airplane,221,158,2	script	Piloto#airplane	4_M_EIN_SOLDIER,{
 	}
 }
 
-airplane,50,66,5	script	Mercador de Maçãs#airplane	4_M_04,{
+airplane,50,66,5	script	Mercador de Maçãs#air	4_M_04,{
 	mes "[Meltz]";
 	mes "Bem-vindo à Loja";
 	mes "do Meltz onde você pode";

@@ -175,7 +175,7 @@ payon,210,110,1	script	Arqueiro Alterado#pay	2_M_PHARMACIST,{
 	close;
 }
 
-payon,132,235,3	script	Pesquisador de Monstros#02	4W_M_02,{
+payon,132,235,3	script	Pesquisador de Monstros	4W_M_02,{
 	mes "[Pesquisador de Monstros Vuicokk]";
 	mes "Prazer em conhecê-lo. Eu sou Vuicokk, pesquisador da Organização de Pesquisa de Monstros de Rune Midgard. ";
 	mes "Você tem alguma pergunta sobre os monstros de Rune Midgard? ";
@@ -442,7 +442,7 @@ payon_in01,47,59,2	script	Arqueiro Wolt#payon	4_M_ORIENT01,{
 		mes " Hmm... às vezes, precisamos de um descanso. ";
 		mes "Quer ouvir uma canção história? Nas minhas férias, eu coloquei fogo na minha casa Hahaha!!! Eu cai no sono quando estava esquentando a água do banho. Hahaha! ";
 		next;
-		switch(select(Não está certo dar uma descansada? ","Mas e o meu treinamento? "," ...Ah, chega, até mais. ")) {
+		switch(select("Não está certo dar uma descansada?","Mas e o meu treinamento?","...Ah, chega, até mais.")) {
 		case 1:
 			mes "[Arqueiro Wolt]";
 			mes "Hmm... não está certo se não praticar e só ficar enrolando por aí. Provavelmente, o nosso chefe ficará bravo com você. ..Bem, pode ser que você fique tão tonto quanto um arqueiro que conheço.... Hahaha. Muhahaha. ";

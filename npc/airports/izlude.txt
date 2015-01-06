@@ -8,7 +8,7 @@
 //= Official NPCs.
 //============================================================
 
-izlude,206,55,3	script	Assist. do Aeroporto#izlude	4_F_01,{
+izlude,206,55,3	script	Assist. do Aeroporto#iz	4_F_01,{
 	mes "[Assistente do Aeroporto]";
 	mes "Bem-vindo ao aeroporto!";
 	mes "Aqui você pode ir para Juno ou Rachel!";

@@ -356,7 +356,7 @@ jawaii,112,173,7	script	Atendente#villroom	4_F_04,{
 	close;
 }
 
-jawaii,214,168,5	script	Agente Matrimonial#Jawaii	1_F_LIBRARYGIRL,{
+jawaii,214,168,5	script	Agente Matrimonial#s2	1_F_LIBRARYGIRL,{
 	mes "[Maria Casamenteira]";
 	mes "Não existe lugar para a sua lua-de-mel como Jawaii.";
 	mes "Já que você está aqui,";
@@ -713,7 +713,7 @@ OnTouch:
 	end;
 }
 	
-jawaii_in,15,104,0	script	Atendente de Área#jawaii	1_F_PUBGIRL,{
+jawaii_in,15,104,0	script	Atendente de Área#j	1_F_PUBGIRL,{
 	if (checkweight(1201,1) == 0) {
 		mes "- Parado aí!! -";
 		mes "- Você está carregando tantas coisas, -";
@@ -1298,7 +1298,7 @@ prt_in,170,14,0	script	Cliente#Bachewcca	4_M_ORIENT02,{
 
 // Izlude
 //============================================================
-izlude,171,185,3	scrtip	Agente Matrimonial#izl	1_F_LIBRARYGIRL,{
+izlude,171,185,3	script	Agente Matrimonial#izl	1_F_LIBRARYGIRL,{
 	mes "[Maria Casamenteira]";
 	mes "Recém-casados e já casados...";
 	mes "Vocês podem ir para a área de recreação imaginária a qualquer momento.";

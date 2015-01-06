@@ -54,10 +54,10 @@
 	mes " ";
 	mes "1. Conforme o Pacto do Reino de Rune Midgard";
 	mes "e a o Feudo do Bosque Celestial,";
-	mes "declaro que este castelo pertence ao Clã ^ff0000" + GetGuildName(.@GID) + "^000000 .";
+	mes "declaro que este castelo pertence ao Clã ^ff0000" + getguildname(.@GID) + "^000000 .";
 	mes " ";
-	mes "2. O Líder do Clã  ^ff0000" + GetGuildName(.@GID) + "^000000 se chama";
-	mes "^ff0000" + GetGuildMaster(.@GID) + "^000000.";
+	mes "2. O Líder do Clã  ^ff0000" + getguildname(.@GID) + "^000000 se chama";
+	mes "^ff0000" + getguildmaster(.@GID) + "^000000.";
 	mes "Se alguém se opõe a este decreto";
 	mes "desembainhe sua espada para fazer valer sua vontade.";
 	close;

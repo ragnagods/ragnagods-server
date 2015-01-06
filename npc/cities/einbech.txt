@@ -154,7 +154,7 @@ einbech,105,218,5	script	Gushenmu#ein	4_M_EINMINER,{
 	close;
 }
 
-einbech,39,215,5	script	Funcionário da Estação#ein-3	4_M_EIN_SOLDIER,{
+einbech,39,215,5	script	Func. da Estação#bech	4_M_EIN_SOLDIER,{
 	mes "[Funcionário]";
 	mes "Bem-vindo à Estação de Trem. O bilhete para embarcar no trem que vai de Einbroch a Einbech é de 200 Zenys. Gostaria de utilizar os serviços?";
 	next;
@@ -273,42 +273,42 @@ einbech,130,253,1	script	Ekuri#ein	4_M_EINMINER,{
 	close;
 }
 
-einbech,135,250,5	script	Quadro de Avisos#einbech11	4_BULLETIN_BOARD2,{
+einbech,135,250,5	script	Quadro de Avisos#11ein	4_BULLETIN_BOARD2,{
 	mes " ";
 	mes "    Entrada do Calabouço da Mina    ";
 	mes " ";
 	close;
 }
 
-einbech,90,214,5	script	Quadro de Avisos#einbech22	4_BULLETIN_BOARD2,{
+einbech,90,214,5	script	Quadro de Avisos#22ein	4_BULLETIN_BOARD2,{
 	mes " ";
 	mes "    Estação de Trem    ";
 	mes " ";
 	close;
 }
 
-einbech,158,189,4	script	Quadro de Avisos#einbech33	4_BULLETIN_BOARD2,{
+einbech,158,189,4	script	Quadro de Avisos#33ein	4_BULLETIN_BOARD2,{
 	mes " ";
 	mes "    Estação de Trem de Carga    ";
 	mes " ";
 	close;
 }
 
-einbech,180,136,5	script	Quadro de Avisos#einbech44	4_BULLETIN_BOARD2,{
+einbech,180,136,5	script	Quadro de Avisos#44ein	4_BULLETIN_BOARD2,{
 	mes " ";
 	mes "    Loja de Utilidades    ";
 	mes " ";
 	close;
 }
 
-einbech,133,114,5	script	Quadro de Avisos#einbech55	4_BULLETIN_BOARD2,{
+einbech,133,114,5	script	Quadro de Avisos#55ein	4_BULLETIN_BOARD2,{
 	mes " ";
 	mes "    Taverna    ";
 	mes " ";
 	close;
 }
 
-einbech,77,105,5	script	Quadro de Avisos#einbech01	4_BULLETIN_BOARD2,{
+einbech,77,105,5	script	Quadro de Avisos#01ein	4_BULLETIN_BOARD2,{
 	mes "Bem-vindo a Einbech,";
 	next;
 	mes "Leste – Taverna, Loja de Utilidades";
@@ -316,7 +316,7 @@ einbech,77,105,5	script	Quadro de Avisos#einbech01	4_BULLETIN_BOARD2,{
 	close;
 }
 
-einbech,181,127,5	script	Quadro de Avisos#einbech03	4_BULLETIN_BOARD2,{
+einbech,181,127,5	script	Quadro de Avisos#03ein	4_BULLETIN_BOARD2,{
 	mes "Nordeste - Estação de Trem";
 	mes "Sul - Taverna";
 	mes "Norte – Loja de Utilidades, Calabouço da Mina";

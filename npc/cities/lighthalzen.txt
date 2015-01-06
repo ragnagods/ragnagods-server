@@ -625,7 +625,7 @@ lighthalzen,147,105,3	script	Laqumet#li_02	4_M_LGTMAN,{
 	close;
 }
 
-lhz_in02,242,172,1	script	Funcionário do Hotel#zen3	4_M_LGTGUARD,{
+lhz_in02,242,172,1	script	Funcionário do Hotel#c	4_M_LGTGUARD,{
 	mes "[Funcionário do Hotel]";
 	mes "Se tiver qualquer";
 	mes "tipo de problema,";
@@ -678,7 +678,7 @@ lhz_in02,201,181,7	script	Safuat Farmy	4_M_YURI,{
 	close;
 }
 
-lhz_in02,251,212,3	script	Funcionário do Hotel#zen2	4_M_LGTGUARD,{
+lhz_in02,251,212,3	script	Funcionário do Hotel#b	4_M_LGTGUARD,{
 	mes "[Funcionário do Hotel]";
 	mes "Essa é a suíte de casal.";
 	mes "Uma pessoa sozinha também pode";
@@ -737,7 +737,7 @@ lhz_in02,221,276,1	script	Hermes#zen8	4_M_LGTMAN,{
 	close;
 }
 
-lhz_in02,238,275,5	script	Funcionário do Hotel#zen1	4_M_LGTMAN,{
+lhz_in02,238,275,5	script	Funcionário do Hotel#a	4_M_LGTMAN,{
 	mes "[Funcionário do Hotel]";
 	mes "'Hospitalidade com um sorriso";
 	mes "e total devoção a seu";
@@ -748,7 +748,7 @@ lhz_in02,238,275,5	script	Funcionário do Hotel#zen1	4_M_LGTMAN,{
 	close;
 }
 
-lhz_in02,247,275,1	script	Funcionário do Hotel#zen4	4_M_LGTGUARD,{
+lhz_in02,247,275,1	script	Funcionário do Hotel#d	4_M_LGTGUARD,{
 	mes "[Funcionário do Hotel]";
 	if (Sex == 1)
 	{
@@ -1305,7 +1305,7 @@ lighthalzen,330,276,3	script	Monja#light	1_F_PRIEST,{
 	close;
 }
 
-lighthalzen,337,296,3	script	Funcionário da Rekenber#1	4_M_LGTGUARD2,{
+lighthalzen,337,296,3	script	Func. da Rekenber#1lhz	4_M_LGTGUARD2,{
 	if (hg_tre > 54) {
 		mes "[Funcionário da Rekenber]";
 		mes "Atualmente não temos nenhuma vaga em aberto.";
@@ -1632,7 +1632,7 @@ lhz_in03,186,29,7	script	Freguês Melancólico#12	4_M_LGTMAN,{
 	close;
 }
 
-lhz_in02,265,273,6	script	Funcionário do Lab.#lhzx	4_LGTSCIENCE,{
+lhz_in02,265,273,6	script	Funcionário do Lab.#x	4_LGTSCIENCE,{
 	mes "[Assam]";
 	mes "Este é um lugar agradável";
 	mes "e geralmente bastante tranqüilo.";
@@ -1966,7 +1966,7 @@ OnTouch:
 	end;
 }
 
-lhz_in01,25,141,4	script	Guarda de Regenschirm#jaja	4_M_LGTGUARD,{
+lhz_in01,25,141,4	script	Guarda de Regenschirm#j	4_M_LGTGUARD,{
 
 	mes "[Guarda de Regenschirm]";
 	if(isequipped(2241) && isequipped(2243)){
@@ -2463,7 +2463,7 @@ lhz_in03,124,117,1	script	Faxineira Brenda#li	1_F_MERCHANT_02,{
 	close;
 }
 
-lighthalzen,159,222,1	script	Funcionário da Rekenber#q	4_M_MANAGER,{
+lighthalzen,159,222,1	script	Funcionário da Rekenber::Benatuth	4_M_MANAGER,{
 	mes "[Benatuth]";
 	mes "Aqui em baixo, o técnico";
 	mes "da manutenção está quase terminando";
@@ -3022,7 +3022,7 @@ OnTouch:
 	end;
 }
 
-lhz_in02,36,274,4	script	Func. Eventos Incríveis#z	4_F_ZONDAGIRL,{
+lhz_in02,36,274,4	script	F. Eventos Incríveis#z	4_F_ZONDAGIRL,{
 	mes "[Saera]";
 	mes "Seja bem-vindo à ";
 	mes "sede temporária da";
@@ -3134,7 +3134,7 @@ lhz_in02,110,286,5	script	Gerente Evts. Incríveis	4_M_YURI,{
 	close;
 }
 
-lhz_in02,36,284,0	script	Func. Eventos Incríveis#x	4_M_ZONDAMAN,{
+lhz_in02,36,284,0	script	F. Eventos Incríveis#x	4_M_ZONDAMAN,{
 	mes "[Cesuno]";
 	mes "Eca! Eu estou completamente ";
 	mes "atolado com todo esse";
@@ -3164,7 +3164,7 @@ lhz_in02,19,274,2	script	Maintenance Guy#lhz	4_M_REPAIR,{
 }
 */
 
-lighthalzen,337,296,3	script	Funcionário da Rekenber#j	4_M_LGTGUARD,{
+lighthalzen,337,296,3	script	Func. da Rekenber#2lhz	4_M_LGTGUARD,{
 	if (hg_tre > 54) {
 		mes "[Funcionário da Rekenber]";
 		mes "Atualmente não temos nenhuma vaga em aberto.";

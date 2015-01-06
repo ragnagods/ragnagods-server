@@ -137,8 +137,8 @@ nif_in,156,93,5	script	Ana Arcana#nif	4_F_NFLOSTGIRL,{
 	}
 }
 
-niflheim,350,258,1	script	Espírito Amaldiçoado#nif	4_NFWISP,{
-	killmonster "niflheim","Espírito Amaldiçoado#nif::OnMyMobDead";
+niflheim,350,258,1	script	Espírito Amaldiçoado#n	4_NFWISP,{
+	killmonster "niflheim","Espírito Amaldiçoado#n::OnMyMobDead";
 	mes "[Eshu Bruce]";
 	mes "Eu posso sentir uma maldição terrível em você... ";
 	mes "Saia daqui! Não se aproxime";
@@ -147,7 +147,7 @@ niflheim,350,258,1	script	Espírito Amaldiçoado#nif	4_NFWISP,{
 	next;
 	switch(select("Pegar o primeiro livro:Pegar o segundo livro:Pegar o terceiro livro:Ir embora")) {
 	case 1:
-		monster "niflheim",349,259,"Rideword",1478,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
+		monster "niflheim",349,259,"Rideword",1478,1,"Espírito Amaldiçoado#n::OnMyMobDead";
 		mes "[Eshu Bruce]";
 		mes "Como ousa tocar em meus livros?";
 		mes "MWAHAHAHAH! Morra com sua maldição!! ";
@@ -226,13 +226,13 @@ niflheim,350,258,1	script	Espírito Amaldiçoado#nif	4_NFWISP,{
 				close;
 			}
 		}
-		monster "niflheim",345,259,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
-		monster "niflheim",347,261,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
-		monster "niflheim",344,253,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
-		monster "niflheim",346,251,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
-		monster "niflheim",349,249,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
-		monster "niflheim",350,260,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
-		monster "niflheim",353,256,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#nif::OnMyMobDead";
+		monster "niflheim",345,259,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
+		monster "niflheim",347,261,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
+		monster "niflheim",344,253,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
+		monster "niflheim",346,251,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
+		monster "niflheim",349,249,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
+		monster "niflheim",350,260,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
+		monster "niflheim",353,256,"Orc Esqueleto",1462,1,"Espírito Amaldiçoado#n::OnMyMobDead";
 		mes "[Eshu Bruce]";
 		mes "Hahahahaha!!! O feitiço está errado!";
 		mes "Eu avisei! Morra de uma vez aqui!";

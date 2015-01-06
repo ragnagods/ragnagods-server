@@ -554,7 +554,7 @@ yuno,263,320,4	script	Soldado de Juno#7juno	8W_SOLDIER,{
 	close;
 }
 
-yuno,142,183,5	script	Repres. do Dirigível#ein	4W_SAILOR,{
+yuno,142,183,5	script	Repres. do Dirigível#ei	4W_SAILOR,{
 	mes "[Representante do Dirigível]";
 	mes "Olá, estou aqui para informá-lo";
 	mes "sobre o Dirigível de Juno, o qual";

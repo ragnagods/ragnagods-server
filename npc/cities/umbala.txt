@@ -556,7 +556,7 @@ umbala,194,104,4	script	Menina Wootan#2	4_M_UMKID,{
 	}
 }
 
-umbala,193,208,6	script Jovem Wootan#3	4_M_UMSOLDIER,{
+umbala,193,208,6	script	Jovem Wootan#3	4_M_UMSOLDIER,{
 	if (event_umbala >= 3) {
 		mes "[Faitan]";
 		mes "Eu pulei de bungee jumping quando era mais jovem.";

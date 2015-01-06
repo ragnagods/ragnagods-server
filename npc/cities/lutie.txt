@@ -1082,7 +1082,7 @@ xmas,146,136,4	script	Palhaço de Natal	4_M_PIERROT,{
 	}
 }
 
-xmas,206,168,4	script	Crianças	4_M_KID1,{
+xmas,206,168,4	script	Crianças#1lutie	4_M_KID1,{
 	if (xmas_npc == 9) {
 		mes "[Charu Charu]";
 		mes "O que? Boneco de Neve?";
@@ -1135,7 +1135,7 @@ xmas,206,168,4	script	Crianças	4_M_KID1,{
 	}
 }
 
-xmas,208,168,4	script	Crianças	4_F_KID2,{
+xmas,208,168,4	script	Crianças#2lutie	4_F_KID2,{
 	if (xmas_npc == 9 || xmas_npc == 10) {
 		switch(xmas_npc) {
 		case 9:

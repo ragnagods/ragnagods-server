@@ -25,7 +25,7 @@ comodo,176,350,4	script	Guia Turístico#2cmd	8_F_GIRL,{
 	callfunc "F_CmdGuide","Aborígene Nukoko";
 }
 
-comodo,37,219,4	script	Guia Turístico#2cmd	8_F_GIRL,{
+comodo,37,219,4	script	Guia Turístico#3cmd	8_F_GIRL,{
 	callfunc "F_CmdGuide","Aborígine Papaya";
 }
 

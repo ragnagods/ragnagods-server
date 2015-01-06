@@ -730,7 +730,7 @@ aldebaran,180,46,4	script	Oriental#alde	4_M_ORIENT01,{
 	close;
 }
 
-aldebaran,212,122,4	script	Cidadão de Al de Baran#b	4W_M_01,{
+aldebaran,212,122,4	script	Cidadão#1adb	4W_M_01,{
 	mes "[Sandro]";
 	mes "Bem vindo! Esta é Al de Baran!";
 	mes "Nós, cidadãos de Al de Baran agradecemos sua visita!";
@@ -831,7 +831,7 @@ aldebaran,143,136,4	script	Guardião do Relógio#A	4_M_ORIENT02,{
 
 // Inside Al De Baran
 //============================================================
-aldeba_in,232,241,4	script	Cidadão de Al de Baran#a	1_M_02,{
+aldeba_in,232,241,4	script	Cidadão#adb2	1_M_02,{
 	mes "[RS125]";
 	mes "Meu nome pode não parecer humano e minha voz pode parecer monótona";
 	mes "mas, não tenha medo! Eu sou uma pessoa de bom coração!";

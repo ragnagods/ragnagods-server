@@ -163,7 +163,7 @@ function	script	EinTower	{
 	}
 }
 
-einbroch,232,272,3	script	Funcionário da Estação#ein1::TremEin	4_M_EIN_SOLDIER,{
+einbroch,232,272,3	script	Func. da Estação#x::TremEin	4_M_EIN_SOLDIER,{
 	mes "[Funcionário]";
 	mes "Bem-vindo à ";
 	mes "Estação de Trem.";
@@ -208,7 +208,7 @@ einbroch,232,272,3	script	Funcionário da Estação#ein1::TremEin	4_M_EIN_SOLDIE
 	}
 }
 	
-einbroch,252,301,3	duplicate(TremEin)	Funcionário da Estação#ein2	4_M_EIN_SOLDIER
+einbroch,252,301,3	duplicate(TremEin)	Func. da Estação#z	4_M_EIN_SOLDIER
 
 einbroch,259,326,3	script	Passageira#ein_1	4_F_EINOLD,{
 	mes "[Passageira]";
@@ -265,7 +265,7 @@ einbroch,228,121,5	script	Pequeno Toby#ein-1	4_M_EINMAN,{
 	close;
 }
 
-einbroch,40,116,1	script	Engenheiro do Aeroplano#ein-1	4_M_EINMAN,{
+einbroch,40,116,1	script	Engenheiro do Aeroplano	4_M_EINMAN,{
 	mes "[Engenheiro de Aeroplanos]";
 	mes "Ei, você aí!";
 	mes "Pare de mexer na minha preciosa 'Burielle'! Eu costumo colocá-la para descansar depois dos ajustes!";
@@ -576,7 +576,7 @@ ein_in01,43,252,3	script	Canphotii#ein01	4_M_EIN_SOLDIER,{
 	close;
 }
 
-ein_in01,206,224,3	script	Funcionário do Hotel#ein02	4_M_EINMAN,{
+ein_in01,206,224,3	script	Funcionário do Hotel#e	4_M_EINMAN,{
 	mes "[Funcionário]";
 	mes "Bom dia.";
 	mes "Este é um hotel-modelo de Einbech, aonde todos os funcionários estão tentando fazer com que os clientes se sintam em casa, seguindo sempre três políticas: limpeza, gentileza e felicidade.";

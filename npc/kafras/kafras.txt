@@ -24,7 +24,7 @@
 
 // Aldebaran
 //============================================================
-aldeba_in,96,181,4	script	Funcionária Kafra#aldeof	4_F_KAFRA5,{
+aldeba_in,96,181,4	script	Funcionária Kafra#alde	4_F_KAFRA5,{
 	cutin "kafra_05",2;
 	mes "[Kafra Leilah]";
 	mes "Este é o Escritório Central da Corporação Kafra.";

@@ -85,7 +85,7 @@ y_airport,145,63,5	script	Aux. Vôos Domésticos	4_F_02,{
 	close;
 }
 
-y_airport,140,63,5	script	Aux. Vôos Internacionais	4_F_02,{
+y_airport,140,63,5	script	Aux Vôos Internacionais	4_F_02,{
 	mes "[Aux. Vôos Internacionais]";
 	mes "Gostaria de embarcar no Aeroplano que vai para Juno, Izlude e Rachel?";
 	mes "Se sim, deixe-me te indicar a área de embarque.";

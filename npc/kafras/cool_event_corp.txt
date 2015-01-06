@@ -31,7 +31,7 @@ function	script	F_ZondaStaff	{
 	mes "Nossa equipe está sempre trabalhando";
 	mes "para corresponder às suas expectativas";
 	mes "referentes à qualidade do serviço prestado. Então";
-	mes "como posso ajudá-l"+(sex == 1?"o":"a")+" hoje?";
+	mes "como posso ajudá-l"+(Sex == 1?"o":"a")+" hoje?";
 	next;
 	switch (getarg(0)) {
 		// Save, Storage, Pushcart, Storage Password (Hugel)
