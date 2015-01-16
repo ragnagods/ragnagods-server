@@ -1,5 +1,5 @@
 //===== Hercules Script ======================================
-//= Louyang City NPCs
+//= Louyang City NPCs // [TRADUZIDO]
 //===== By: ==================================================
 //= Vidar (1.0)
 //= Mass Zero (1.1)
@@ -19,301 +19,345 @@
 
 // Louyang Transportation
 //============================================================
--	script	::Girl_louyang	-1,{
-	mes "[Girl]";
-	mes "La la la la~";
-	mes "I feel so good today~";
-	mes "I'm in the mood to go";
-	mes "on a picnic somewhere~";
-	mes "La la la la~";
+alberta,245,45,3	script	Kunyang#0lou	4_F_CHNDRESS1,{
+	mes "[Kunyang]";
+	mes "Nianiang, Nianiang, Nianiang, Nianiang.";
+	mes "Eu não estou contente hoje, Niang. Eu quero ir";
+	mes "fazer um piquenique em algum lugar Niang.";
 	next;
-	switch(select("About Louyang.:Go to Louyang.:Cancel.")) {
+	switch(select("Sobre Louyang...","Ir para Louyang.","Cancelar.")) {
 	case 1:
-		mes "[Girl]";
-		mes "Oh, are you";
-		mes "interested in Louyang?";
-		mes "It's a nice place to";
-		mes "visit for travelers.";
+		mes "[Kunyang]";
+		mes "Niang, quer ir para Louyang??";
+		mes "Lugar muito agradável, tem tantas";
+		mes "coisas místicas da antiga Niang.";
+		mes "A beleza da cidade e do campo, Niang.";
 		next;
-		mes "[Girl]";
-		mes "Louyang has a long history";
-		mes "with stories of ancient magic and warriors. It's also rumored that many evil beasts roam the";
-		mes "Louyang area.";
+		mes "[Kunyang]";
+		mes "Especialmente, muitos monstros misteriosos";
+		mes "que fazem coisas misteriosas, Niang.";
+		mes "O mais importante é que você pode conseguir um item raro,";
+		mes "A Panacéia está lá, Niang.";
 		next;
-		mes "[Girl]";
-		mes "You can find cure-all medicines, mysterious occurrences, and";
-		mes "martial artists all in one place!";
+		mes "[Kunyang]";
+		mes "Há muitas pessoas que estudam o boxe chinês.";
+		mes "Kunyang estudou bastante todas as manhãs, né, Niang?";
+		mes "Kunyang é ";
+		mes "muito muito forte, Niang!";
 		next;
-		mes "[Girl]";
-		mes "I used to train in the martial arts every morning back when I was in Louyang. I might not look like it, but I'm pretty strong!";
-		next;
-		mes "[Girl]";
-		mes "If you want to visit";
-		mes "Louyang, feel free to";
-		mes "tell me. Just give me";
-		mes "some Zeny and we'll go~";
+		mes "[Kunyang]";
+		mes "Se quer ir, me avise Niang...";
+		mes "Vou cobrar só poucos zenys de você ";
+		mes "e mandá-lo para Louyang...";
+		mes "Hahaha, você acredita nisso, Niang?!!";
 		close;
 	case 2:
-		mes "[Girl]";
-		mes "I'll guide you to";
-		mes "Louyang right away.";
-		mes "For my service, I am";
-		mes "accepting 10,000 Zeny.";
+		mes "[Kunyang]";
+		mes "Saindo agora, Niang.";
+		mes "Eu embarco você por apenas 10.000 zenys, Niang.";
+		mes "Divirta-se e volte mais tarde, Niang.";
 		next;
-		mes "[Girl]";
-		mes "So, are you ready?";
+		mes "[Kunyang]";
+		mes "Bem, podemos ir agora, Niang?";
 		next;
-		if (select("Yes!:No.") == 1) {
+		if (select("Vamos lá!","Cancelar.") == 1) {
 			if (Zeny > 9999) {
-				mes "[Girl]";
-				mes "Okay~";
-				mes "Ready!";
-				mes "Have fun!";
+				mes "[Kunyang]";
+				mes "Yap!! Haaat!!!";
+				mes "Saindo agora, Niang!!!";
 				close2;
 				Zeny -= 10000;
 				warp "lou_fild01",190,101;
 				end;
 			}
-			mes "[Girl]";
-			mes "...";
-			mes "You don't seem";
-			mes "to have 10,000 Zeny...";
-			mes "Go get some money first!";
+			mes "[Kunyang]";
+			mes "Sem dinheiro, Niang!";
+			mes "Eu preciso de 10.000 zenys.";
+			mes "Sem dinheiro, sem viagem, Niang!";
 			close;
 		}
-		mes "[Girl]";
-		mes "Oh...";
-		mes "It's so disappointing";
-		mes "to hear you say that.";
-		mes "Well, have a good day!";
+		mes "[Kunyang]";
+		mes "Hung! Que decepção, Niang. Volte para a sua casa";
+		mes "e faça uma almôndega de você mesmo, Niang!!";
 		close;
 	case 3:
-		mes "[Girl]";
-		mes "Oh...";
-		mes "Have a good day!";
+		mes "[Kunyang]";
+		mes "Hung! Que decepção, Niang. Volte para a sua casa";
+		mes "e faça uma almôndega de você mesmo, Niang!!";
 		close;
 	}
 }
 
-lou_fild01,190,100,7	script	Girl#1lou	4_F_CHNDRESS1,{
-	mes "[Girl]";
-	mes "Would you";
-	mes "like to go back";
-	mes "to Alberta?";
+lou_fild01,190,100,7	script	Kunyang#1lou	4_F_CHNDRESS1,{
+	mes "[Kunyang]";
+	mes "Quer voltar, Niang?";
 	next;
-	if (select("Go back to Alberta.:Cancel.") == 1) {
-		mes "[Girl]";
-		mes "I hope to";
-		mes "see you again!";
-		mes "Bye bye!";
+	if (select("Voltar para Alberta","Cancelar.") == 1) {
+		mes "[Kunyang]";
+		mes "Volte sempre, Niang! ";
+		mes "Partindo!!!";
 		close2;
-		if (checkre(0))
-			warp "alberta",236,40;
-		else
+		//if (checkre(0))
+		//	warp "alberta",236,40;
+		//else
 			warp "alberta",235,45;
 		end;
 	}
-	mes "[Girl]";
-	mes "If you like this";
-	mes "area, why don't you";
-	mes "stay and enjoy the";
-	mes "the food and the sights!";
-	next;
-	if (Sex) {
-		mes "[Girl]";
-		mes "And by sights...";
-		mes "I mean girls!";
-		mes "Tee hee~";
+	mes "[Kunyang]";
+	mes "Se está tudo bem, pode morar aqui, Niang.";
+	if (Sex == 1)
+	{
+		mes "Boa comida e belas garotas, Niang.";
 	}
-	else {
-		mes "[Girl]";
-		mes "And the boys here";
-		mes "aren't bad looking~";
+	else
+	{
+		mes "Boa comida e belos garotos, Niang.";
 	}
 	close;
 }
 
 // Generic Louyang NPCs
 //============================================================
-louyang,297,167,2	script	Muscular Woman#lou	4_F_CHNDRESS1,{
+louyang,297,167,2	script	Mulher de Personalidade	4_F_CHNDRESS1,{
 	if (!Sex) {
-		mes "[Zhi Ching Li]";
-		mes "All the members of the Maiden Palace, including myself and our master, are all female.";
-		next;
-		mes "[Zhi Ching Li]";
-		mes "Recently we've had a hard time recruiting new members, so I came here to check if there's any woman who wishes to join us.";
+		mes "[Jichungre]";
+		mes "O nosso 'Palácio das Senhoras' é composto por todas as nossas senhoras,";
+		mes "incluindo a dona do nosso palácio.";
+		mes "Mas, hoje em dia nem todas as pessoas";
+		mes "têm participado destes encontros.";
+		mes "Estamos em declínio.";
 		emotion e_dots;
+		next;
+		mes "[Jichungre]";
+		mes "Então eu vim";
+		mes "tomar conta daquelas ";
+		mes "que querem fazer parte do palácio.";
 		close;
 	}
-	mes "[Zhi Ching Li]";
-	mes "...";
-	next;
-	mes "[Zhi Ching Li]";
-	mes "...";
-	mes "......";
-	next;
-	mes "[Zhi Ching Li]";
-	mes "Please leave me";
-	mes "alone, I'm busy.";
+	mes "[Jichungre]";
+	mes "..........";
+	mes "Eu estou muito ocupada agora. Por favor, não me perturbe!";
+	mes "..........";
 	close;
 }
 
-louyang,274,136,4	script	Powerful-looking guy#lou	4_M_CHN8GUEK,{
-	mes "[Akiira]";
-	mes "I am practicing my 'Claw of Dragon.' I not only need to use the power of my fists, I must also condition myself spiritually.";
+louyang,274,136,4	script	Homem de Personalidade#l	4_M_CHN8GUEK,{
+	mes "[Akira]";
+	mes "'Palgukyongkun' ";
+	mes "tem três sentidos.";
+	mes "Primeiro, o 'Kan', que significa 'simples'.";
+	mes "Segundo, o 'Byen', que significa 'flexível'.";
+	mes "E, terceiro, o 'Bulbyen', que significa 'nunca muda'.";
 	next;
-	mes "[Akiira]";
-	mes "Every martial art requires";
-	mes "spiritual training since the";
-	mes "mind controls the body.";
-	mes "If you've trained yourself spiritually, you can easily";
-	mes "use any part of the body!";
+	mes "[Akira]";
+	mes "'Yek' diz que tudo muda e transforma alguma coisa em correta.";
+	mes "'YekKan' é o mesmo que 'Yek'.";
+	mes "'ByenYek' significa o princípio do correto.";
+	mes "Ele é flexível";
+	mes "e se vincula a cada um dos outros.";
+	mes "'SangSok'(pertence a cada),";
 	next;
-	mes "[Akiira]";
-	mes "If you are considering";
-	mes "studying the martial arts, you should first attain knowledge before jumping into the";
-	mes "physical training.";
-	next;
-	mes "[Akiira]";
-	mes "Learn about the martial arts";
-	mes "and meditate on life's truths. First, you must find peace of mind before you can hope to master the mind and body.";
+	mes "[Akira]";
+	mes "'Bulek' significa a lei correta do Céu e da Terra.";
+	mes "Isso significa que";
+	mes "não pode mudar.";
+	mes "'Yek' é a lei da mudança.";
+	mes "Tudo na terra continua a mudar";
+	mes "e nunca pára de mudar.";
+	mes "'SangSangBulSik' significa ";
+	mes "que estamos no meio da mudança.";
 	close;
 }
 
-louyang,276,136,4	script	Fist master#lou	4_M_CHN8GUEK,{
-	mes "[Zhiang Xiau Ji]";
-	mes "Finally...";
-	mes "I have mastered";
-	mes "the 'Claw of Dragon!'";
+louyang,276,136,4	script	Pessoa Realizada#lou	4_M_CHN8GUEK,{
+	mes "[JungKukJi]";
+	mes "Embora estejamos no meio da mudança,";
+	mes "há uma lei que diz:";
+	mes "Nunca Mudar";
+	mes "'ByenYek' apóia a mudança ";
+	mes "Entretanto, devíamos saber que há uma lei que apóia";
+	mes "a Nunca Mudar.";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "Although there are eight basic steps, I had to learn the history of this art, and meditate, focusing on my spiritual improvement,";
-	mes "for three years.";
+	mes "[JungKukJi]";
+	mes "'ByenYek' é 'Negociação'";
+	mes "'BulYek' é 'Lei'";
+	mes "'GanYek' é 'Método'";
+	mes "'BokHee' abre o Céu e a Terra,";
+	mes "por isso deve ser complexo.";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "After that, my master finally started to give me the physical training so I could use the eight steps of the Claw of Dragon. I've devoted myself to this art for thirty years.";
+	mes "[JungKukJi]";
+	mes "'TaeKuk' é o primeiro , 'YingYang' é o segundo.";
+	mes "Nada pode estar fora de 'YingYang'.";
+	mes "Ele transforma 'Kan' em 'Bun'.";
+	mes "Continuamente,";
+	mes "há o 'Echi', que significa a coisa correta.";
 	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "I'm very proud that I've";
-	mes "mastered this art ten years earlier than I expected. Now, I need to study this form and improve it by correcting its weak points and enhancing its strengths.";
-	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "I guess that would take me about ten years. But I'm not disheartened by that at all.";
-	next;
-	mes "[Zhiang Xiau Ji]";
-	mes "When you're learning a martial art, you can't rush yourself and learn everything in a short period of time. It's impossible! Plus, that isn't the essence of art...";
+	mes "[JungKukJi]";
+	mes "'Bun' se torna 'Hwa' através de 'Kan'.";
+	mes "Há um caminho e uma raiz.";
+	mes "'PalKukYongKwon' está seguindo";
+	mes "seus princípios básicos.";
 	close;
 }
 
-louyang,276,133,0	script	Trainee#1lou::LouTrainee	4_M_CHN8GUEK,{
-	mes "[Trainee]";
-	mes "Yeeeyap~!";
-	mes "Taaaaaah~~!!";
-	mes "Hooo~.";
+louyang,276,133,0	script	Discípulo#1lou::LouTrainee	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "HAaaa!";
+	mes "Taaah!!";
+	mes "Hup.";
 	close;
 }
 
-louyang,276,131,0	script	Trainee#2lou	4_M_CHN8GUEK,{
-	mes "[Trainee]";
-	mes "Tah Tah Tah!";
-	mes "Taaaaaah~~!!";
-	mes "Schwooooooo~";
+louyang,276,131,0	script	Discípulo#2lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "Hup!";
+	mes "Taah!!";
+	mes "Heihei...";
 	close;
 }
 
-louyang,276,129,0	script	Trainee#3lou	4_M_CHN8GUEK,{
-	mes "[Trainee]";
-	mes "Si!";
-	mes "Ayah!!";
+louyang,276,129,0	script	Discípulo#3lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "CHAaa";
+	mes "Iapp!!";
+	mes ".......";
 	close;
 }
 
-louyang,274,133,0	script	Trainee#4lou	4_M_CHN8GUEK,{
-	mes "[Trainee]";
-	mes "Dergh!";
-	mes "Dergh!";
-	mes "Schwa--!";
+louyang,274,133,0	script	Discípulo#4lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "Hup!";
+	mes "HupHup!!";
+	mes "Hup...";
 	close;
 }
 
-louyang,274,131,0	script	Trainee#5lou	4_M_CHN8GUEK,{
-	mes "[Trainee]";
-	mes "Yah Yah Yah!";
-	mes "Taaaaaah~~!!";
-	mes "Wataaaaaaaah!";
+louyang,274,131,0	script	Discípulo#5lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "Uaa Cha";
+	mes "Ahh Cho!!";
+	mes "Uadaaa....";
 	close;
 }
 
-louyang,274,129,0	script	Trainee#6lou	4_M_CHN8GUEK,{
-	mes "[Trainee]";
-	mes "Yeeeyap~!";
-	mes "Taaaaaah~~!!";
-	mes "Hooo~";
+louyang,274,129,0	script	Discípulo#6lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "de Yang";
+	mes "...!";
+	mes "........!!";
 	close;
 }
 
-louyang,278,133,0	duplicate(LouTrainee)	Trainee#7lou	4_M_CHN8GUEK
-louyang,278,131,0	duplicate(LouTrainee)	Trainee#8lou	4_M_CHN8GUEK
-louyang,278,129,0	duplicate(LouTrainee)	Trainee#9lou	4_M_CHN8GUEK
-louyang,272,133,0	duplicate(LouTrainee)	Trainee#10lou	4_M_CHN8GUEK
-louyang,272,131,0	duplicate(LouTrainee)	Trainee#11lou	4_M_CHN8GUEK
-louyang,272,129,0	duplicate(LouTrainee)	Trainee#12lou	4_M_CHN8GUEK
+louyang,278,133,0	script	Discípulo#7lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "ChungChu!!";
+	mes "Hup!!";
+	mes "Hhhhup";
+	close;
+}
+
+louyang,278,131,0	script	Discípulo#8lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "GuaKua!";
+	mes ".....";
+	mes "Hup.";
+	close;
+}
+
+louyang,278,129,0	script	Discípulo#9lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "HuakTa JungJu!";
+	mes "Taas!!";
+	mes "Iap!!";
+	close;
+}
+
+louyang,272,133,0	script	Discípulo#10lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "Ai..";
+	mes "Ia";
+	mes "Ai meu Deus......";
+	close;
+}
+
+louyang,272,131,0	script	Discípulo#11lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "Soga...";
+	mes "Ummm!!";
+	mes "Doois!!";
+	close;
+}
+
+louyang,272,129,0	script	Discípulo#12lou	4_M_CHN8GUEK,{
+	mes "[Discípulo]";
+	mes "Sim!";
+	mes "Tão cansado!!";
+	mes "Ô Deus....";
+	close;
+}
 
 // Louyang Viewing Tower
 //============================================================
-lou_in01,25,23,5	script	Friendly Looking Lady#lo	4_F_CHNDRESS3,{
-	mes "[Hong Miao]";
-	mes "Welcome.";
+lou_in01,25,23,5	script	Moça Gentil#lo	4_F_CHNDRESS3,{
+	mes "[Hong-Myo]";
+	mes "Olá!!";
+	mes "Este é o elevador que te levará ao topo da torre panorâmica.";
+	mes "Se você pagar a taxa,";
+	mes "nós o levaremos para o último andar de forma segura.";
+	mes "Esperamos que você use o elevador sempre.";
+	mes "Você gostaria de utilizá-lo agora?";
 	next;
-	mes "[Hong Miao]";
-	mes "This is an elevator which leads";
-	mes "to the Observation Tower. We are providing you a safe and fast transfer service for an affordable fee. Would you like to use this service?";
-	next;
-	switch(select("Information.:Yes.:Maybe next time.")) {
+	switch(select("Ouvir mais sobre a torre panorâmica.","Sim.","Cancelar.")) {
 	case 1:
-		mes "[Hong Miao]";
-		mes "After many suggestions and proposals were sent to the Louyang tourism office, the Observation Tower was built so tourists can enjoy the sights.";
+		mes "[Hong-Myo]";
+		mes "A torre panorâmica é uma de";
+		mes "nossas atrações turísticas. Ouvimos falar de muitos turistas";
+		mes "que não conseguiam aproveitar a visão panorâmica do Castelo do Dragão,";
+		mes "por isso tivemos a idéia de contruir";
+		mes "a torre panorâmica.";
 		next;
-		mes "[Hong Miao]";
-		mes "Due to the geographical";
-		mes "features of Louyang, it's difficult to enjoy the breath taking view that our land has to offer.";
-		next;
-		mes "[Hong Miao]";
-		mes "You can come up to the tower by taking the elevator right here. We are providing this quick and safe transfer service for 500 zeny per person.";
+		mes "[Hong-Myo]";
+		mes "O elevador já está pronto";
+		mes "para te levar em segurança.";
+		mes "A taxa de embarque é de 500 zenys.";
+		mes "Queremos garantir a sua segurança. Obrigada.";
 		close;
 	case 2:
 		if (Zeny < 500) {
-			mes "[Hong Miao]";
-			mes "I'm sorry, but you do not have enough zeny. I hope you'll come back later to enjoy the Observation Tower. Have a good day.";
+			mes "[Hong-Myo]";
+			mes "Desculpe,";
+			mes "mas você não tem dinheiro suficiente.";
+			mes "Por favor, volte assim que for possível.";
+			mes "Obrigada.";
 			close;
 		}
-		mes "[Hong Miao]";
-		mes "Thank you for your patronage.";
-		mes "We are trying to provide you with the best of service. Please";
-		mes "come again.";
+		mes "[Hong-Myo]";
+		mes "Obrigada por usar o nosso elevador.";
+		mes "Nós queremos o melhor";
+		mes "para a sua segurança.";
+		mes "Obrigada.";
+		mes "Espero ver você de novo.";
 		next;
 		Zeny -= 500;
 		warp "lou_in01",17,19;
 		end;
 	case 3:
-		mes "[Hong Miao]";
-		mes "Please come";
-		mes "back later.";
-		mes "Have a good day.";
+		mes "[Hong-Myo]";
+		mes "Por favor, volte assim que for possível";
+		mes "Tchau! Tenha um bom dia.";
 		close;
 	}
 }
 
-louyang,84,254,0	script	Exit#lou	HIDDEN_NPC,{
-	mes "^3355FFThere is some sort";
-	mes "of descent apparatus.";
-	mes "Would you like to use it?^000000";
+louyang,84,254,0	script	Saída#lou	HIDDEN_NPC,{
+	mes "Existe um meio de descer.";
+	mes "Você quer descer?";
 	next;
-	if (select("Yes.:No.") == 1) {
+	if (select("Sim, vamos lá.","Não, por enquanto.") == 1) {
 		if (rand(1,100) == 34) {
 			percentheal -99,0;
 			warp "louyang",86,269;
-			mapannounce "louyang",""+strnpcinfo(0)+" : Oh God, I'm faaaaaaaaaaaalling~~!!!!",bc_map;
+			mapannounce "louyang",""+strcharinfo(0)+" : Ahhhhhhhhhhhhhh!!!!",bc_map;
 		}
 		else {
 			warp "lou_in01",10,18;

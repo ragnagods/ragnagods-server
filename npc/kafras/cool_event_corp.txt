@@ -1,5 +1,5 @@
 //===== Hercules Script ======================================
-//= Cool Event Corp. Staff
+//= Cool Event Corp. Staff // [TRADUZIDO]
 //===== By: ==================================================
 //= Gepard
 //===== Current Version: =====================================
@@ -26,85 +26,85 @@
 //==========================================================================
 function	script	F_ZondaStaff	{
 	cutin "zonda_01",2;
-	mes "[Cool Event Corp. Staff]";
-	mes "Welcome to Cool Event Corp.";
-	mes "Our staff is always working";
-	mes "to surpass your expactations";
-	mes "for quality service. So how";
-	mes "may I assist you today?";
+	mes "[Funcionário Corp. Eventos Incríveis]";
+	mes "Bem-vindo à Corporação Eventos Incríveis.";
+	mes "Nossa equipe está sempre trabalhando";
+	mes "para corresponder às suas expectativas";
+	mes "referentes à qualidade do serviço prestado. Então";
+	mes "como posso ajudá-l"+(Sex == 1?"o":"a")+" hoje?";
 	next;
 	switch (getarg(0)) {
 		// Save, Storage, Pushcart, Storage Password (Hugel)
-		case 0: setarray @Z_Menu0$, "Save", "Use Storage", "Rent a Pushcart", "Storage Password Service", "Cancel"; break;
+		case 0: setarray @Z_Menu0$, "Salvar", "Usar Armazém", "Alugar um Carrinho", "Serviço de Senha no Armazém", "Cancelar"; break;
 		// Save, Storage, Pushcart, Storage Password (Veins, Rachel)
 		default:
-		case 1: setarray @Z_Menu0$, "Save", "Use Storage", "Teleport Service", "Rent a Pushcart", "Storage Password Service", "Cancel"; break;
+		case 1: setarray @Z_Menu0$, "Salvar", "Usar Armazém", "Usar Teleporte", "Alugar um Carrinho", "Serviço de Senha no Armazém", "Cancelar"; break;
 	}
 	.@menu$ = "";
 	for (.@i = 0; .@i < getarraysize(@Z_Menu0$); ++.@i)
 		.@menu$ += @Z_Menu0$[.@i] + ":";
 	.@j = select (.@menu$) - 1;
 	if (@Z_Menu0$[.@j] == "Save") {
-		mes "[Cool Event Corp. Staff]";
-		mes "Your Respawn Point";
-		mes "has been saved here";
+		mes "[Funcionário Corp. Eventos Incríveis]";
+		mes "Seu Ponto de Retorno";
+		mes "foi salvo aqui";
 		mes getarg(1);
-		mes "Thank you for using the";
-		mes "Cool Event Corp. service~";
+		mes "Obrigado por utilizar";
+		mes "os Serviços da Corporação Eventos Incríveis!";
 		return;
-	} else if (@Z_Menu0$[.@j] == "Use Storage") {
-		callfunc "F_KafStor",0,40,6,"[Cool Event Corp. Staff]";
+	} else if (@Z_Menu0$[.@j] == "Usar Armazém") {
+		callfunc "F_KafStor",0,40,6,"[Funcionário Corp. Eventos Incríveis]";
 		close2;
 		cutin "", 255;
 		end;
-	} else if (@Z_Menu0$[.@j] == "Teleport Service") {
-		callfunc "F_KafTele", 6, "[Cool Event Corp. Staff]";
+	} else if (@Z_Menu0$[.@j] == "Usar Teleporte") {
+		callfunc "F_KafTele", 6, "[Funcionário Corp. Eventos Incríveis]";
 		close2;
 		cutin "", 255;
 		end;
-	} else if (@Z_Menu0$[.@j] == "Rent a Pushcart") {
-		callfunc "F_KafCart", 6, 800, "[Cool Event Corp. Staff]";
+	} else if (@Z_Menu0$[.@j] == "Alugar um Carrinho") {
+		callfunc "F_KafCart", 6, 800, "[Funcionário Corp. Eventos Incríveis]";
 		close2;
 		cutin "", 255;
 		end;
-	} else if (@Z_Menu0$[.@j] == "Storage Password Service") {
-		callfunc("F_SetKafCode","[Cool Event Corp. Staff]","Cool Event Corp.");
+	} else if (@Z_Menu0$[.@j] == "Serviço de Senha no Armazém") {
+		callfunc("F_SetKafCode","[Funcionário Corp. Eventos Incríveis]","Corp. Eventos Incríveis");
 		//the function closes msg and removes cutins
 	} else {
-		mes "[Cool Event Corp. Staff]";
-		mes "Cool Event Corp. is always";
-		mes "striving to provide the best";
-		mes "services for our customers.";
-		mes "Help us become the best by";
-		mes "providing us with your opinions";
-		mes "and honest feedback. Thank you.";
+		mes "[Funcionário Corp. Eventos Incríveis]";
+		mes "A Corporação Eventos Incríveis está sempre";
+		mes "buscando fornecer os melhores";
+		mes "serviços aos nossos clientes.";
+		mes "Ajude-nos a nos tornarmos os melhores,";
+		mes "nos dando suas sinceras opiniões";
+		mes "e sugestões. Obrigado.";
 		close2;
 	}
 	cutin "", 255;
 	end;
 }
 
-hugel,88,168,4	script	Cool Event Corp. Staff::CoolEventCorpStaffHugel	4_M_ZONDAMAN,{
+hugel,88,168,4	script	Corp. Eventos Incríveis::CoolEventCorpStaffHugel	4_M_ZONDAMAN,{
 	callfunc "F_KafSet";
-	callfunc "F_ZondaStaff", 0, "in the village of Hugel.";
+	callfunc "F_ZondaStaff", 0, "na vila de Hugel.";
 	savepoint "hugel",96,155;
 	close2;
 	cutin "", 255;
 	end;
 }
 
-rachel,109,138,5	script	Cool Event Corp. Staff::CoolEventCorpStaffRachel	4_M_ZONDAMAN,{
+rachel,109,138,5	script	Corp. Eventos Incríveis::CoolEventCorpStaffRachel	4_M_ZONDAMAN,{
 	callfunc "F_KafSet";
-	callfunc "F_ZondaStaff", 1, "in the town of Rachel.";
+	callfunc "F_ZondaStaff", 1, "na cidade de Rachel.";
 	savepoint "rachel",113,137;
 	close2;
 	cutin "", 255;
 	end;
 }
 
-veins,208,128,5	script	Cool Event Corp. Staff::CoolEventCorpStaffVeins	4_M_ZONDAMAN,{
+veins,208,128,5	script	Corp. Eventos Incríveis::CoolEventCorpStaffVeins	4_M_ZONDAMAN,{
 	callfunc "F_KafSet";
-	callfunc "F_ZondaStaff", 1, "in the town of Veins.";
+	callfunc "F_ZondaStaff", 1, "na cidade de Veins.";
 	savepoint "veins",204,103;
 	close2;
 	cutin "", 255;

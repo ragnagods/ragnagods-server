@@ -11,7 +11,7 @@
 //============================================================
 
 // Bossnia =====
-bossnia_01	mapflag	notomb
-bossnia_02	mapflag	notomb
-bossnia_03	mapflag	notomb
-bossnia_04	mapflag	notomb
+//bossnia_01	mapflag	notomb	 // [DESABILITADO]
+//bossnia_02	mapflag	notomb	 // [DESABILITADO]
+//bossnia_03	mapflag	notomb	 // [DESABILITADO]
+//bossnia_04	mapflag	notomb	 // [DESABILITADO]

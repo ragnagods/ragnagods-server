@@ -37,8 +37,8 @@ lou_in01	mapflag	nobranch
 lou_in02	mapflag	nobranch
 moc_castle	mapflag	nobranch
 morocc_in	mapflag	nobranch
-moscovia	mapflag	nobranch
-mosk_in	mapflag	nobranch
+//moscovia	mapflag	nobranch	 // [DESABILITADO]
+//mosk_in	mapflag	nobranch	 // [DESABILITADO]
 new_zone01	mapflag	nobranch
 new_zone02	mapflag	nobranch
 new_zone03	mapflag	nobranch
@@ -139,7 +139,7 @@ kh_vila	mapflag	nobranch
 kh_kiehl01	mapflag	nobranch
 kh_kiehl02	mapflag	nobranch
 que_rachel	mapflag	nobranch
-que_san04	mapflag	nobranch
+//que_san04	mapflag	nobranch	 // [DESABILITADO]
 que_thor	mapflag	nobranch
 
 // Guild Castles ===============
@@ -167,23 +167,23 @@ prtg_cas03	mapflag	nobranch
 prtg_cas04	mapflag	nobranch
 prtg_cas05	mapflag	nobranch
 //schg_gld
-schg_cas01	mapflag	nobranch
-schg_cas02	mapflag	nobranch
-schg_cas03	mapflag	nobranch
-schg_cas04	mapflag	nobranch
-schg_cas05	mapflag	nobranch
+//schg_cas01	mapflag	nobranch	 // [DESABILITADO]
+//schg_cas02	mapflag	nobranch	 // [DESABILITADO]
+//schg_cas03	mapflag	nobranch	 // [DESABILITADO]
+//schg_cas04	mapflag	nobranch	 // [DESABILITADO]
+//schg_cas05	mapflag	nobranch	 // [DESABILITADO]
 //aru_gld
-arug_cas01	mapflag	nobranch
-arug_cas02	mapflag	nobranch
-arug_cas03	mapflag	nobranch
-arug_cas04	mapflag	nobranch
-arug_cas05	mapflag	nobranch
+//arug_cas01	mapflag	nobranch	 // [DESABILITADO]
+//arug_cas02	mapflag	nobranch	 // [DESABILITADO]
+//arug_cas03	mapflag	nobranch	 // [DESABILITADO]
+//arug_cas04	mapflag	nobranch	 // [DESABILITADO]
+//arug_cas05	mapflag	nobranch	 // [DESABILITADO]
 
 //n_castle	mapflag	nobranch
-nguild_alde	mapflag	nobranch
-nguild_gef	mapflag	nobranch
-nguild_pay	mapflag	nobranch
-nguild_prt	mapflag	nobranch
+//nguild_alde	mapflag	nobranch	 // [DESABILITADO]
+//nguild_gef	mapflag	nobranch	 // [DESABILITADO]
+//nguild_pay	mapflag	nobranch	 // [DESABILITADO]
+//nguild_prt	mapflag	nobranch	 // [DESABILITADO]
 
 // GvG Arenas ==================
 guild_vs1	mapflag	nobranch
@@ -200,11 +200,11 @@ force_1-3	mapflag	nobranch
 ordeal_1-1	mapflag	nobranch
 ordeal_1-2	mapflag	nobranch
 //ordeal_1-3	mapflag	nobranch
-ordeal_2-1	mapflag	nobranch
-ordeal_2-2	mapflag	nobranch
+//ordeal_2-1	mapflag	nobranch	 // [DESABILITADO]
+//ordeal_2-2	mapflag	nobranch	 // [DESABILITADO]
 //ordeal_2-3	mapflag	nobranch
-ordeal_3-1	mapflag	nobranch
-ordeal_3-2	mapflag	nobranch
+//ordeal_3-1	mapflag	nobranch	 // [DESABILITADO]
+//ordeal_3-2	mapflag	nobranch	 // [DESABILITADO]
 //ordeal_3-3	mapflag	nobranch
 pvp_2vs2	mapflag	nobranch
 pvp_c_room	mapflag	nobranch
@@ -258,132 +258,132 @@ veins	mapflag	nobranch
 
 //Aldebaran Turbo Track ========
 turbo_room	mapflag	nobranch
-turbo_n_1	mapflag	nobranch
-turbo_n_4	mapflag	nobranch
-turbo_n_8	mapflag	nobranch
-turbo_n_16	mapflag	nobranch
-turbo_e_4	mapflag	nobranch
-turbo_e_8	mapflag	nobranch
-turbo_e_16	mapflag	nobranch
+//turbo_n_1	mapflag	nobranch	 // [DESABILITADO]
+//turbo_n_4	mapflag	nobranch	 // [DESABILITADO]
+//turbo_n_8	mapflag	nobranch	 // [DESABILITADO]
+//turbo_n_16	mapflag	nobranch	 // [DESABILITADO]
+//turbo_e_4	mapflag	nobranch	 // [DESABILITADO]
+//turbo_e_8	mapflag	nobranch	 // [DESABILITADO]
+//turbo_e_16	mapflag	nobranch	 // [DESABILITADO]
 
 // Monster Races ===============
 p_track01	mapflag	nobranch
-p_track02	mapflag	nobranch
+//p_track02	mapflag	nobranch	 // [DESABILITADO]
 
 // Vision of Okolnir ===========
-que_qsch01	mapflag	nobranch
-que_qsch02	mapflag	nobranch
-que_qsch03	mapflag	nobranch
-que_qsch04	mapflag	nobranch
-que_qsch05	mapflag	nobranch
-que_qaru01	mapflag	nobranch
-que_qaru02	mapflag	nobranch
-que_qaru03	mapflag	nobranch
-que_qaru04	mapflag	nobranch
-que_qaru05	mapflag	nobranch
+//que_qsch01	mapflag	nobranch	 // [DESABILITADO]
+//que_qsch02	mapflag	nobranch	 // [DESABILITADO]
+//que_qsch03	mapflag	nobranch	 // [DESABILITADO]
+//que_qsch04	mapflag	nobranch	 // [DESABILITADO]
+//que_qsch05	mapflag	nobranch	 // [DESABILITADO]
+//que_qaru01	mapflag	nobranch	 // [DESABILITADO]
+//que_qaru02	mapflag	nobranch	 // [DESABILITADO]
+//que_qaru03	mapflag	nobranch	 // [DESABILITADO]
+//que_qaru04	mapflag	nobranch	 // [DESABILITADO]
+//que_qaru05	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode 12 ===========
-1@cata	mapflag	nobranch
-2@cata	mapflag	nobranch
-e_tower	mapflag	nobranch
-1@tower	mapflag	nobranch
-2@tower	mapflag	nobranch
-3@tower	mapflag	nobranch
-4@tower	mapflag	nobranch
-5@tower	mapflag	nobranch
-6@tower	mapflag	nobranch
+//1@cata	mapflag	nobranch	 // [DESABILITADO]
+//2@cata	mapflag	nobranch	 // [DESABILITADO]
+//e_tower	mapflag	nobranch	 // [DESABILITADO]
+//1@tower	mapflag	nobranch	 // [DESABILITADO]
+//2@tower	mapflag	nobranch	 // [DESABILITADO]
+//3@tower	mapflag	nobranch	 // [DESABILITADO]
+//4@tower	mapflag	nobranch	 // [DESABILITADO]
+//5@tower	mapflag	nobranch	 // [DESABILITADO]
+//6@tower	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode 13.1 ===========
-mid_camp	mapflag	nobranch
-mid_campin	mapflag	nobranch
-man_fild01	mapflag	nobranch
-moc_fild22b	mapflag	nobranch
-que_dan01	mapflag	nobranch
-que_dan02	mapflag	nobranch
-schg_que01	mapflag	nobranch
-arug_que01	mapflag	nobranch
-1@orcs	mapflag	nobranch
-2@orcs	mapflag	nobranch
+//mid_camp	mapflag	nobranch	 // [DESABILITADO]
+//mid_campin	mapflag	nobranch	 // [DESABILITADO]
+//man_fild01	mapflag	nobranch	 // [DESABILITADO]
+//moc_fild22b	mapflag	nobranch	 // [DESABILITADO]
+//que_dan01	mapflag	nobranch	 // [DESABILITADO]
+//que_dan02	mapflag	nobranch	 // [DESABILITADO]
+//schg_que01	mapflag	nobranch	 // [DESABILITADO]
+//arug_que01	mapflag	nobranch	 // [DESABILITADO]
+//1@orcs	mapflag	nobranch	 // [DESABILITADO]
+//2@orcs	mapflag	nobranch	 // [DESABILITADO]
 
 // Battle Grounds ==============
-bat_c01	mapflag	nobranch
-bat_c02	mapflag	nobranch
-bat_c03	mapflag	nobranch
-bat_room	mapflag	nobranch
-bat_b01	mapflag	nobranch
-bat_b02	mapflag	nobranch
-bat_a01	mapflag	nobranch
-bat_a02	mapflag	nobranch
+//bat_c01	mapflag	nobranch	 // [DESABILITADO]
+//bat_c02	mapflag	nobranch	 // [DESABILITADO]
+//bat_c03	mapflag	nobranch	 // [DESABILITADO]
+//bat_room	mapflag	nobranch	 // [DESABILITADO]
+//bat_b01	mapflag	nobranch	 // [DESABILITADO]
+//bat_b02	mapflag	nobranch	 // [DESABILITADO]
+//bat_a01	mapflag	nobranch	 // [DESABILITADO]
+//bat_a02	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode 13.2 ===========
-1@nyd	mapflag	nobranch
-2@nyd	mapflag	nobranch
-manuk	mapflag	nobranch
-man_fild02	mapflag	nobranch
-man_in01	mapflag	nobranch
-splendide	mapflag	nobranch
-spl_in01	mapflag	nobranch
-spl_in02	mapflag	nobranch
+//1@nyd	mapflag	nobranch	 // [DESABILITADO]
+//2@nyd	mapflag	nobranch	 // [DESABILITADO]
+//manuk	mapflag	nobranch	 // [DESABILITADO]
+//man_fild02	mapflag	nobranch	 // [DESABILITADO]
+//man_in01	mapflag	nobranch	 // [DESABILITADO]
+//splendide	mapflag	nobranch	 // [DESABILITADO]
+//spl_in01	mapflag	nobranch	 // [DESABILITADO]
+//spl_in02	mapflag	nobranch	 // [DESABILITADO]
 
 // 3rd Class Job Maps & Paradise ===========
-moc_para01	mapflag	nobranch
-job3_arch01	mapflag	nobranch
-job3_arch02	mapflag	nobranch
-job3_arch03	mapflag	nobranch
-job3_guil01	mapflag	nobranch
-job3_guil02	mapflag	nobranch
-job3_guil03	mapflag	nobranch
-job3_rang01	mapflag	nobranch
-job3_rang02	mapflag	nobranch
-job3_rune01	mapflag	nobranch
-job3_rune02	mapflag	nobranch
-job3_rune03	mapflag	nobranch
-job3_war01	mapflag	nobranch
-job3_war02	mapflag	nobranch
-jupe_core2	mapflag	nobranch
+//moc_para01	mapflag	nobranch	 // [DESABILITADO]
+//job3_arch01	mapflag	nobranch	 // [DESABILITADO]
+//job3_arch02	mapflag	nobranch	 // [DESABILITADO]
+//job3_arch03	mapflag	nobranch	 // [DESABILITADO]
+//job3_guil01	mapflag	nobranch	 // [DESABILITADO]
+//job3_guil02	mapflag	nobranch	 // [DESABILITADO]
+//job3_guil03	mapflag	nobranch	 // [DESABILITADO]
+//job3_rang01	mapflag	nobranch	 // [DESABILITADO]
+//job3_rang02	mapflag	nobranch	 // [DESABILITADO]
+//job3_rune01	mapflag	nobranch	 // [DESABILITADO]
+//job3_rune02	mapflag	nobranch	 // [DESABILITADO]
+//job3_rune03	mapflag	nobranch	 // [DESABILITADO]
+//job3_war01	mapflag	nobranch	 // [DESABILITADO]
+//job3_war02	mapflag	nobranch	 // [DESABILITADO]
+//jupe_core2	mapflag	nobranch	 // [DESABILITADO]
 
 // Brasilis ===========
-brasilis	mapflag	nobranch
-bra_in01	mapflag	nobranch
+//brasilis	mapflag	nobranch	 // [DESABILITADO]
+//bra_in01	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode 13.3 ===========
-dicastes01	mapflag	nobranch
-dicastes02	mapflag	nobranch
-dic_in01	mapflag	nobranch
-s_atelier	mapflag	nobranch
+//dicastes01	mapflag	nobranch	 // [DESABILITADO]
+//dicastes02	mapflag	nobranch	 // [DESABILITADO]
+//dic_in01	mapflag	nobranch	 // [DESABILITADO]
+//s_atelier	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode 14.1 & Dewata ===========
-mora	mapflag	nobranch
-1@mist	mapflag	nobranch
-dewata	mapflag	nobranch
-dew_in01	mapflag	nobranch
+//mora	mapflag	nobranch	 // [DESABILITADO]
+//1@mist	mapflag	nobranch	 // [DESABILITADO]
+//dewata	mapflag	nobranch	 // [DESABILITADO]
+//dew_in01	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode Zero & Malaya Port ===========
-malangdo	mapflag	nobranch
-mal_in01	mapflag	nobranch
-mal_in02	mapflag	nobranch
-1@cash	mapflag	nobranch
-1@pump	mapflag	nobranch
-2@pump	mapflag	nobranch
-1@lhz	mapflag	nobranch
-malaya	mapflag	nobranch
-ma_scene01	mapflag	nobranch
-ma_in01	mapflag	nobranch
-1@ma_h	mapflag	nobranch
-1@ma_c	mapflag	nobranch
-1@ma_b	mapflag	nobranch
+//malangdo	mapflag	nobranch	 // [DESABILITADO]
+//mal_in01	mapflag	nobranch	 // [DESABILITADO]
+//mal_in02	mapflag	nobranch	 // [DESABILITADO]
+//1@cash	mapflag	nobranch	 // [DESABILITADO]
+//1@pump	mapflag	nobranch	 // [DESABILITADO]
+//2@pump	mapflag	nobranch	 // [DESABILITADO]
+//1@lhz	mapflag	nobranch	 // [DESABILITADO]
+//malaya	mapflag	nobranch	 // [DESABILITADO]
+//ma_scene01	mapflag	nobranch	 // [DESABILITADO]
+//ma_in01	mapflag	nobranch	 // [DESABILITADO]
+//1@ma_h	mapflag	nobranch	 // [DESABILITADO]
+//1@ma_c	mapflag	nobranch	 // [DESABILITADO]
+//1@ma_b	mapflag	nobranch	 // [DESABILITADO]
 
 // Episode 14.2 ===========
-eclage	mapflag	nobranch
-ecl_in01	mapflag	nobranch
-ecl_in02	mapflag	nobranch
-ecl_in03	mapflag	nobranch
-ecl_in04	mapflag	nobranch
-1@ecl	mapflag	nobranch
-ecl_hub01	mapflag	nobranch
+//eclage	mapflag	nobranch	 // [DESABILITADO]
+//ecl_in01	mapflag	nobranch	 // [DESABILITADO]
+//ecl_in02	mapflag	nobranch	 // [DESABILITADO]
+//ecl_in03	mapflag	nobranch	 // [DESABILITADO]
+//ecl_in04	mapflag	nobranch	 // [DESABILITADO]
+//1@ecl	mapflag	nobranch	 // [DESABILITADO]
+//ecl_hub01	mapflag	nobranch	 // [DESABILITADO]
 
 //evt_zombie	mapflag	nobranch
 
 // Poring War ==================
-poring_w01	mapflag	nobranch
-poring_w02	mapflag	nobranch
+//poring_w01	mapflag	nobranch	 // [DESABILITADO]
+//poring_w02	mapflag	nobranch	 // [DESABILITADO]
