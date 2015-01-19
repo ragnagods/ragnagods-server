@@ -303,7 +303,7 @@ int battle_attr_ratio(int atk_elem,int def_type, int def_lv)
 	if (atk_elem < 0 || atk_elem >= ELE_MAX)
 		return 100;
 
-	if (def_type < 0 || def_type > ELE_MAX || def_lv < 1 || def_lv > 4)
+	if (def_type < 0 || def_type >= ELE_MAX || def_lv < 1 || def_lv > 4)
 		return 100;
 
 	return battle->attr_fix_table[def_lv-1][atk_elem][def_type];
@@ -325,7 +325,7 @@ int64 battle_attr_fix(struct block_list *src, struct block_list *target, int64 d
 	if (atk_elem < 0 || atk_elem >= ELE_MAX)
 		atk_elem = rnd()%ELE_MAX;
 
-	if (def_type < 0 || def_type > ELE_MAX ||
+	if (def_type < 0 || def_type >= ELE_MAX ||
 		def_lv < 1 || def_lv > 4) {
 		ShowError("battle_attr_fix: unknown attr type: atk=%d def_type=%d def_lv=%d\n",atk_elem,def_type,def_lv);
 		return damage;
@@ -749,7 +749,8 @@ int64 battle_calc_masteryfix(struct block_list *src, struct block_list *target, 
 #endif
 		case RA_WUGDASH://(Caster Current Weight x 10 / 8)
 			if( sd->weight )
-				damage += sd->weight / 8 ;
+				damage += sd->weight / 8;
+			/* Fall through */
 		case RA_WUGSTRIKE:
 		case RA_WUGBITE:
 			damage += 30*pc->checkskill(sd, RA_TOOTHOFWUG);
@@ -1508,6 +1509,7 @@ int battle_calc_skillratio(int attack_type, struct block_list *src, struct block
 					if ( sd && sd->spiritcharm[SPIRITS_TYPE_CHARM_WATER] > 0 )
 						skillratio += 5 * sd->spiritcharm[SPIRITS_TYPE_CHARM_WATER];
 #endif
+					/* Fall through */
 				case NJ_HYOUSYOURAKU:
 					skillratio += 50 * skill_lv;
 					if ( sd && sd->spiritcharm[SPIRITS_TYPE_CHARM_WATER] > 0 )
@@ -1521,6 +1523,7 @@ int battle_calc_skillratio(int attack_type, struct block_list *src, struct block
 				case NJ_KAMAITACHI:
 					if ( sd && sd->spiritcharm[SPIRITS_TYPE_CHARM_WIND] > 0 )
 						skillratio += 10 * sd->spiritcharm[SPIRITS_TYPE_CHARM_WIND];
+					/* Fall through */
 				case NPC_ENERGYDRAIN:
 					skillratio += 100 * skill_lv;
 					break;
@@ -2459,6 +2462,7 @@ int battle_calc_skillratio(int attack_type, struct block_list *src, struct block
 					break;
 				case GN_SPORE_EXPLOSION:
 					skillratio = 100 * skill_lv + (200 + st->int_) * status->get_lv(src) / 100;
+					/* Fall through */
 				case GN_CRAZYWEED_ATK:
 					skillratio += 400 + 100 * skill_lv;
 					break;
@@ -2668,7 +2672,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 			}
 		}
 
-		if( sc->data[SC_ZEPHYR] && ((flag&BF_LONG) || rand()%100 < 10) ) {
+		if( sc->data[SC_ZEPHYR] && ((flag&BF_LONG) || rnd()%100 < 10) ) {
 				d->dmg_lv = ATK_BLOCK;
 				return 0;
 		}
@@ -3038,7 +3042,7 @@ int64 battle_calc_damage(struct block_list *src,struct block_list *bl,struct Dam
 				status_change_end(bl, SC_KYRIE, INVALID_TIMER);
 		}
 
-		if( sc->data[SC_MEIKYOUSISUI] && rand()%100 < 40 ) // custom value
+		if( sc->data[SC_MEIKYOUSISUI] && rnd()%100 < 40 ) // custom value
 			damage = 0;
 
 
@@ -3521,6 +3525,7 @@ struct Damage battle_calc_magic_attack(struct block_list *src,struct block_list 
 							ad.flag = BF_WEAPON|BF_SHORT;
 							ad.type = 0;
 						}
+					/* Fall through */
 					default:
 						MATK_RATE(battle->calc_skillratio(BF_MAGIC, src, target, skill_id, skill_lv, skillratio, mflag));
 				}
@@ -3845,14 +3850,14 @@ struct Damage battle_calc_misc_attack(struct block_list *src,struct block_list *
 
 	case KO_MUCHANAGE:
 		md.damage = skill->get_zeny(skill_id ,skill_lv);
-		md.damage = md.damage * (50 + rand()%50) / 100;
+		md.damage = md.damage * (50 + rnd()%50) / 100;
 		if ( is_boss(target) || (sd && !pc->checkskill(sd,NJ_TOBIDOUGU)) )
 			md.damage >>= 1;
 		break;
 	case NJ_ZENYNAGE:
 		md.damage = skill->get_zeny(skill_id ,skill_lv);
 		if (!md.damage) md.damage = 2;
-		md.damage = rand()%md.damage + md.damage;
+		md.damage = rnd()%md.damage + md.damage;
 		if (is_boss(target))
 			md.damage=md.damage / 3;
 		else if (tsd)
@@ -4783,6 +4788,7 @@ struct Damage battle_calc_weapon_attack(struct block_list *src,struct block_list
 	#ifdef RENEWAL
 			case NJ_TATAMIGAESHI:
 					ATK_RATE(200);
+				/* Fall through */
 			case LK_SPIRALPIERCE:
 			case ML_SPIRALPIERCE: // [malufett]
 				if( skill_id != NJ_TATAMIGAESHI ){
@@ -4805,6 +4811,7 @@ struct Damage battle_calc_weapon_attack(struct block_list *src,struct block_list
 					}
 					wd.damage = battle->calc_masteryfix(src, target, skill_id, skill_lv, wd.damage, wd.div_, 0, flag.weapon);
 				}
+				/* Fall through */
 	#endif
 			default:
 				ATK_RATE(battle->calc_skillratio(BF_WEAPON, src, target, skill_id, skill_lv, skillratio, wflag));
@@ -5533,7 +5540,7 @@ void battle_reflect_damage(struct block_list *target, struct block_list *src, st
 
 					delay += 100;/* gradual increase so the numbers don't clip in the client */
 				}
-				if( sc->data[SC_LG_REFLECTDAMAGE] && rand()%100 < (30 + 10*sc->data[SC_LG_REFLECTDAMAGE]->val1) ) {
+				if( sc->data[SC_LG_REFLECTDAMAGE] && rnd()%100 < (30 + 10*sc->data[SC_LG_REFLECTDAMAGE]->val1) ) {
 					bool change = false;
 
 					NORMALIZE_RDAMAGE(damage * sc->data[SC_LG_REFLECTDAMAGE]->val2 / 100);
@@ -5685,7 +5692,7 @@ int battle_damage_area(struct block_list *bl, va_list ap) {
 		else
 			status_fix_damage(src,bl,damage,0);
 		clif->damage(bl,bl,amotion,dmotion,damage,1,ATK_BLOCK,0);
-		if( !(src && src->type == BL_PC && ((TBL_PC*)src)->state.autocast) )
+		if( !(src->type == BL_PC && ((TBL_PC*)src)->state.autocast) )
 			skill->additional_effect(src, bl, CR_REFLECTSHIELD, 1, BF_WEAPON|BF_SHORT|BF_NORMAL,ATK_DEF,tick);
 		map->freeblock_unlock();
 	}
@@ -6172,7 +6179,18 @@ int battle_check_target( struct block_list *src, struct block_list *target,int f
 	switch( target->type ) { // Checks on actual target
 		case BL_PC: {
 				struct status_change* sc = status->get_sc(src);
-				if (((TBL_PC*)target)->invincible_timer != INVALID_TIMER || pc_isinvisible((TBL_PC*)target))
+			
+				if( ((TBL_PC*)target)->invincible_timer != INVALID_TIMER ) {
+					switch( battle->get_current_skill(src) ) {
+						/* TODO a proper distinction should be established bugreport:8397 */
+						case PR_SANCTUARY:
+						case PR_MAGNIFICAT:
+							break;
+						default:
+							return -1;
+					}
+				}
+				if ( pc_isinvisible((TBL_PC*)target) )
 					return -1; //Cannot be targeted yet.
 				if( sc && sc->count ) {
 					if( sc->data[SC_SIREN] && sc->data[SC_SIREN]->val2 == target->id )

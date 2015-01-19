@@ -3605,7 +3605,8 @@ const char* npc_parse_mob(char* w1, char* w2, char* w3, char* w4, const char* st
 		}
 		if (mobspawn.num > db->spawn[i].qty) {
 			//Insert into list
-			memmove(&db->spawn[i+1], &db->spawn[i], sizeof(db->spawn) -(i+1)*sizeof(db->spawn[0]));
+			if( i != ARRAYLENGTH(db->spawn) - 1 )
+				memmove(&db->spawn[i+1], &db->spawn[i], sizeof(db->spawn) -(i+1)*sizeof(db->spawn[0]));
 			db->spawn[i].mapindex = map_id2index(mobspawn.m);
 			db->spawn[i].qty = mobspawn.num;
 			break;
@@ -3682,7 +3683,7 @@ const char* npc_parse_mapflag(char* w1, char* w2, char* w3, char* w4, const char
 			map->list[m].save.map = 0;
 			map->list[m].save.x = -1;
 			map->list[m].save.y = -1;
-		} else if (sscanf(w4, "%31[^,],%d,%d", savemap, &savex, &savey) == 3) {
+		} else if (w4 && sscanf(w4, "%31[^,],%d,%d", savemap, &savex, &savey) == 3) {
 			map->list[m].save.map = mapindex->name2id(savemap);
 			map->list[m].save.x = savex;
 			map->list[m].save.y = savey;
@@ -3875,7 +3876,7 @@ const char* npc_parse_mapflag(char* w1, char* w2, char* w3, char* w4, const char
 		map->list[m].flag.nomvploot=state;
 	else if (!strcmpi(w3,"nocommand")) {
 		if (state) {
-			if (sscanf(w4, "%d", &state) == 1)
+			if (w4 && sscanf(w4, "%d", &state) == 1)
 				map->list[m].nocommand =state;
 			else //No level specified, block everyone.
 				map->list[m].nocommand =100;
@@ -4112,7 +4113,6 @@ int npc_parsesrcfile(const char* filepath, bool runOnInit) {
 		// More info at http://unicode.org/faq/utf_bom.html#bom5 and http://en.wikipedia.org/wiki/Byte_order_mark#UTF-8
 		ShowError("npc_parsesrcfile: Detected unsupported UTF-8 BOM in file '%s'. Stopping (please consider using another character set.)\n", filepath);
 		aFree(buffer);
-		fclose(fp);
 		return EXIT_FAILURE;
 	}
 

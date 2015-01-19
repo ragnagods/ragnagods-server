@@ -1541,12 +1541,12 @@ int status_fixed_revive(struct block_list *bl, unsigned int per_hp, unsigned int
 
 	if(hp > st->max_hp - st->hp)
 		hp = st->max_hp - st->hp;
-	else if (per_hp && !hp)
+	else if (!hp)
 		hp = 1;
 
 	if(sp > st->max_sp - st->sp)
 		sp = st->max_sp - st->sp;
-	else if (per_sp && !sp)
+	else if (!sp)
 		sp = 1;
 
 	st->hp += hp;
@@ -4090,7 +4090,7 @@ unsigned short status_base_atk(const struct block_list *bl, const struct status_
 	if ( bl->type == BL_PC )
 #ifdef RENEWAL
 		str = (int)(dstr + (float)dex / 5 + (float)st->luk / 3 + (float)((TBL_PC*)bl)->status.base_level / 4);
-	else if ( bl->type == BL_MOB )
+	else if ( bl->type == BL_MOB || bl->type == BL_MER )
 		str = dstr + ((TBL_MOB*)bl)->level;
 #else
 		str += dex / 5 + st->luk / 5;
@@ -4106,13 +4106,15 @@ static inline unsigned short status_base_matk_max(const struct status_data *st) 
 unsigned short status_base_matk(struct block_list *bl, const struct status_data *st, int level) {
 #ifdef RENEWAL
 	switch ( bl->type ) {
-	case BL_MOB:
-		return st->int_ + level;
-	case BL_HOM:
-		return status_get_homint(bl) + level;
-	case BL_PC:
-	default: // temporary until all are formulated
-		return st->int_ + (st->int_ / 2) + (st->dex / 5) + (st->luk / 3) + (level / 4);
+		case BL_MOB:
+			return st->int_ + level;
+		case BL_HOM:
+			return status_get_homint(bl) + level;
+		case BL_MER:
+			return st->int_ + st->int_ / 5 * st->int_ / 5;
+		case BL_PC:
+		default: // temporary until all are formulated
+			return st->int_ + (st->int_ / 2) + (st->dex / 5) + (st->luk / 3) + (level / 4);
 	}
 #else
 	return 0;
@@ -4140,7 +4142,7 @@ void status_calc_misc(struct block_list *bl, struct status_data *st, int level) 
 		st->rhw.atk2 = (status_get_homluk(bl) + status_get_homstr(bl) + status_get_homdex(bl)) / 3;
 	} else {
 		st->hit += level + st->dex + (bl->type == BL_PC ? st->luk / 3 + 175 : 150); //base level + ( every 1 dex = +1 hit ) + (every 3 luk = +1 hit) + 175
-		st->flee += level + st->agi + (bl->type == BL_PC ? st->luk / 5 : 0) + 100; //base level + ( every 1 agi = +1 flee ) + (every 5 luk = +1 flee) + 100
+		st->flee += level + st->agi + (bl->type == BL_MER ? 0: (bl->type == BL_PC ? st->luk / 5 : 0) + 100); //base level + ( every 1 agi = +1 flee ) + (every 5 luk = +1 flee) + 100
 		st->def2 += (int)(((float)level + st->vit) / 2 + (bl->type == BL_PC ? ((float)st->agi / 5) : 0)); //base level + (every 2 vit = +1 def) + (every 5 agi = +1 def)
 		st->mdef2 += (int)(bl->type == BL_PC ? (st->int_ + ((float)level / 4) + ((float)(st->dex + st->vit) / 5)) : ((float)(st->int_ + level) / 4)); //(every 4 base level = +1 mdef) + (every 1 int = +1 mdef) + (every 5 dex = +1 mdef) + (every 5 vit = +1 mdef)
 	}
@@ -4168,29 +4170,30 @@ void status_calc_misc(struct block_list *bl, struct status_data *st, int level) 
 		st->batk = cap_value(temp, 0, USHRT_MAX);
 	} else
 		st->batk = status->base_atk(bl, st);
-	if ( st->cri )
+	if ( st->cri ) {
 		switch ( bl->type ) {
-		case BL_MOB:
-			if ( battle_config.mob_critical_rate != 100 )
-				st->cri = st->cri*battle_config.mob_critical_rate / 100;
-			if ( !st->cri && battle_config.mob_critical_rate )
-				st->cri = 10;
-			break;
-		case BL_PC:
-			//Players don't have a critical adjustment setting as of yet.
-			break;
-		case BL_MER:
-#ifdef RENEWAL
-			st->matk_min = st->matk_max = status_base_matk_max(st);
-			st->def2 = st->vit + level / 10 + st->vit / 5;
-			st->mdef2 = level / 10 + st->int_ / 5;
-#endif
-			break;
-		default:
-			if ( battle_config.critical_rate != 100 )
-				st->cri = st->cri*battle_config.critical_rate / 100;
-			if ( !st->cri && battle_config.critical_rate )
-				st->cri = 10;
+			case BL_MOB:
+				if ( battle_config.mob_critical_rate != 100 )
+					st->cri = st->cri*battle_config.mob_critical_rate / 100;
+				if ( !st->cri && battle_config.mob_critical_rate )
+					st->cri = 10;
+				break;
+			case BL_PC:
+				//Players don't have a critical adjustment setting as of yet.
+				break;
+			case BL_MER:
+	#ifdef RENEWAL
+				st->matk_min = st->matk_max = status_base_matk_max(st);
+				st->def2 = st->vit + level / 10 + st->vit / 5;
+				st->mdef2 = level / 10 + st->int_ / 5;
+	#endif
+			/* Fall through */
+			default:
+				if ( battle_config.critical_rate != 100 )
+					st->cri = st->cri*battle_config.critical_rate / 100;
+				if ( !st->cri && battle_config.critical_rate )
+					st->cri = 10;
+		}
 	}
 	if ( bl->type&BL_REGEN )
 		status->calc_regen(bl, st, status->get_regen_data(bl));
@@ -6573,6 +6576,7 @@ int status_get_sc_def(struct block_list *src, struct block_list *bl, enum sc_typ
 		break;
 	case SC_OBLIVIONCURSE: // 100% - (100 - 0.8 x INT)
 		sc_def = st->int_*80;
+		/* Fall through */
 	case SC_TOXIN:
 	case SC_PARALYSE:
 	case SC_VENOMBLEED:
@@ -8719,13 +8723,14 @@ int status_change_start(struct block_list *src, struct block_list *bl, enum sc_t
 				val3 = 5 * val1 + val2;//Movement Speed And ASPD Increase
 				break;
 			case SC_SYMPHONY_LOVE:
-				val2 = 12 * val1 + val2 + sd->status.job_level / 4;//MDEF Increase In %
+				val2 = 12 * val1 + val2 + (sd ? sd->status.job_level : 70) / 4;//MDEF Increase In %
+				break;
 			case SC_MOONLIT_SERENADE:
 			case SC_RUSH_WINDMILL:
-				val2 = 6 * val1 + val2 + sd->status.job_level / 5;
+				val2 = 6 * val1 + val2 + (sd ? sd->status.job_level : 70) / 5;
 				break;
 			case SC_ECHOSONG:
-				val3 = 6 * val1 + val2 + sd->status.job_level / 4;//DEF Increase In %
+				val3 = 6 * val1 + val2 + (sd ? sd->status.job_level : 70) / 4;//DEF Increase In %
 				break;
 			case SC_HARMONIZE:
 				val2 = 5 + 5 * val1;
@@ -9020,7 +9025,7 @@ int status_change_start(struct block_list *src, struct block_list *bl, enum sc_t
 			{
 				int hp = status_get_hp(bl), sp = status_get_sp(bl), lv = 5;
 
-				if( rand()%100 > (25 + 10 * val1) - status_get_int(bl) / 2)
+				if( rnd()%100 > (25 + 10 * val1) - status_get_int(bl) / 2)
 					return 0;
 
 				PER( 100 / (status_get_max_hp(bl) / hp), lv );
@@ -9994,6 +9999,7 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 						status_change_end(src, SC_RG_CCONFINE_M, INVALID_TIMER);
 				}
 			}
+			/* Fall through */
 		case SC_RG_CCONFINE_M:
 			if (sce->val2 > 0) {
 				//Caster has been unlocked... nearby chars need to be unlocked.
@@ -10302,6 +10308,7 @@ int status_change_end_(struct block_list* bl, enum sc_type type, int tid, const 
 		case SC_CLOAKING:
 		case SC_CLOAKINGEXCEED:
 			sc->option &= ~OPTION_CLOAK;
+			/* Fall through */
 		case SC_CAMOUFLAGE:
 			opt_flag|= 2;
 			break;
@@ -10609,9 +10616,9 @@ int status_change_timer(int tid, int64 tick, int id, intptr_t data) {
 		case SC_RUWACH:
 		case SC_WZ_SIGHTBLASTER:
 			if(type == SC_WZ_SIGHTBLASTER) {
-			//Restore trap immunity
-			if(sce->val4%2)
-				sce->val4--;
+				//Restore trap immunity
+				if(sce->val4%2)
+					sce->val4--;
 				map->foreachinrange(status->change_timer_sub, bl, sce->val3, BL_CHAR|BL_SKILL, bl, sce, type, tick);
 			} else
 				map->foreachinrange(status->change_timer_sub, bl, sce->val3, BL_CHAR, bl, sce, type, tick);
@@ -11391,6 +11398,7 @@ int status_change_timer_sub(struct block_list* bl, va_list ap) {
 			if( tsc && tsc->data[SC__SHADOWFORM] && (sce && sce->val4 >0 && sce->val4%2000 == 0) && // for every 2 seconds do the checking
 				rnd()%100 < 100-tsc->data[SC__SHADOWFORM]->val1*10 ) // [100 - (Skill Level x 10)] %
 				status_change_end(bl, SC__SHADOWFORM, INVALID_TIMER);
+			/* Fall through */
 		case SC_CONCENTRATION:
 			status_change_end(bl, SC_HIDING, INVALID_TIMER);
 			status_change_end(bl, SC_CLOAKING, INVALID_TIMER);
@@ -11462,7 +11470,7 @@ int status_get_weapon_atk(struct block_list *bl, struct weapon_atk *watk, int fl
 		min = (int)(watk->atk - variance + strdex_bonus) + watk->atk2;
 		max = (int)(watk->atk + variance + strdex_bonus) + watk->atk2;
 	}
-	else if (bl->type == BL_MOB && watk->atk){
+	else if ((bl->type == BL_MOB || bl->type == BL_MER) && watk->atk){
 		min = watk->atk * 80 / 100;
 		max = watk->atk * 120 / 100;
 	}
@@ -11545,23 +11553,27 @@ void status_get_matk_sub(struct block_list *bl, int flag, unsigned short *matk_m
 	*matk_max = *matk_min;
 
 	switch ( bl->type ) {
-	case BL_PC:
-		//This is the only portion in MATK that varies depending on the weapon level and refinement rate.
-		if ( (st->rhw.matk + st->lhw.matk) > 0 ) {
-			int wMatk = st->rhw.matk + st->lhw.matk; // Left and right matk stacks
-			int variance = wMatk * st->rhw.wlv / 10; // Only use right hand weapon level
-			*matk_min += wMatk - variance;
-			*matk_max += wMatk + variance;
-		}
-		break;
-	case BL_MOB:
-		*matk_min += 70 * ((TBL_MOB*)bl)->status.rhw.atk2 / 100;
-		*matk_max += 130 * ((TBL_MOB*)bl)->status.rhw.atk2 / 100;
-		break;
-	case BL_HOM:
-		*matk_min += (status_get_homint(bl) + status_get_homdex(bl)) / 5;
-		*matk_max += (status_get_homluk(bl) + status_get_homint(bl) + status_get_homdex(bl)) / 3;
-		break;
+		case BL_PC:
+			//This is the only portion in MATK that varies depending on the weapon level and refinement rate.
+			if ( (st->rhw.matk + st->lhw.matk) > 0 ) {
+				int wMatk = st->rhw.matk + st->lhw.matk; // Left and right matk stacks
+				int variance = wMatk * st->rhw.wlv / 10; // Only use right hand weapon level
+				*matk_min += wMatk - variance;
+				*matk_max += wMatk + variance;
+			}
+			break;
+		case BL_MER:
+			*matk_min += 70 * ((TBL_MER*)bl)->battle_status.rhw.atk2 / 100;
+			*matk_max += 130 * ((TBL_MER*)bl)->battle_status.rhw.atk2 / 100;
+			break;
+		case BL_MOB:
+			*matk_min += 70 * ((TBL_MOB*)bl)->status.rhw.atk2 / 100;
+			*matk_max += 130 * ((TBL_MOB*)bl)->status.rhw.atk2 / 100;
+			break;
+		case BL_HOM:
+			*matk_min += (status_get_homint(bl) + status_get_homdex(bl)) / 5;
+			*matk_max += (status_get_homluk(bl) + status_get_homint(bl) + status_get_homdex(bl)) / 3;
+			break;
 	}
 
 #else // not RENEWAL

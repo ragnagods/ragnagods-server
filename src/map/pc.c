@@ -886,11 +886,12 @@ int pc_isequip(struct map_session_data *sd,int n)
 
 	item = sd->inventory_data[n];
 
-	if(pc_has_permission(sd, PC_PERM_USE_ALL_EQUIPMENT))
-		return 1;
-
 	if(item == NULL)
 		return 0;
+
+	if(pc_has_permission(sd, PC_PERM_USE_ALL_EQUIPMENT))
+		return 1;
+	
 	if(item->elv && sd->status.base_level < (unsigned int)item->elv){
 		clif->msg(sd, 0x6ED);
 		return 0;
@@ -2833,30 +2834,34 @@ int pc_bonus2(struct map_session_data *sd,int type,int type2,int val)
 			break;
 		case SP_ADD_DAMAGE_CLASS:
 			switch (sd->state.lr_flag) {
-			case 0: //Right hand
-				ARR_FIND(0, ARRAYLENGTH(sd->right_weapon.add_dmg), i, sd->right_weapon.add_dmg[i].rate == 0 || sd->right_weapon.add_dmg[i].class_ == type2);
-				if (i == ARRAYLENGTH(sd->right_weapon.add_dmg)) {
-					ShowWarning("pc_bonus2: Reached max (%"PRIuS") number of add Class dmg bonuses per character!\n",
-					            ARRAYLENGTH(sd->right_weapon.add_dmg));
+				case 0: //Right hand
+					ARR_FIND(0, ARRAYLENGTH(sd->right_weapon.add_dmg), i, sd->right_weapon.add_dmg[i].rate == 0 || sd->right_weapon.add_dmg[i].class_ == type2);
+					if (i == ARRAYLENGTH(sd->right_weapon.add_dmg)) {
+						ShowWarning("pc_bonus2: Reached max (%"PRIuS") number of add Class dmg bonuses per character!\n",
+									ARRAYLENGTH(sd->right_weapon.add_dmg));
+						break;
+					}
+					sd->right_weapon.add_dmg[i].class_ = type2;
+					sd->right_weapon.add_dmg[i].rate += val;
+					if (!sd->right_weapon.add_dmg[i].rate) { //Shift the rest of elements up.
+						if( i != ARRAYLENGTH(sd->right_weapon.add_dmg) - 1 )
+							memmove(&sd->right_weapon.add_dmg[i], &sd->right_weapon.add_dmg[i+1], sizeof(sd->right_weapon.add_dmg) - (i+1)*sizeof(sd->right_weapon.add_dmg[0]));
+					}
 					break;
-				}
-				sd->right_weapon.add_dmg[i].class_ = type2;
-				sd->right_weapon.add_dmg[i].rate += val;
-				if (!sd->right_weapon.add_dmg[i].rate) //Shift the rest of elements up.
-					memmove(&sd->right_weapon.add_dmg[i], &sd->right_weapon.add_dmg[i+1], sizeof(sd->right_weapon.add_dmg) - (i+1)*sizeof(sd->right_weapon.add_dmg[0]));
-				break;
-			case 1: //Left hand
-				ARR_FIND(0, ARRAYLENGTH(sd->left_weapon.add_dmg), i, sd->left_weapon.add_dmg[i].rate == 0 || sd->left_weapon.add_dmg[i].class_ == type2);
-				if (i == ARRAYLENGTH(sd->left_weapon.add_dmg)) {
-					ShowWarning("pc_bonus2: Reached max (%"PRIuS") number of add Class dmg bonuses per character!\n",
-					            ARRAYLENGTH(sd->left_weapon.add_dmg));
+				case 1: //Left hand
+					ARR_FIND(0, ARRAYLENGTH(sd->left_weapon.add_dmg), i, sd->left_weapon.add_dmg[i].rate == 0 || sd->left_weapon.add_dmg[i].class_ == type2);
+					if (i == ARRAYLENGTH(sd->left_weapon.add_dmg)) {
+						ShowWarning("pc_bonus2: Reached max (%"PRIuS") number of add Class dmg bonuses per character!\n",
+									ARRAYLENGTH(sd->left_weapon.add_dmg));
+						break;
+					}
+					sd->left_weapon.add_dmg[i].class_ = type2;
+					sd->left_weapon.add_dmg[i].rate += val;
+					if (!sd->left_weapon.add_dmg[i].rate) { //Shift the rest of elements up.
+						if( i != ARRAYLENGTH(sd->left_weapon.add_dmg) - 1 )
+							memmove(&sd->left_weapon.add_dmg[i], &sd->left_weapon.add_dmg[i+1], sizeof(sd->left_weapon.add_dmg) - (i+1)*sizeof(sd->left_weapon.add_dmg[0]));
+					}
 					break;
-				}
-				sd->left_weapon.add_dmg[i].class_ = type2;
-				sd->left_weapon.add_dmg[i].rate += val;
-				if (!sd->left_weapon.add_dmg[i].rate) //Shift the rest of elements up.
-					memmove(&sd->left_weapon.add_dmg[i], &sd->left_weapon.add_dmg[i+1], sizeof(sd->left_weapon.add_dmg) - (i+1)*sizeof(sd->left_weapon.add_dmg[0]));
-				break;
 			}
 			break;
 		case SP_ADD_MAGIC_DAMAGE_CLASS:
@@ -2869,7 +2874,7 @@ int pc_bonus2(struct map_session_data *sd,int type,int type2,int val)
 			}
 			sd->add_mdmg[i].class_ = type2;
 			sd->add_mdmg[i].rate += val;
-			if (!sd->add_mdmg[i].rate) //Shift the rest of elements up.
+			if (!sd->add_mdmg[i].rate && i != ARRAYLENGTH(sd->add_mdmg) - 1) //Shift the rest of elements up.
 				memmove(&sd->add_mdmg[i], &sd->add_mdmg[i+1], sizeof(sd->add_mdmg) - (i+1)*sizeof(sd->add_mdmg[0]));
 			break;
 		case SP_ADD_DEF_CLASS:
@@ -2882,7 +2887,7 @@ int pc_bonus2(struct map_session_data *sd,int type,int type2,int val)
 			}
 			sd->add_def[i].class_ = type2;
 			sd->add_def[i].rate += val;
-			if (!sd->add_def[i].rate) //Shift the rest of elements up.
+			if ( !sd->add_def[i].rate && i != ARRAYLENGTH(sd->add_def) - 1) //Shift the rest of elements up.
 				memmove(&sd->add_def[i], &sd->add_def[i+1], sizeof(sd->add_def) - (i+1)*sizeof(sd->add_def[0]));
 			break;
 		case SP_ADD_MDEF_CLASS:
@@ -2895,7 +2900,7 @@ int pc_bonus2(struct map_session_data *sd,int type,int type2,int val)
 			}
 			sd->add_mdef[i].class_ = type2;
 			sd->add_mdef[i].rate += val;
-			if (!sd->add_mdef[i].rate) //Shift the rest of elements up.
+			if (!sd->add_mdef[i].rate && i != ARRAYLENGTH(sd->add_mdef) - 1) //Shift the rest of elements up.
 				memmove(&sd->add_mdef[i], &sd->add_mdef[i+1], sizeof(sd->add_mdef) - (i+1)*sizeof(sd->add_mdef[0]));
 			break;
 		case SP_HP_DRAIN_RATE:
@@ -3497,7 +3502,7 @@ int pc_bonus4(struct map_session_data *sd,int type,int type2,int type3,int type4
 		break;
 
 	case SP_SET_DEF_RACE: //bonus4 bSetDefRace,n,x,r,y;
-		if( type2 > RC_MAX ) {
+		if( type2 >= RC_MAX ) {
 			ShowWarning("pc_bonus4 (DEF_SET): %d is not supported.\n", type2);
 			break;
 		}
@@ -3509,7 +3514,7 @@ int pc_bonus4(struct map_session_data *sd,int type,int type2,int type3,int type4
 		break;
 
 	case SP_SET_MDEF_RACE: //bonus4 bSetMDefRace,n,x,r,y;
-		if( type2 > RC_MAX ) {
+		if( type2 >= RC_MAX ) {
 			ShowWarning("pc_bonus4 (MDEF_SET): %d is not supported.\n", type2);
 			break;
 		}
@@ -4260,6 +4265,7 @@ int pc_isUseitem(struct map_session_data *sd,int n)
 		case ITEMID_ANODYNE:
 			if( map_flag_gvg2(sd->bl.m) )
 				return 0;
+			/* Fall through */
 		case ITEMID_ALOEBERA:
 			if( pc_issit(sd) )
 				return 0;
@@ -4270,6 +4276,7 @@ int pc_isUseitem(struct map_session_data *sd,int n)
 				clif->skill_mapinfomessage(sd,0);
 				return 0;
 			}
+			/* Fall through */
 		case ITEMID_WING_OF_BUTTERFLY:
 		case ITEMID_DUN_TELE_SCROLL1:
 		case ITEMID_DUN_TELE_SCROLL2:
@@ -9022,20 +9029,18 @@ int pc_equipitem(struct map_session_data *sd,int n,int req_pos)
 	iflag = sd->npc_item_flag;
 
 	/* check for combos (MUST be before status_calc_pc) */
-	if ( id ) {
-		if( id->combos_count )
-			pc->checkcombo(sd,id);
-		if(itemdb_isspecial(sd->status.inventory[n].card[0]))
-			; //No cards
-		else {
-			for( i = 0; i < id->slot; i++ ) {
-				struct item_data *data;
-				if (!sd->status.inventory[n].card[i])
-					continue;
-				if ( ( data = itemdb->exists(sd->status.inventory[n].card[i]) ) != NULL ) {
-					if( data->combos_count )
-						pc->checkcombo(sd,data);
-				}
+	if( id->combos_count )
+		pc->checkcombo(sd,id);
+	if(itemdb_isspecial(sd->status.inventory[n].card[0]))
+		; //No cards
+	else {
+		for( i = 0; i < id->slot; i++ ) {
+			struct item_data *data;
+			if (!sd->status.inventory[n].card[i])
+				continue;
+			if ( ( data = itemdb->exists(sd->status.inventory[n].card[i]) ) != NULL ) {
+				if( data->combos_count )
+					pc->checkcombo(sd,data);
 			}
 		}
 	}
@@ -9043,22 +9048,20 @@ int pc_equipitem(struct map_session_data *sd,int n,int req_pos)
 	status_calc_pc(sd,SCO_NONE);
 	if (flag) //Update skill data
 		clif->skillinfoblock(sd);
-
+	
 	//OnEquip script [Skotlex]
-	if (id) {
-		if (id->equip_script)
-			script->run(id->equip_script,0,sd->bl.id,npc->fake_nd->bl.id);
-		if(itemdb_isspecial(sd->status.inventory[n].card[0]))
-			; //No cards
-		else {
-			for( i = 0; i < id->slot; i++ ) {
-				struct item_data *data;
-				if (!sd->status.inventory[n].card[i])
-					continue;
-				if ( ( data = itemdb->exists(sd->status.inventory[n].card[i]) ) != NULL ) {
-					if( data->equip_script )
-						script->run(data->equip_script,0,sd->bl.id,npc->fake_nd->bl.id);
-				}
+	if (id->equip_script)
+		script->run(id->equip_script,0,sd->bl.id,npc->fake_nd->bl.id);
+	if(itemdb_isspecial(sd->status.inventory[n].card[0]))
+		; //No cards
+	else {
+		for( i = 0; i < id->slot; i++ ) {
+			struct item_data *data;
+			if (!sd->status.inventory[n].card[i])
+				continue;
+			if ( ( data = itemdb->exists(sd->status.inventory[n].card[i]) ) != NULL ) {
+				if( data->equip_script )
+					script->run(data->equip_script,0,sd->bl.id,npc->fake_nd->bl.id);
 			}
 		}
 	}
@@ -9706,7 +9709,7 @@ int map_day_timer(int tid, int64 tick, int id, intptr_t data) {
 
 	map->night_flag = 0; // 0=day, 1=night [Yor]
 	map->foreachpc(pc->daynight_timer_sub);
-	strcpy(tmp_soutput, (data == 0) ? msg_txt(502) : msg_txt(60)); // The day has arrived!
+	safestrncpy(tmp_soutput, (data == 0) ? msg_txt(502) : msg_txt(60), sizeof(tmp_soutput)); // The day has arrived!
 	intif->broadcast(tmp_soutput, strlen(tmp_soutput) + 1, BC_DEFAULT);
 	return 0;
 }
@@ -9726,7 +9729,7 @@ int map_night_timer(int tid, int64 tick, int id, intptr_t data) {
 
 	map->night_flag = 1; // 0=day, 1=night [Yor]
 	map->foreachpc(pc->daynight_timer_sub);
-	strcpy(tmp_soutput, (data == 0) ? msg_txt(503) : msg_txt(59)); // The night has fallen...
+	safestrncpy(tmp_soutput, (data == 0) ? msg_txt(503) : msg_txt(59), sizeof(tmp_soutput)); // The night has fallen...
 	intif->broadcast(tmp_soutput, strlen(tmp_soutput) + 1, BC_DEFAULT);
 	return 0;
 }

@@ -2508,7 +2508,7 @@ int mob_dead(struct mob_data *md, struct block_list *src, int type) {
 
 			for(i = 0; i < MAX_MVP_DROP; i++) {
 				while( 1 ) {
-					int va = rand()%MAX_MVP_DROP;
+					int va = rnd()%MAX_MVP_DROP;
 					if( !mdrop_id[va] || !md->db->mvpitem[i].nameid ) {
 						mdrop_id[va] = md->db->mvpitem[i].nameid;
 						mdrop_p[va]  = md->db->mvpitem[i].p;
@@ -3894,7 +3894,7 @@ bool mob_parse_dbrow(char** str) {
 			if (k == MAX_SEARCH)
 				continue;
 
-			if (id->mob[k].id != class_)
+			if (id->mob[k].id != class_ && k != MAX_SEARCH - 1)
 				memmove(&id->mob[k+1], &id->mob[k], (MAX_SEARCH-k-1)*sizeof(id->mob[0]));
 			id->mob[k].chance = db->dropitem[i].p;
 			id->mob[k].id = class_;

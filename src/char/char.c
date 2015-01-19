@@ -45,11 +45,11 @@
 #include "../common/timer.h"
 #include "../common/utils.h"
 
-// private declarations
-#define CHAR_CONF_NAME "conf/char-server.conf"
-#define LAN_CONF_NAME  "conf/subnet.conf"
-#define SQL_CONF_NAME  "conf/inter-server.conf"
+#ifndef WIN32
+	#include <unistd.h>
+#endif
 
+// private declarations
 char char_db[256] = "char";
 char scdata_db[256] = "sc_data";
 char cart_db[256] = "cart_inventory";
@@ -1457,7 +1457,7 @@ bool char_char_slotchange(struct char_session_data *sd, int fd, unsigned short f
 	struct mmo_charstatus char_dat;
 	int from_id = 0;
 
-	if( from > MAX_CHARS || to > MAX_CHARS || ( sd->char_slots && to > sd->char_slots ) || sd->found_char[from] <= 0 )
+	if( from >= MAX_CHARS || to >= MAX_CHARS || ( sd->char_slots && to > sd->char_slots ) || sd->found_char[from] <= 0 )
 		return false;
 
 	if( !chr->mmo_char_fromsql(sd->found_char[from], &char_dat, false) ) // Only the short data is needed.
@@ -3005,12 +3005,12 @@ void char_send_maps(int fd, int id, int j)
 	// Transmitting the maps of the other map-servers to the new map-server
 	for(x = 0; x < ARRAYLENGTH(chr->server); x++) {
 		if (chr->server[x].fd > 0 && x != id) {
-			WFIFOHEAD(fd,10 +4*ARRAYLENGTH(chr->server[x].map));
+			WFIFOHEAD(fd,10 +4*chr->server[x].maps);
 			WFIFOW(fd,0) = 0x2b04;
 			WFIFOL(fd,4) = htonl(chr->server[x].ip);
 			WFIFOW(fd,8) = htons(chr->server[x].port);
 			j = 0;
-			for(i = 0; i < ARRAYLENGTH(chr->server[x].map); i++)
+			for(i = 0; i < chr->server[x].maps; i++)
 				if (chr->server[x].map[i])
 					WFIFOW(fd,10+(j++)*4) = chr->server[x].map[i];
 			if (j > 0) {
@@ -3746,7 +3746,14 @@ void char_parse_frommap_request_stats_report(int fd)
 
 	WFIFOSET(sfd, RFIFOW(fd,2) );
 
-	flush_fifo(sfd);
+	do {
+		flush_fifo(sfd);
+#ifdef WIN32
+		Sleep(1);
+#else
+		sleep(1);
+#endif
+	} while( !session[sfd]->flag.eof && session[sfd]->wdata_size );
 
 	do_close(sfd);
 
@@ -5696,6 +5703,11 @@ int do_final(void) {
 		if( chr->server[i].map )
 			aFree(chr->server[i].map);
 
+	aFree(chr->CHAR_CONF_NAME);
+	aFree(chr->LAN_CONF_NAME);
+	aFree(chr->SQL_CONF_NAME);
+	aFree(chr->INTER_CONF_NAME);
+
 	HPM->event(HPET_POST_FINAL);
 
 	ShowStatus("Finished.\n");
@@ -5752,45 +5764,80 @@ void char_hp_symbols(void) {
 	HPM->share(inter->sql_handle, "sql_handle");
 }
 
+/**
+ * --char-config handler
+ *
+ * Overrides the default char configuration file.
+ * @see cmdline->exec
+ */
+static CMDLINEARG(charconfig)
+{
+	aFree(chr->CHAR_CONF_NAME);
+	chr->CHAR_CONF_NAME = aStrdup(params);
+	return true;
+}
+/**
+ * --inter-config handler
+ *
+ * Overrides the default inter-server configuration file.
+ * @see cmdline->exec
+ */
+static CMDLINEARG(interconfig)
+{
+	aFree(chr->INTER_CONF_NAME);
+	chr->INTER_CONF_NAME = aStrdup(params);
+	return true;
+}
+/**
+ * --lan-config handler
+ *
+ * Overrides the default subnet configuration file.
+ * @see cmdline->exec
+ */
+static CMDLINEARG(lanconfig)
+{
+	aFree(chr->LAN_CONF_NAME);
+	chr->LAN_CONF_NAME = aStrdup(params);
+	return true;
+}
+/**
+ * Initializes the command line arguments handlers.
+ */
+void cmdline_args_init_local(void)
+{
+	CMDLINEARG_DEF2(char-config, charconfig, "Alternative char-server configuration.", CMDLINE_OPT_PARAM);
+	CMDLINEARG_DEF2(inter-config, interconfig, "Alternative inter-server configuration.", CMDLINE_OPT_PARAM);
+	CMDLINEARG_DEF2(lan-config, lanconfig, "Alternative subnet configuration.", CMDLINE_OPT_PARAM);
+}
+
 int do_init(int argc, char **argv) {
 	int i;
 	memset(&skillid2idx, 0, sizeof(skillid2idx));
 
 	char_load_defaults();
 
+	chr->CHAR_CONF_NAME = aStrdup("conf/char-server.conf");
+	chr->LAN_CONF_NAME = aStrdup("conf/subnet.conf");
+	chr->SQL_CONF_NAME = aStrdup("conf/inter-server.conf");
+	chr->INTER_CONF_NAME = aStrdup("conf/inter-server.conf");
+
 	for(i = 0; i < MAX_MAP_SERVERS; i++ )
 		chr->server[i].map = NULL;
 
 	HPM_char_do_init();
 	HPM->symbol_defaults_sub = char_hp_symbols;
-#if 0
-	/* TODO: Move to common code */
-	for( i = 1; i < argc; i++ ) {
-		const char* arg = argv[i];
-		if( strcmp(arg, "--load-plugin") == 0 ) {
-			if( map->arg_next_value(arg, i, argc, true) ) {
-				RECREATE(load_extras, char *, ++load_extras_count);
-				load_extras[load_extras_count-1] = argv[++i];
-			}
-		}
-	}
-	HPM->config_read((const char * const *)load_extras, load_extras_count);
-	if (load_extras) {
-		aFree(load_extras);
-		load_extras = NULL;
-		load_extras_count = 0;
-	}
-#endif
-	HPM->config_read(NULL, 0);
+	cmdline->exec(argc, argv, CMDLINE_OPT_PREINIT);
+	HPM->config_read();
 	HPM->event(HPET_PRE_INIT);
 
 	//Read map indexes
 	mapindex->init();
 	start_point.map = mapindex->name2id("new_zone01");
 
-	chr->config_read((argc < 2) ? CHAR_CONF_NAME : argv[1]);
-	chr->lan_config_read((argc > 3) ? argv[3] : LAN_CONF_NAME);
-	chr->sql_config_read(SQL_CONF_NAME);
+	cmdline->exec(argc, argv, CMDLINE_OPT_NORMAL);
+	chr->config_read(chr->CHAR_CONF_NAME);
+	chr->lan_config_read(chr->LAN_CONF_NAME);
+	chr->sql_config_read(chr->SQL_CONF_NAME);
 
 	if (strcmp(chr->userid, "s1")==0 && strcmp(chr->passwd, "p1")==0) {
 		ShowWarning("Using the default user/password s1/p1 is NOT RECOMMENDED.\n");
@@ -5798,7 +5845,7 @@ int do_init(int argc, char **argv) {
 		ShowNotice("And then change the user/password to use in conf/char-server.conf (or conf/import/char_conf.txt)\n");
 	}
 
-	inter->init_sql((argc > 2) ? argv[2] : inter_cfgName); // inter server configuration
+	inter->init_sql(chr->INTER_CONF_NAME); // inter server configuration
 
 	auth_db = idb_alloc(DB_OPT_RELEASE_DATA);
 	chr->online_char_db = idb_alloc(DB_OPT_RELEASE_DATA);

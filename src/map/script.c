@@ -5372,6 +5372,7 @@ BUILDIN(warpparty)
 			//"SavePoint" uses save point of the currently attached player
 			if (( sd = script->rid2sd(st) ) == NULL )
 				return true;
+			/* Fall through */
 		default:
 			map_index = 0;
 			break;
@@ -6774,7 +6775,7 @@ BUILDIN(grouprandomitem) {
  *------------------------------------------*/
 BUILDIN(makeitem)
 {
-	int nameid,amount,flag = 0;
+	int nameid,amount;
 	int x,y,m;
 	const char *mapname;
 	struct item item_tmp;
@@ -6813,12 +6814,9 @@ BUILDIN(makeitem)
 
 
 	memset(&item_tmp,0,sizeof(item_tmp));
-	item_tmp.nameid=nameid;
-	if(!flag)
-		item_tmp.identify=1;
-	else
-		item_tmp.identify=itemdb->isidentified2(item_data);
-
+	item_tmp.nameid = nameid;
+	item_tmp.identify=1;
+	
 	map->addflooritem(&item_tmp,amount,m,x,y,0,0,0,0);
 
 	return true;
@@ -8719,7 +8717,7 @@ BUILDIN(setmount)
 				option = ( flag == SETMOUNT_TYPE_DRAGON_GREEN ? OPTION_DRAGON1 :
 				           flag == SETMOUNT_TYPE_DRAGON_BROWN ? OPTION_DRAGON2 :
 				           flag == SETMOUNT_TYPE_DRAGON_GRAY ? OPTION_DRAGON3 :
-				           flag == SETMOUNT_TYPE_DRAGON_RED ? OPTION_DRAGON4 :
+				           flag == SETMOUNT_TYPE_DRAGON_BLUE ? OPTION_DRAGON4 :
 				           flag == SETMOUNT_TYPE_DRAGON_RED ? OPTION_DRAGON5 :
 				           OPTION_DRAGON1); // default value
 				pc->setridingdragon(sd, option);
@@ -12421,7 +12419,7 @@ BUILDIN(getinventorylist){
 
 BUILDIN(getcartinventorylist){
 	TBL_PC *sd=script->rid2sd(st);
-	char card_var[NAME_LENGTH];
+	char card_var[26];
 
 	int i,j=0,k;
 	if(!sd) return true;
@@ -14460,7 +14458,7 @@ BUILDIN(sprintf) {
 		}
 		if(arg>=argc) {
 			ShowError("buildin_sprintf: Not enough arguments passed!\n");
-			if(buf) aFree(buf);
+			aFree(buf);
 			if(buf2) aFree(buf2);
 			StrBuf->Destroy(&final_buf);
 			script_pushconststr(st,"");
@@ -14496,7 +14494,7 @@ BUILDIN(sprintf) {
 			}
 		} else {  // Unsupported type
 			ShowError("buildin_sprintf: Unknown argument type!\n");
-			if(buf) aFree(buf);
+			aFree(buf);
 			if(buf2) aFree(buf2);
 			StrBuf->Destroy(&final_buf);
 			script_pushconststr(st,"");
@@ -14518,7 +14516,7 @@ BUILDIN(sprintf) {
 
 	script_pushstrcopy(st, StrBuf->Value(&final_buf));
 
-	if(buf) aFree(buf);
+	aFree(buf);
 	if(buf2) aFree(buf2);
 	StrBuf->Destroy(&final_buf);
 
@@ -14577,7 +14575,7 @@ BUILDIN(sscanf) {
 		if(arg>=argc) {
 			ShowError("buildin_sscanf: Not enough arguments passed!\n");
 			script_pushint(st, -1);
-			if(buf) aFree(buf);
+			aFree(buf);
 			if(ref_str) aFree(ref_str);
 			return false;
 		}
@@ -14600,7 +14598,7 @@ BUILDIN(sscanf) {
 		buf_p = reference_getname(data);
 		if(not_server_variable(*buf_p) && (sd = script->rid2sd(st))==NULL) {
 			script_pushint(st, -1);
-			if(buf) aFree(buf);
+			aFree(buf);
 			if(ref_str) aFree(ref_str);
 			return true;
 		}
@@ -14629,7 +14627,7 @@ BUILDIN(sscanf) {
 	}
 
 	script_pushint(st, arg);
-	if(buf) aFree(buf);
+	aFree(buf);
 	if(ref_str) aFree(ref_str);
 
 	return true;
@@ -18055,7 +18053,10 @@ BUILDIN(npcskill) {
 	skill_level = script_getnum(st, 3);
 	stat_point  = script_getnum(st, 4);
 	npc_level   = script_getnum(st, 5);
-	sd          = script->rid2sd(st);
+	
+	if( !(sd = script->rid2sd(st)) )
+		return false;
+	
 	nd          = (struct npc_data *)map->id2bl(sd->npc_id);
 
 	if (stat_point > battle_config.max_third_parameter) {
@@ -18066,7 +18067,7 @@ BUILDIN(npcskill) {
 		ShowError("npcskill: level exceeded maximum of %d.\n", MAX_LEVEL);
 		return false;
 	}
-	if (sd == NULL || nd == NULL) {
+	if (nd == NULL) {
 		return false;
 	}
 
@@ -18977,7 +18978,8 @@ BUILDIN(tradertype) {
 	}
 #endif
 
-	nd->u.scr.shop->type = type;
+	if( nd->u.scr.shop )
+		nd->u.scr.shop->type = type;
 
 	return true;
 }

@@ -764,7 +764,7 @@ void itemdb_write_cached_packages(const char *config_filename) {
 }
 bool itemdb_read_cached_packages(const char *config_filename) {
 	FILE *file;
-	unsigned short pcount;
+	unsigned short pcount = 0;
 	unsigned short i;
 
 	if( !(file = HCache->open(config_filename,"rb")) ) {
@@ -2242,7 +2242,7 @@ void itemdb_reload(void) {
 			if (k == MAX_SEARCH)
 				continue;
 			
-			if (id->mob[k].id != i)
+			if (id->mob[k].id != i && k != MAX_SEARCH - 1)
 				memmove(&id->mob[k+1], &id->mob[k], (MAX_SEARCH-k-1)*sizeof(id->mob[0]));
 			id->mob[k].chance = entry->dropitem[d].p;
 			id->mob[k].id = i;

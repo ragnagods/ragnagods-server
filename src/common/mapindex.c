@@ -48,7 +48,7 @@ const char* mapindex_getmapname_ext(const char* string, char* output) {
 
 	size_t len;
 
-	strcpy(buf,string);
+	safestrncpy(buf,string, sizeof(buf));
 	sscanf(string, "%*[^#]%*[#]%15s", buf);
 
 	len = safestrnlen(buf, MAP_NAME_LENGTH);
@@ -126,7 +126,7 @@ unsigned short mapindex_name2id(const char* name) {
 }
 
 const char* mapindex_id2name_sub(unsigned short id,const char *file, int line, const char *func) {
-	if (id > MAX_MAPINDEX || !mapindex_exists(id)) {
+	if (id >= MAX_MAPINDEX || !mapindex_exists(id)) {
 		ShowDebug("mapindex_id2name: Requested name for non-existant map index [%d] in cache. %s:%s:%d\n", id,file,func,line);
 		return mapindex->list[0].name; // dummy empty string so that the callee doesn't crash
 	}
@@ -154,6 +154,7 @@ int mapindex_init(void) {
 		switch (sscanf(line, "%12s\t%d", map_name, &index)) {
 			case 1: //Map with no ID given, auto-assign
 				index = last_index+1;
+				/* Fall through */
 			case 2: //Map with ID given
 				mapindex->addmap(index,map_name);
 				total++;

@@ -80,7 +80,7 @@ int duel_create(struct map_session_data* sd, const unsigned int maxpl) {
 	int i=1;
 	char output[256];
 	
-	while(duel->list[i].members_count > 0 && i < MAX_DUEL) i++;
+	while(i < MAX_DUEL && duel->list[i].members_count > 0) i++;
 	if(i == MAX_DUEL) return 0;
 	
 	duel->count++;
@@ -89,7 +89,7 @@ int duel_create(struct map_session_data* sd, const unsigned int maxpl) {
 	duel->list[i].invites_count = 0;
 	duel->list[i].max_players_limit = maxpl;
 	
-	strcpy(output, msg_txt(372)); // " -- Duel has been created (@invite/@leave) --"
+	safestrncpy(output, msg_txt(372), sizeof(output)); // " -- Duel has been created (@invite/@leave) --"
 	clif_disp_onlyself(sd, output, strlen(output));
 	
 	clif->map_property(sd, MAPPROPERTY_FREEPVPZONE);

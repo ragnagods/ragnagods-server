@@ -3628,7 +3628,7 @@ ACMD(reloadscript) {
 	mapit->free(iter);
 
 	flush_fifos();
-	map->reloadnpc(true, NULL, 0); // reload config files seeking for npcs
+	map->reloadnpc(true); // reload config files seeking for npcs
 	script->reload();
 	npc->reload();
 
@@ -5199,7 +5199,8 @@ ACMD(skillid) {
 			sprintf(atcmd_output, msg_txt(1164), DB->data2i(data), skill->db[idx].desc, key.str); // skill %d: %s (%s)
 			clif->message(fd, atcmd_output);
 		} else if ( found < MAX_SKILLID_PARTIAL_RESULTS && ( stristr(key.str,message) || stristr(skill->db[idx].desc,message) ) ) {
-			snprintf(partials[found++], MAX_SKILLID_PARTIAL_RESULTS_LEN, msg_txt(1164), DB->data2i(data), skill->db[idx].desc, key.str);
+			snprintf(partials[found], MAX_SKILLID_PARTIAL_RESULTS_LEN, msg_txt(1164), DB->data2i(data), skill->db[idx].desc, key.str);
+			found++;
 		}
 	}
 
@@ -6176,14 +6177,15 @@ ACMD(users)
 	}
 	mapit->free(iter);
 
-	// display results for each map
-	for( i = 0; i < MAX_MAPINDEX; ++i )
-	{
-		if( users[i] == 0 )
-			continue;// empty
+	if( users_all ) {
+		// display results for each map
+		for( i = 0; i < MAX_MAPINDEX; ++i ) {
+			if( users[i] == 0 )
+				continue;// empty
 
-		safesnprintf(buf, sizeof(buf), "%s: %d (%.2f%%)", mapindex_id2name(i), users[i], (float)(100.0f*users[i]/users_all));
-		clif->message(sd->fd, buf);
+			safesnprintf(buf, sizeof(buf), "%s: %d (%.2f%%)", mapindex_id2name(i), users[i], (float)(100.0f*users[i]/users_all));
+			clif->message(sd->fd, buf);
+		}
 	}
 
 	// display overall count
@@ -6615,7 +6617,7 @@ ACMD(mobinfo)
 			sprintf(atcmd_output, msg_txt(1247), monster->mexp); //  MVP Bonus EXP:%u
 			clif->message(fd, atcmd_output);
 
-			strcpy(atcmd_output, msg_txt(1248)); //  MVP Items:
+			safestrncpy(atcmd_output, msg_txt(1248), sizeof(atcmd_output)); //  MVP Items:
 			j = 0;
 			for (i = 0; i < MAX_MVP_DROP; i++) {
 				if (monster->mvpitem[i].nameid <= 0 || (item_data = itemdb->exists(monster->mvpitem[i].nameid)) == NULL)
@@ -7085,12 +7087,12 @@ ACMD(iteminfo)
 		clif->message(fd, atcmd_output);
 
 		if (item_data->maxchance == -1)
-			strcpy(atcmd_output, msg_txt(1281)); //  - Available in the shops only.
+			safestrncpy(atcmd_output, msg_txt(1281), sizeof(atcmd_output)); //  - Available in the shops only.
 		else if ( !battle_config.atcommand_mobinfo_type ) {
 			if( item_data->maxchance )
 				sprintf(atcmd_output, msg_txt(1282), (float)item_data->maxchance / 100 ); //  - Maximal monsters drop chance: %02.02f%%
 			else
-				strcpy(atcmd_output, msg_txt(1283)); //  - Monsters don't drop this item.
+				safestrncpy(atcmd_output, msg_txt(1283), sizeof(atcmd_output)); //  - Monsters don't drop this item.
 		}
 		clif->message(fd, atcmd_output);
 
@@ -7129,7 +7131,7 @@ ACMD(whodrops)
 		clif->message(fd, atcmd_output);
 
 		if (item_data->mob[0].chance == 0) {
-			strcpy(atcmd_output, msg_txt(1286)); //  - Item is not dropped by mobs.
+			safestrncpy(atcmd_output, msg_txt(1286), sizeof(atcmd_output)); //  - Item is not dropped by mobs.
 			clif->message(fd, atcmd_output);
 		} else {
 			sprintf(atcmd_output, msg_txt(1287), MAX_SEARCH); //  - Common mobs with highest drop chance (only max %d are listed):
@@ -9313,6 +9315,50 @@ ACMD(skdebug) {
 	return true;
 }
 /**
+ * cooldown-debug
+ **/
+ACMD(cddebug) {
+	int i;
+	struct skill_cd* cd = NULL;
+	
+	if( !(cd = idb_get(skill->cd_db,sd->status.char_id)) ) {
+		clif->message(fd,"No cool down list found");
+	} else {
+		clif->messages(fd,"Found %d registered cooldowns",cd->cursor);
+		for(i = 0; i < cd->cursor; i++) {
+			if( cd->entry[i] ) {
+				const struct TimerData *td = timer->get(cd->entry[i]->timer);
+				
+				if( !td || td->func != skill->blockpc_end ) {
+					clif->messages(fd,"Found invalid entry in slot %d for skill %s",i,skill->db[cd->entry[i]->skidx].name);
+					sd->blockskill[cd->entry[i]->skidx] = false;
+				}
+			}
+		}
+	}
+	
+	if( !cd || (message && *message && strcmpi(message,"reset")) ) {
+		for(i = 0; i < MAX_SKILL; i++) {
+			if( sd->blockskill[i] ) {
+				clif->messages(fd,"Found skill '%s', unblocking...",skill->db[i].name);
+				sd->blockskill[i] = false;
+			}
+		}
+		if( cd ) {//reset
+			for(i = 0; i < cd->cursor; i++) {
+				if( !cd->entry[i] ) continue;
+				timer->delete(cd->entry[i]->timer,skill->blockpc_end);
+				ers_free(skill->cd_entry_ers, cd->entry[i]);
+			}
+			
+			idb_remove(skill->cd_db,sd->status.char_id);
+			ers_free(skill->cd_ers, cd);
+		}
+	}
+	
+	return true;
+}
+/**
  * Fills the reference of available commands in atcommand DBMap
  **/
 #define ACMD_DEF(x) { #x, atcommand_ ## x, NULL, NULL, NULL, true }
@@ -9581,6 +9627,7 @@ void atcommand_basecommands(void) {
 		ACMD_DEF(searchstore),
 		ACMD_DEF(costume),
 		ACMD_DEF(skdebug),
+		ACMD_DEF(cddebug),
 	};
 	int i;
 

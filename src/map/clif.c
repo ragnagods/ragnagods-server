@@ -404,6 +404,7 @@ bool clif_send(const void* buf, int len, struct block_list* bl, enum send_target
 		case AREA_WOSC:
 			if (sd && bl->prev == NULL) //Otherwise source misses the packet.[Skotlex]
 				clif->send (buf, len, bl, SELF);
+			/* Fall through */
 		case AREA_WOC:
 		case AREA_WOS:
 			map->foreachinarea(clif->send_sub, bl->m, bl->x-AREA_SIZE, bl->y-AREA_SIZE, bl->x+AREA_SIZE, bl->y+AREA_SIZE,
@@ -443,6 +444,7 @@ bool clif_send(const void* buf, int len, struct block_list* bl, enum send_target
 			y0 = bl->y - AREA_SIZE;
 			x1 = bl->x + AREA_SIZE;
 			y1 = bl->y + AREA_SIZE;
+			/* Fall through */
 		case PARTY:
 		case PARTY_WOS:
 		case PARTY_SAMEMAP:
@@ -518,6 +520,7 @@ bool clif_send(const void* buf, int len, struct block_list* bl, enum send_target
 			y0 = bl->y - AREA_SIZE;
 			x1 = bl->x + AREA_SIZE;
 			y1 = bl->y + AREA_SIZE;
+			/* Fall through */
 		case GUILD_SAMEMAP:
 		case GUILD_SAMEMAP_WOS:
 		case GUILD:
@@ -569,6 +572,7 @@ bool clif_send(const void* buf, int len, struct block_list* bl, enum send_target
 			y0 = bl->y - AREA_SIZE;
 			x1 = bl->x + AREA_SIZE;
 			y1 = bl->y + AREA_SIZE;
+			/* Fall through */
 		case BG_SAMEMAP:
 		case BG_SAMEMAP_WOS:
 		case BG:
@@ -2752,7 +2756,7 @@ void read_channels_config(void) {
 			}
 			if( libconfig->setting_lookup_string(settings, "irc_channel_nick", &irc_nick) ) {
 				if( strcmpi(irc_nick,"Hercules_chSysBot") == 0 ) {
-					sprintf(clif->hChSys->irc_nick, "Hercules_chSysBot%d",rand()%777);
+					sprintf(clif->hChSys->irc_nick, "Hercules_chSysBot%d",rnd()%777);
 				} else
 					safestrncpy(clif->hChSys->irc_nick, irc_nick, 40);
 			} else {
@@ -5629,7 +5633,7 @@ void clif_displaymessage2(const int fd, const char* mes) {
 	nullpo_retv(mes);
 
 	//Scrapped, as these are shared by disconnected players =X [Skotlex]
-	if (fd == 0)
+	if (fd == 0 && !map->cpsd_active)
 		;
 	else {
 		// Limit message to 255+1 characters (otherwise it causes a buffer overflow in the client)
@@ -5706,8 +5710,7 @@ void clif_broadcast(struct block_list* bl, const char* mes, size_t len, int type
 	memcpy(WBUFP(buf, 4 + lp), mes, len);
 	clif->send(buf, WBUFW(buf,2), bl, target);
 
-	if (buf)
-		aFree(buf);
+	aFree(buf);
 }
 
 /*==========================================
@@ -5753,8 +5756,7 @@ void clif_broadcast2(struct block_list* bl, const char* mes, size_t len, unsigne
 	memcpy(WBUFP(buf,16), mes, len);
 	clif->send(buf, WBUFW(buf,2), bl, target);
 
-	if (buf)
-		aFree(buf);
+	aFree(buf);
 }
 
 
@@ -13884,7 +13886,8 @@ void clif_parse_PMIgnore(int fd, struct map_session_data* sd) {
 			return;
 		}
 		// move everything one place down to overwrite removed entry
-		memmove(sd->ignore[i].name, sd->ignore[i+1].name, (MAX_IGNORE_LIST-i-1)*sizeof(sd->ignore[0].name));
+		if( i != MAX_IGNORE_LIST - 1 )
+			memmove(&sd->ignore[i], &sd->ignore[i+1], (MAX_IGNORE_LIST-i-1)*sizeof(sd->ignore[0]));
 		// wipe last entry
 		memset(sd->ignore[MAX_IGNORE_LIST-1].name, 0, sizeof(sd->ignore[0].name));
 	}
@@ -16096,13 +16099,27 @@ void clif_mercenary_info(struct map_session_data *sd) {
 	WFIFOL(fd,2) = md->bl.id;
 
 	// Mercenary shows ATK as a random value between ATK ~ ATK2
-	atk = rnd()%(mstatus->rhw.atk2 - mstatus->rhw.atk + 1) + mstatus->rhw.atk;
-	WFIFOW(fd,6) = cap_value(atk, 0, INT16_MAX);
+#ifdef RENEWAL
+	atk = status->get_weapon_atk(&md->bl, &mstatus->rhw, 0);
+#else
+	atk = rnd() % (mstatus->rhw.atk2 - mstatus->rhw.atk + 1) + mstatus->rhw.atk;
+#endif
+	WFIFOW(fd, 6) = cap_value(atk, 0, INT16_MAX);
+#ifdef RENEWAL
+	atk = status->base_matk(&md->bl, mstatus, status->get_lv(&md->bl));
+	WFIFOW(fd,8) = cap_value(atk, 0, INT16_MAX);
+#else
 	WFIFOW(fd,8) = cap_value(mstatus->matk_max, 0, INT16_MAX);
+#endif
 	WFIFOW(fd,10) = mstatus->hit;
 	WFIFOW(fd,12) = mstatus->cri/10;
+#ifdef RENEWAL
+	WFIFOW(fd, 14) = mstatus->def2;
+	WFIFOW(fd, 16) = mstatus->mdef2;
+#else
 	WFIFOW(fd,14) = mstatus->def;
 	WFIFOW(fd,16) = mstatus->mdef;
+#endif
 	WFIFOW(fd,18) = mstatus->flee;
 	WFIFOW(fd,20) = mstatus->amotion;
 	safestrncpy((char*)WFIFOP(fd,22), md->db->name, NAME_LENGTH);
@@ -16284,6 +16301,7 @@ void clif_bg_message(struct battleground_data *bgd, int src_id, const char *name
 {
 	struct map_session_data *sd;
 	unsigned char *buf;
+	
 	if( !bgd->count || (sd = bg->getavailablesd(bgd)) == NULL )
 		return;
 
@@ -16296,8 +16314,7 @@ void clif_bg_message(struct battleground_data *bgd, int src_id, const char *name
 	memcpy(WBUFP(buf,32), mes, len);
 	clif->send(buf,WBUFW(buf,2), &sd->bl, BG);
 
-	if( buf )
-		aFree(buf);
+	aFree(buf);
 }
 
 
@@ -17656,7 +17673,7 @@ void clif_parse_CashShopBuy(int fd, struct map_session_data *sd) {
 		short tab = RFIFOW(fd, 18 + ( i * 10 ));
 		enum CASH_SHOP_BUY_RESULT result = CSBR_UNKNOWN;
 
-		if( tab < 0 || tab > CASHSHOP_TAB_MAX )
+		if( tab < 0 || tab >= CASHSHOP_TAB_MAX )
 			continue;
 
 		for( j = 0; j < clif->cs.item_count[tab]; j++ ) {
@@ -17733,7 +17750,7 @@ void clif_parse_CashShopReqTab(int fd, struct map_session_data *sd) {
 	short tab = RFIFOW(fd, 2);
 	int j;
 
-	if( tab < 0 || tab > CASHSHOP_TAB_MAX || clif->cs.item_count[tab] == 0 )
+	if( tab < 0 || tab >= CASHSHOP_TAB_MAX || clif->cs.item_count[tab] == 0 )
 		return;
 
 	WFIFOHEAD(fd, 10 + ( clif->cs.item_count[tab] * 6 ) );
@@ -18801,10 +18818,12 @@ static void __attribute__ ((unused)) packetdb_addpacket(short cmd, int len, ...)
 
 	pos = va_arg(va, int);
 
-	if( pos == 0xFFFF ) /* nothing more to do */
-		return;
-
 	va_end(va);
+
+	if( pos == 0xFFFF ) { /* nothing more to do */
+		return;
+	}
+
 	va_start(va,len);
 
 	func = va_arg(va,pFunc);
