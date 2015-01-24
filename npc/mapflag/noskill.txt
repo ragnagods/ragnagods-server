@@ -14,17 +14,17 @@
 prt_are_in	mapflag	noskill
 
 //The Sign Quest ===============
-//himinn	mapflag	noskill	 // [DESABILITADO]
+himinn	mapflag	noskill
 
 // Quiz Maps ===================
 quiz_00	mapflag	noskill
 quiz_01	mapflag	noskill
 quiz_02	mapflag	noskill
-//quiz_test	mapflag	noskill	 // [DESABILITADO]
+quiz_test	mapflag	noskill
 
 //Hugel Minigames ==============
 que_bingo	mapflag	noskill
 p_track01	mapflag	noskill
-//p_track02	mapflag	noskill	 // [DESABILITADO]
+p_track02	mapflag	noskill
 
 //evt_zombie	mapflag	noskill

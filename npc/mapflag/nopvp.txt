@@ -10,33 +10,33 @@
 //= 1.0 - Initial script.
 //============================================================
 
-//1@cata	mapflag	pvp	off	 // [DESABILITADO]
-//2@cata	mapflag	pvp	off	 // [DESABILITADO]
-//1@nyd	mapflag	pvp	off	 // [DESABILITADO]
-//2@nyd	mapflag	pvp	off	 // [DESABILITADO]
-//1@orcs	mapflag	pvp	off	 // [DESABILITADO]
-//2@orcs	mapflag	pvp	off	 // [DESABILITADO]
-//1@tower	mapflag	pvp	off	 // [DESABILITADO]
-//2@tower	mapflag	pvp	off	 // [DESABILITADO]
-//3@tower	mapflag	pvp	off	 // [DESABILITADO]
-//4@tower	mapflag	pvp	off	 // [DESABILITADO]
-//5@tower	mapflag	pvp	off	 // [DESABILITADO]
-//6@tower	mapflag	pvp	off	 // [DESABILITADO]
-//1@mist	mapflag	pvp	off	 // [DESABILITADO]
-//1@cash	mapflag	pvp	off	 // [DESABILITADO]
-//1@pump	mapflag	pvp	off	 // [DESABILITADO]
-//2@pump	mapflag	pvp	off	 // [DESABILITADO]
-//1@lhz	mapflag	pvp	off	 // [DESABILITADO]
-//1@ma_h	mapflag	pvp	off	 // [DESABILITADO]
-//1@ma_c	mapflag	pvp	off	 // [DESABILITADO]
-//1@ma_b	mapflag	pvp	off	 // [DESABILITADO]
-//1@ecl	mapflag	pvp	off	 // [DESABILITADO]
+1@cata	mapflag	pvp	off
+2@cata	mapflag	pvp	off
+1@nyd	mapflag	pvp	off
+2@nyd	mapflag	pvp	off
+1@orcs	mapflag	pvp	off
+2@orcs	mapflag	pvp	off
+1@tower	mapflag	pvp	off
+2@tower	mapflag	pvp	off
+3@tower	mapflag	pvp	off
+4@tower	mapflag	pvp	off
+5@tower	mapflag	pvp	off
+6@tower	mapflag	pvp	off
+1@mist	mapflag	pvp	off
+1@cash	mapflag	pvp	off
+1@pump	mapflag	pvp	off
+2@pump	mapflag	pvp	off
+1@lhz	mapflag	pvp	off
+1@ma_h	mapflag	pvp	off
+1@ma_c	mapflag	pvp	off
+1@ma_b	mapflag	pvp	off
+1@ecl	mapflag	pvp	off
 
-//bat_a01	mapflag	pvp	off	 // [DESABILITADO]
+bat_a01	mapflag	pvp	off
 //bat_a02	mapflag	pvp	off	 // [DESABILITADO]
-//bat_b01	mapflag	pvp	off	 // [DESABILITADO]
+bat_b01	mapflag	pvp	off
 //bat_b02	mapflag	pvp	off	 // [DESABILITADO]
-//bat_c01	mapflag	pvp	off	 // [DESABILITADO]
+bat_c01	mapflag	pvp	off
 //bat_c02	mapflag	pvp	off	 // [DESABILITADO]
 //bat_c03	mapflag	pvp	off	 // [DESABILITADO]
 
@@ -124,7 +124,7 @@ ve_in	mapflag	pvp	off
 ve_in02	mapflag	pvp	off
 cave	mapflag	pvp	off
 
-//e_tower	mapflag	pvp	off	 // [DESABILITADO]
+e_tower	mapflag	pvp	off
 
 //mid_camp	mapflag	pvp	off	 // [DESABILITADO]
 //mid_campin	mapflag	pvp	off	 // [DESABILITADO]
@@ -133,9 +133,9 @@ cave	mapflag	pvp	off
 //que_dan01	mapflag	pvp	off	 // [DESABILITADO]
 //que_dan02	mapflag	pvp	off	 // [DESABILITADO]
 //schg_que01	mapflag	pvp	off	 // [DESABILITADO]
-//arug_que01	mapflag	pvp	off	 // [DESABILITADO]
+arug_que01	mapflag	pvp	off
 
-//bat_room	mapflag	pvp	off	 // [DESABILITADO]
+bat_room	mapflag	pvp	off
 
 //manuk	mapflag	pvp	off	 // [DESABILITADO]
 //man_in01	mapflag	pvp	off	 // [DESABILITADO]

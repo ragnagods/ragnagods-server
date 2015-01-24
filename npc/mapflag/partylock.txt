@@ -12,46 +12,46 @@
 //============================================================
 
 // Sealed Shrine ==================
-//1@cata	mapflag	partylock	 // [DESABILITADO]
-//2@cata	mapflag	partylock	 // [DESABILITADO]
+1@cata	mapflag	partylock
+2@cata	mapflag	partylock
 
 // Endless Tower ==================
-//1@tower	mapflag	partylock	 // [DESABILITADO]
-//2@tower	mapflag	partylock	 // [DESABILITADO]
-//3@tower	mapflag	partylock	 // [DESABILITADO]
-//4@tower	mapflag	partylock	 // [DESABILITADO]
-//5@tower	mapflag	partylock	 // [DESABILITADO]
-//6@tower	mapflag	partylock	 // [DESABILITADO]
+1@tower	mapflag	partylock
+2@tower	mapflag	partylock
+3@tower	mapflag	partylock
+4@tower	mapflag	partylock
+5@tower	mapflag	partylock
+6@tower	mapflag	partylock
 
 // Orc's Memory ===================
-//1@orcs	mapflag	partylock	 // [DESABILITADO]
-//2@orcs	mapflag	partylock	 // [DESABILITADO]
+1@orcs	mapflag	partylock
+2@orcs	mapflag	partylock
 
 // Nidhoggr's Instance ===========
-//1@nyd	mapflag	partylock	 // [DESABILITADO]
-//2@nyd	mapflag	partylock	 // [DESABILITADO]
+1@nyd	mapflag	partylock
+2@nyd	mapflag	partylock
 
 // Misty Forest Labyrinth ===========
-//1@mist	mapflag	partylock	 // [DESABILITADO]
+1@mist	mapflag	partylock
 
 // Octopus Cave ===========
-//1@cash	mapflag	partylock	 // [DESABILITADO]
+1@cash	mapflag	partylock
 
 // Drain ===========
-//1@pump	mapflag	partylock	 // [DESABILITADO]
-//2@pump	mapflag	partylock	 // [DESABILITADO]
+1@pump	mapflag	partylock
+2@pump	mapflag	partylock
 
 // Somatology Laboratory ===========
-//1@lhz	mapflag	partylock	 // [DESABILITADO]
+1@lhz	mapflag	partylock
 
 // Bangungot Hospital F2 ===========
-//1@ma_h	mapflag	partylock	 // [DESABILITADO]
+1@ma_h	mapflag	partylock
 
 // Buwaya Cave ===========
-//1@ma_c	mapflag	partylock	 // [DESABILITADO]
+1@ma_c	mapflag	partylock
 
 // Bakonawa Hideout ===========
-//1@ma_b	mapflag	partylock	 // [DESABILITADO]
+1@ma_b	mapflag	partylock
 
 // Inside Eclage ===========
-//1@ecl	mapflag	partylock	 // [DESABILITADO]
+1@ecl	mapflag	partylock

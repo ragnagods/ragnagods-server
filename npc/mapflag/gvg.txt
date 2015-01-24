@@ -42,14 +42,14 @@ prtg_cas02	mapflag	gvg_castle
 prtg_cas03	mapflag	gvg_castle
 prtg_cas04	mapflag	gvg_castle
 prtg_cas05	mapflag	gvg_castle
-//schg_cas01	mapflag	gvg_castle	 // [DESABILITADO]
-//schg_cas02	mapflag	gvg_castle	 // [DESABILITADO]
-//schg_cas03	mapflag	gvg_castle	 // [DESABILITADO]
+schg_cas01	mapflag	gvg_castle
+schg_cas02	mapflag	gvg_castle
+schg_cas03	mapflag	gvg_castle
 //schg_cas04	mapflag	gvg_castle	 // [DESABILITADO]
 //schg_cas05	mapflag	gvg_castle	 // [DESABILITADO]
-//arug_cas01	mapflag	gvg_castle	 // [DESABILITADO]
-//arug_cas02	mapflag	gvg_castle	 // [DESABILITADO]
-//arug_cas03	mapflag	gvg_castle	 // [DESABILITADO]
+arug_cas01	mapflag	gvg_castle
+arug_cas02	mapflag	gvg_castle
+arug_cas03	mapflag	gvg_castle
 //arug_cas04	mapflag	gvg_castle	 // [DESABILITADO]
 //arug_cas05	mapflag	gvg_castle	 // [DESABILITADO]
 
@@ -87,10 +87,10 @@ prtg_cas05	mapflag	gvg_castle
 
 // Novice Guild Castles ===
 //n_castle	mapflag	gvg_castle
-//nguild_alde	mapflag	gvg_castle	 // [DESABILITADO]
-//nguild_gef	mapflag	gvg_castle	 // [DESABILITADO]
-//nguild_pay	mapflag	gvg_castle	 // [DESABILITADO]
-//nguild_prt	mapflag	gvg_castle	 // [DESABILITADO]
+nguild_alde	mapflag	gvg_castle
+nguild_gef	mapflag	gvg_castle
+nguild_pay	mapflag	gvg_castle
+nguild_prt	mapflag	gvg_castle
 
 //nguild_alde	mapflag	monster_noteleport
 //nguild_gef	mapflag	monster_noteleport
@@ -102,5 +102,5 @@ gld_dun01	mapflag	gvg_dungeon
 gld_dun02	mapflag	gvg_dungeon
 gld_dun03	mapflag	gvg_dungeon
 gld_dun04	mapflag	gvg_dungeon
-//arug_dun01	mapflag	gvg_dungeon	 // [DESABILITADO]
-//schg_dun01	mapflag	gvg_dungeon	 // [DESABILITADO]
+arug_dun01	mapflag	gvg_dungeon
+schg_dun01	mapflag	gvg_dungeon

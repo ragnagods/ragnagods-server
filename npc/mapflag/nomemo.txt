@@ -233,7 +233,7 @@ que_bingo	mapflag	nomemo
 que_sign01	mapflag	nomemo
 que_hugel	mapflag	nomemo
 que_rachel	mapflag	nomemo
-//que_san04	mapflag	nomemo	 // [DESABILITADO]
+que_san04	mapflag	nomemo
 que_thor	mapflag	nomemo
 poring_c01	mapflag	nomemo
 poring_c02	mapflag	nomemo
@@ -459,18 +459,18 @@ prtg_cas02	mapflag	nomemo
 prtg_cas03	mapflag	nomemo
 prtg_cas04	mapflag	nomemo
 prtg_cas05	mapflag	nomemo
-//nguild_alde	mapflag	nomemo	 // [DESABILITADO]
-//nguild_gef	mapflag	nomemo	 // [DESABILITADO]
-//nguild_pay	mapflag	nomemo	 // [DESABILITADO]
-//nguild_prt	mapflag	nomemo	 // [DESABILITADO]
-//schg_cas01	mapflag	nomemo	 // [DESABILITADO]
-//schg_cas02	mapflag	nomemo	 // [DESABILITADO]
-//schg_cas03	mapflag	nomemo	 // [DESABILITADO]
+nguild_alde	mapflag	nomemo
+nguild_gef	mapflag	nomemo
+nguild_pay	mapflag	nomemo
+nguild_prt	mapflag	nomemo
+schg_cas01	mapflag	nomemo
+schg_cas02	mapflag	nomemo
+schg_cas03	mapflag	nomemo
 //schg_cas04	mapflag	nomemo	 // [DESABILITADO]
 //schg_cas05	mapflag	nomemo	 // [DESABILITADO]
-//arug_cas01	mapflag	nomemo	 // [DESABILITADO]
-//arug_cas02	mapflag	nomemo	 // [DESABILITADO]
-//arug_cas03	mapflag	nomemo	 // [DESABILITADO]
+arug_cas01	mapflag	nomemo
+arug_cas02	mapflag	nomemo
+arug_cas03	mapflag	nomemo
 //arug_cas04	mapflag	nomemo	 // [DESABILITADO]
 //arug_cas05	mapflag	nomemo	 // [DESABILITADO]
 //To Protect Novices Guilds from level abusers
@@ -488,18 +488,18 @@ arena_room	mapflag	nomemo
 force_1-1	mapflag	nomemo
 force_1-2	mapflag	nomemo
 force_1-3	mapflag	nomemo
-//force_2-1	mapflag	nomemo	 // [DESABILITADO]
-//force_3-1	mapflag	nomemo	 // [DESABILITADO]
-//force_4-1	mapflag	nomemo	 // [DESABILITADO]
-//force_5-1	mapflag	nomemo	 // [DESABILITADO]
+force_2-1	mapflag	nomemo
+force_3-1	mapflag	nomemo
+force_4-1	mapflag	nomemo
+force_5-1	mapflag	nomemo
 ordeal_1-1	mapflag	nomemo
 ordeal_1-2	mapflag	nomemo
 //ordeal_1-3	mapflag	nomemo
-//ordeal_2-1	mapflag	nomemo	 // [DESABILITADO]
-//ordeal_2-2	mapflag	nomemo	 // [DESABILITADO]
+ordeal_2-1	mapflag	nomemo
+ordeal_2-2	mapflag	nomemo
 //ordeal_2-3	mapflag	nomemo
-//ordeal_3-1	mapflag	nomemo	 // [DESABILITADO]
-//ordeal_3-2	mapflag	nomemo	 // [DESABILITADO]
+ordeal_3-1	mapflag	nomemo
+ordeal_3-2	mapflag	nomemo
 //ordeal_3-3	mapflag	nomemo
 pvp_c_room	mapflag	nomemo
 quiz_00	mapflag	nomemo
@@ -608,17 +608,17 @@ pvp_2vs2	mapflag	nomemo
 
 //Aldebaran Turbo Track
 turbo_room	mapflag	nomemo
-//turbo_n_1	mapflag	nomemo	 // [DESABILITADO]
-//turbo_n_4	mapflag	nomemo	 // [DESABILITADO]
-//turbo_n_8	mapflag	nomemo	 // [DESABILITADO]
-//turbo_n_16	mapflag	nomemo	 // [DESABILITADO]
-//turbo_e_4	mapflag	nomemo	 // [DESABILITADO]
-//turbo_e_8	mapflag	nomemo	 // [DESABILITADO]
-//turbo_e_16	mapflag	nomemo	 // [DESABILITADO]
+turbo_n_1	mapflag	nomemo
+turbo_n_4	mapflag	nomemo
+turbo_n_8	mapflag	nomemo
+turbo_n_16	mapflag	nomemo
+turbo_e_4	mapflag	nomemo
+turbo_e_8	mapflag	nomemo
+turbo_e_16	mapflag	nomemo
 
 //Monster Races ================
 p_track01	mapflag	nomemo
-//p_track02	mapflag	nomemo	 // [DESABILITADO]
+p_track02	mapflag	nomemo
 
 //Vision of Okolnir ==========
 //que_qsch01	mapflag	nomemo	 // [DESABILITADO]
@@ -633,26 +633,26 @@ p_track01	mapflag	nomemo
 //que_qaru05	mapflag	nomemo	 // [DESABILITADO]
 
 //Sealed Shrine ==================
-//1@cata	mapflag	nomemo	 // [DESABILITADO]
-//2@cata	mapflag	nomemo	 // [DESABILITADO]
+1@cata	mapflag	nomemo
+2@cata	mapflag	nomemo
 
 //Endless Tower ==================
-//e_tower	mapflag	nomemo	 // [DESABILITADO]
-//1@tower	mapflag	nomemo	 // [DESABILITADO]
-//2@tower	mapflag	nomemo	 // [DESABILITADO]
-//3@tower	mapflag	nomemo	 // [DESABILITADO]
-//4@tower	mapflag	nomemo	 // [DESABILITADO]
-//5@tower	mapflag	nomemo	 // [DESABILITADO]
-//6@tower	mapflag	nomemo	 // [DESABILITADO]
+e_tower	mapflag	nomemo
+1@tower	mapflag	nomemo
+2@tower	mapflag	nomemo
+3@tower	mapflag	nomemo
+4@tower	mapflag	nomemo
+5@tower	mapflag	nomemo
+6@tower	mapflag	nomemo
 
 // Battle Grounds ================
-//bat_c01	mapflag	nomemo	 // [DESABILITADO]
+bat_c01	mapflag	nomemo
 //bat_c02	mapflag	nomemo	 // [DESABILITADO]
 //bat_c03	mapflag	nomemo	 // [DESABILITADO]
-//bat_room	mapflag	nomemo	 // [DESABILITADO]
-//bat_b01	mapflag	nomemo	 // [DESABILITADO]
+bat_room	mapflag	nomemo
+bat_b01	mapflag	nomemo
 //bat_b02	mapflag	nomemo	 // [DESABILITADO]
-//bat_a01	mapflag	nomemo	 // [DESABILITADO]
+bat_a01	mapflag	nomemo
 //bat_a02	mapflag	nomemo	 // [DESABILITADO]
 
 // Episode 13 ====================
@@ -665,9 +665,9 @@ p_track01	mapflag	nomemo
 //que_dan01	mapflag	nomemo	 // [DESABILITADO]
 //que_dan02	mapflag	nomemo	 // [DESABILITADO]
 //schg_que01	mapflag	nomemo	 // [DESABILITADO]
-//schg_dun01	mapflag	nomemo	 // [DESABILITADO]
-//arug_que01	mapflag	nomemo	 // [DESABILITADO]
-//arug_dun01	mapflag	nomemo	 // [DESABILITADO]
+schg_dun01	mapflag	nomemo
+arug_que01	mapflag	nomemo
+arug_dun01	mapflag	nomemo
 //nyd_dun01	mapflag	nomemo	 // [DESABILITADO]
 //nyd_dun02	mapflag	nomemo	 // [DESABILITADO]
 //manuk	mapflag	nomemo	 // [DESABILITADO]
@@ -676,21 +676,21 @@ p_track01	mapflag	nomemo
 //splendide	mapflag	nomemo	 // [DESABILITADO]
 //spl_fild01	mapflag	nomemo	 // [DESABILITADO]
 //spl_in01	mapflag	nomemo	 // [DESABILITADO]
-//job3_arch01	mapflag	nomemo	 // [DESABILITADO]
-//job3_arch02	mapflag	nomemo	 // [DESABILITADO]
+job3_arch01	mapflag	nomemo
+job3_arch02	mapflag	nomemo
 //job3_arch03	mapflag	nomemo	 // [DESABILITADO]
-//job3_guil01	mapflag	nomemo	 // [DESABILITADO]
-//job3_guil02	mapflag	nomemo	 // [DESABILITADO]
-//job3_guil03	mapflag	nomemo	 // [DESABILITADO]
-//job3_rang01	mapflag	nomemo	 // [DESABILITADO]
-//job3_rang02	mapflag	nomemo	 // [DESABILITADO]
-//job3_rune01	mapflag	nomemo	 // [DESABILITADO]
-//job3_rune02	mapflag	nomemo	 // [DESABILITADO]
+job3_guil01	mapflag	nomemo
+job3_guil02	mapflag	nomemo
+job3_guil03	mapflag	nomemo
+job3_rang01	mapflag	nomemo
+job3_rang02	mapflag	nomemo
+job3_rune01	mapflag	nomemo
+job3_rune02	mapflag	nomemo
 //job3_rune03	mapflag	nomemo	 // [DESABILITADO]
-//job3_war01	mapflag	nomemo	 // [DESABILITADO]
+job3_war01	mapflag	nomemo
 //job3_war02	mapflag	nomemo	 // [DESABILITADO]
-//job3_gen01	mapflag	nomemo	 // [DESABILITADO]
-//job3_sha01	mapflag	nomemo	 // [DESABILITADO]
+job3_gen01	mapflag	nomemo
+job3_sha01	mapflag	nomemo
 //jupe_core2	mapflag	nomemo	 // [DESABILITADO]
 //s_atelier	mapflag	nomemo	 // [DESABILITADO]
 //bra_in01	mapflag	nomemo	 // [DESABILITADO]
@@ -707,7 +707,7 @@ p_track01	mapflag	nomemo
 // Episode 14 ====================
 //bif_fild01	mapflag	nomemo	 // [DESABILITADO]
 //bif_fild02	mapflag	nomemo	 // [DESABILITADO]
-//1@mist	mapflag	nomemo	 // [DESABILITADO]
+1@mist	mapflag	nomemo
 //mora	mapflag	nomemo	 // [DESABILITADO]
 //dew_dun01	mapflag	nomemo	 // [DESABILITADO]
 //dew_dun02	mapflag	nomemo	 // [DESABILITADO]
@@ -716,27 +716,27 @@ p_track01	mapflag	nomemo
 //mal_in01	mapflag	nomemo	 // [DESABILITADO]
 //mal_in02	mapflag	nomemo	 // [DESABILITADO]
 //mal_dun01	mapflag	nomemo	 // [DESABILITADO]
-//1@cash	mapflag	nomemo	 // [DESABILITADO]
-//1@pump	mapflag	nomemo	 // [DESABILITADO]
-//2@pump	mapflag	nomemo	 // [DESABILITADO]
+1@cash	mapflag	nomemo
+1@pump	mapflag	nomemo
+2@pump	mapflag	nomemo
 //iz_dun05	mapflag	nomemo	 // [DESABILITADO]
 //lhz_dun04	mapflag	nomemo	 // [DESABILITADO]
 //que_lhz	mapflag	nomemo	 // [DESABILITADO]
-//1@lhz	mapflag	nomemo	 // [DESABILITADO]
+1@lhz	mapflag	nomemo
 //gld_dun01_2	mapflag	nomemo	 // [DESABILITADO]
 //gld_dun02_2	mapflag	nomemo	 // [DESABILITADO]
 //gld_dun03_2	mapflag	nomemo	 // [DESABILITADO]
 //gld_dun04_2	mapflag	nomemo	 // [DESABILITADO]
-//gld2_ald	mapflag	nomemo	 // [DESABILITADO]
-//gld2_gef	mapflag	nomemo	 // [DESABILITADO]
-//gld2_pay	mapflag	nomemo	 // [DESABILITADO]
-//gld2_prt	mapflag	nomemo	 // [DESABILITADO]
+gld2_ald	mapflag	nomemo
+gld2_gef	mapflag	nomemo
+gld2_pay	mapflag	nomemo
+gld2_prt	mapflag	nomemo
 //ma_scene01	mapflag	nomemo	 // [DESABILITADO]
 //ma_in01	mapflag	nomemo	 // [DESABILITADO]
 //ma_dun01	mapflag	nomemo	 // [DESABILITADO]
-//1@ma_h	mapflag	nomemo	 // [DESABILITADO]
-//1@ma_c	mapflag	nomemo	 // [DESABILITADO]
-//1@ma_b	mapflag	nomemo	 // [DESABILITADO]
+1@ma_h	mapflag	nomemo
+1@ma_c	mapflag	nomemo
+1@ma_b	mapflag	nomemo
 //ma_zif01	mapflag	nomemo	 // [DESABILITADO]
 //ma_zif02	mapflag	nomemo	 // [DESABILITADO]
 //ma_zif03	mapflag	nomemo	 // [DESABILITADO]
@@ -752,7 +752,7 @@ p_track01	mapflag	nomemo
 //ecl_in02	mapflag	nomemo	 // [DESABILITADO]
 //ecl_in03	mapflag	nomemo	 // [DESABILITADO]
 //ecl_in04	mapflag	nomemo	 // [DESABILITADO]
-//1@ecl	mapflag	nomemo	 // [DESABILITADO]
+1@ecl	mapflag	nomemo
 //ecl_tdun01	mapflag	nomemo	 // [DESABILITADO]
 //ecl_tdun02	mapflag	nomemo	 // [DESABILITADO]
 //ecl_tdun03	mapflag	nomemo	 // [DESABILITADO]
@@ -762,18 +762,18 @@ p_track01	mapflag	nomemo
 //moc_prydn2	mapflag	nomemo	 // [DESABILITADO]
 
 //Orc's Memory ===================
-//1@orcs	mapflag	nomemo	 // [DESABILITADO]
-//2@orcs	mapflag	nomemo	 // [DESABILITADO]
+1@orcs	mapflag	nomemo
+2@orcs	mapflag	nomemo
 
 // Nidhoggr's Instance ===========
-//1@nyd	mapflag	nomemo	 // [DESABILITADO]
-//2@nyd	mapflag	nomemo	 // [DESABILITADO]
+1@nyd	mapflag	nomemo
+2@nyd	mapflag	nomemo
 
 //evt_zombie	mapflag	nomemo
 
 // Poring War ====================
-//poring_w01	mapflag	nomemo	 // [DESABILITADO]
-//poring_w02	mapflag	nomemo	 // [DESABILITADO]
+poring_w01	mapflag	nomemo
+poring_w02	mapflag	nomemo
 
 // Bossnia (custom) ==============
 //bossnia_01	mapflag	nomemo	 // [DESABILITADO]

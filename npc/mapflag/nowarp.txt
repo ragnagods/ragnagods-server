@@ -35,41 +35,41 @@ prtg_cas02	mapflag	nowarp
 prtg_cas03	mapflag	nowarp
 prtg_cas04	mapflag	nowarp
 prtg_cas05	mapflag	nowarp
-//schg_cas01	mapflag	nowarp	 // [DESABILITADO]
-//schg_cas02	mapflag	nowarp	 // [DESABILITADO]
-//schg_cas03	mapflag	nowarp	 // [DESABILITADO]
+schg_cas01	mapflag	nowarp
+schg_cas02	mapflag	nowarp
+schg_cas03	mapflag	nowarp
 //schg_cas04	mapflag	nowarp	 // [DESABILITADO]
 //schg_cas05	mapflag	nowarp	 // [DESABILITADO]
-//arug_cas01	mapflag	nowarp	 // [DESABILITADO]
-//arug_cas02	mapflag	nowarp	 // [DESABILITADO]
-//arug_cas03	mapflag	nowarp	 // [DESABILITADO]
+arug_cas01	mapflag	nowarp
+arug_cas02	mapflag	nowarp
+arug_cas03	mapflag	nowarp
 //arug_cas04	mapflag	nowarp	 // [DESABILITADO]
 //arug_cas05	mapflag	nowarp	 // [DESABILITADO]
 n_castle	mapflag	nowarp
-//nguild_alde	mapflag	nowarp	 // [DESABILITADO]
-//nguild_gef	mapflag	nowarp	 // [DESABILITADO]
-//nguild_pay	mapflag	nowarp	 // [DESABILITADO]
-//nguild_prt	mapflag	nowarp	 // [DESABILITADO]
+nguild_alde	mapflag	nowarp
+nguild_gef	mapflag	nowarp
+nguild_pay	mapflag	nowarp
+nguild_prt	mapflag	nowarp
 //Aldebaran Turbo Track ======
-//turbo_n_1	mapflag	nowarp	 // [DESABILITADO]
-//turbo_n_4	mapflag	nowarp	 // [DESABILITADO]
-//turbo_n_8	mapflag	nowarp	 // [DESABILITADO]
-//turbo_n_16	mapflag	nowarp	 // [DESABILITADO]
-//turbo_e_4	mapflag	nowarp	 // [DESABILITADO]
-//turbo_e_8	mapflag	nowarp	 // [DESABILITADO]
-//turbo_e_16	mapflag	nowarp	 // [DESABILITADO]
+turbo_n_1	mapflag	nowarp
+turbo_n_4	mapflag	nowarp
+turbo_n_8	mapflag	nowarp
+turbo_n_16	mapflag	nowarp
+turbo_e_4	mapflag	nowarp
+turbo_e_8	mapflag	nowarp
+turbo_e_16	mapflag	nowarp
 //Monster Races ================
 p_track01	mapflag	nowarp
-//p_track02	mapflag	nowarp	 // [DESABILITADO]
+p_track02	mapflag	nowarp
 // Battle Grounds ==============
-//bat_c01	mapflag	nowarp	 // [DESABILITADO]
+bat_c01	mapflag	nowarp
 //bat_c02	mapflag	nowarp	 // [DESABILITADO]
 //bat_c03	mapflag	nowarp	 // [DESABILITADO]
-//bat_b01	mapflag	nowarp	 // [DESABILITADO]
+bat_b01	mapflag	nowarp
 //bat_b02	mapflag	nowarp	 // [DESABILITADO]
-//bat_a01	mapflag	nowarp	 // [DESABILITADO]
+bat_a01	mapflag	nowarp
 //bat_a02	mapflag	nowarp	 // [DESABILITADO]
 
 // Poring War ==================
-//poring_w01	mapflag	nowarp	 // [DESABILITADO]
-//poring_w02	mapflag	nowarp	 // [DESABILITADO]
+poring_w01	mapflag	nowarp
+poring_w02	mapflag	nowarp

@@ -187,29 +187,29 @@ monk_in	mapflag	nopenalty
 in_rogue	mapflag	nopenalty
 job_sage	mapflag	nopenalty
 // 3-1 --------------------
-//job3_arch01	mapflag	nopenalty	 // [DESABILITADO]
-//job3_arch02	mapflag	nopenalty	 // [DESABILITADO]
+job3_arch01	mapflag	nopenalty
+job3_arch02	mapflag	nopenalty
 //job3_arch03	mapflag	nopenalty	 // [DESABILITADO]
-//job3_guil01	mapflag	nopenalty	 // [DESABILITADO]
-//job3_guil02	mapflag	nopenalty	 // [DESABILITADO]
-//job3_guil03	mapflag	nopenalty	 // [DESABILITADO]
-//job3_rang01	mapflag	nopenalty	 // [DESABILITADO]
-//job3_rang02	mapflag	nopenalty	 // [DESABILITADO]
-//job3_rune01	mapflag	nopenalty	 // [DESABILITADO]
-//job3_rune02	mapflag	nopenalty	 // [DESABILITADO]
+job3_guil01	mapflag	nopenalty
+job3_guil02	mapflag	nopenalty
+job3_guil03	mapflag	nopenalty
+job3_rang01	mapflag	nopenalty
+job3_rang02	mapflag	nopenalty
+job3_rune01	mapflag	nopenalty
+job3_rune02	mapflag	nopenalty
 //job3_rune03	mapflag	nopenalty	 // [DESABILITADO]
-//job3_war01	mapflag	nopenalty	 // [DESABILITADO]
+job3_war01	mapflag	nopenalty
 //job3_war02	mapflag	nopenalty	 // [DESABILITADO]
 // 3-2 --------------------
-//job3_gen01	mapflag	nopenalty	 // [DESABILITADO]
+job3_gen01	mapflag	nopenalty
 // Ext --------------------
-//job3_sha01	mapflag	nopenalty	 // [DESABILITADO]
+job3_sha01	mapflag	nopenalty
 //job_ko	mapflag	nopenalty	 // [DESABILITADO]
 
 // Misc Quests =======================
 //mosk_ship	mapflag	nopenalty	 // [DESABILITADO]
 que_sign01	mapflag	nopenalty
-//que_sign02	mapflag	nopenalty	 // [DESABILITADO]
+que_sign02	mapflag	nopenalty
 
 // GvG Arenas ===================
 guild_vs1	mapflag	nopenalty
@@ -226,12 +226,12 @@ sec_in02	mapflag	nopenalty
 force_1-1	mapflag	nopenalty
 force_1-2	mapflag	nopenalty
 force_1-3	mapflag	nopenalty
-//force_2-1	mapflag	nopenalty	 // [DESABILITADO]
-//force_2-2	mapflag	nopenalty	 // [DESABILITADO]
-//force_2-3	mapflag	nopenalty	 // [DESABILITADO]
-//force_3-1	mapflag	nopenalty	 // [DESABILITADO]
-//force_3-2	mapflag	nopenalty	 // [DESABILITADO]
-//force_3-3	mapflag	nopenalty	 // [DESABILITADO]
+force_2-1	mapflag	nopenalty
+force_2-2	mapflag	nopenalty
+force_2-3	mapflag	nopenalty
+force_3-1	mapflag	nopenalty
+force_3-2	mapflag	nopenalty
+force_3-3	mapflag	nopenalty
 
 // PvP Arenas =========================
 pvp_y_1-1	mapflag	nopenalty
@@ -278,17 +278,17 @@ pvp_2vs2	mapflag	nopenalty
 
 //Aldebaran Turbo Track
 turbo_room	mapflag	nopenalty
-//turbo_n_1	mapflag	nopenalty	 // [DESABILITADO]
-//turbo_n_4	mapflag	nopenalty	 // [DESABILITADO]
-//turbo_n_8	mapflag	nopenalty	 // [DESABILITADO]
-//turbo_n_16	mapflag	nopenalty	 // [DESABILITADO]
-//turbo_e_4	mapflag	nopenalty	 // [DESABILITADO]
-//turbo_e_8	mapflag	nopenalty	 // [DESABILITADO]
-//turbo_e_16	mapflag	nopenalty	 // [DESABILITADO]
+turbo_n_1	mapflag	nopenalty
+turbo_n_4	mapflag	nopenalty
+turbo_n_8	mapflag	nopenalty
+turbo_n_16	mapflag	nopenalty
+turbo_e_4	mapflag	nopenalty
+turbo_e_8	mapflag	nopenalty
+turbo_e_16	mapflag	nopenalty
 
 //Monster Races ================
 p_track01	mapflag	nopenalty
-//p_track02	mapflag	nopenalty	 // [DESABILITADO]
+p_track02	mapflag	nopenalty
 
 //Vision of Okolnir =============
 //que_qsch01	mapflag	nopenalty	 // [DESABILITADO]
@@ -303,16 +303,16 @@ p_track01	mapflag	nopenalty
 //que_qaru05	mapflag	nopenalty	 // [DESABILITADO]
 
 // Battle Grounds ==============
-//bat_c01	mapflag	nopenalty	 // [DESABILITADO]
+bat_c01	mapflag	nopenalty
 //bat_c02	mapflag	nopenalty	 // [DESABILITADO]
 //bat_c03	mapflag	nopenalty	 // [DESABILITADO]
-//bat_room	mapflag	nopenalty	 // [DESABILITADO]
-//bat_b01	mapflag	nopenalty	 // [DESABILITADO]
+bat_room	mapflag	nopenalty
+bat_b01	mapflag	nopenalty
 //bat_b02	mapflag	nopenalty	 // [DESABILITADO]
-//bat_a01	mapflag	nopenalty	 // [DESABILITADO]
+bat_a01	mapflag	nopenalty
 //bat_a02	mapflag	nopenalty	 // [DESABILITADO]
 
 //evt_zombie	mapflag	nopenalty
 
 // Poring War ==================
-//poring_w02	mapflag	nopenalty	 // [DESABILITADO]
+poring_w02	mapflag	nopenalty

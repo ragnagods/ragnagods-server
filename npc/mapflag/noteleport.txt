@@ -82,7 +82,7 @@ yuno_in03	mapflag	noteleport
 yuno_in04	mapflag	noteleport
 yuno_in05	mapflag	noteleport
 que_sign01	mapflag	noteleport
-//que_sign02	mapflag	noteleport	 // [DESABILITADO]
+que_sign02	mapflag	noteleport
 ein_in01	mapflag	noteleport
 airport	mapflag	noteleport
 airplane	mapflag	noteleport
@@ -164,7 +164,7 @@ poring_c01	mapflag	noteleport
 poring_c02	mapflag	noteleport
 que_job01	mapflag	noteleport
 que_job02	mapflag	noteleport
-//que_job03	mapflag	noteleport	 // [DESABILITADO]
+que_job03	mapflag	noteleport
 cave	mapflag	noteleport
 
 // Guild Castles =================
@@ -188,20 +188,20 @@ prtg_cas02	mapflag	noteleport
 prtg_cas03	mapflag	noteleport
 prtg_cas04	mapflag	noteleport
 prtg_cas05	mapflag	noteleport
-//schg_cas01	mapflag	noteleport	 // [DESABILITADO]
-//schg_cas02	mapflag	noteleport	 // [DESABILITADO]
-//schg_cas03	mapflag	noteleport	 // [DESABILITADO]
+schg_cas01	mapflag	noteleport
+schg_cas02	mapflag	noteleport
+schg_cas03	mapflag	noteleport
 //schg_cas04	mapflag	noteleport	 // [DESABILITADO]
 //schg_cas05	mapflag	noteleport	 // [DESABILITADO]
-//arug_cas01	mapflag	noteleport	 // [DESABILITADO]
-//arug_cas02	mapflag	noteleport	 // [DESABILITADO]
-//arug_cas03	mapflag	noteleport	 // [DESABILITADO]
+arug_cas01	mapflag	noteleport
+arug_cas02	mapflag	noteleport
+arug_cas03	mapflag	noteleport
 //arug_cas04	mapflag	noteleport	 // [DESABILITADO]
 //arug_cas05	mapflag	noteleport	 // [DESABILITADO]
-//nguild_alde	mapflag	noteleport	 // [DESABILITADO]
-//nguild_gef	mapflag	noteleport	 // [DESABILITADO]
-//nguild_pay	mapflag	noteleport	 // [DESABILITADO]
-//nguild_prt	mapflag	noteleport	 // [DESABILITADO]
+nguild_alde	mapflag	noteleport
+nguild_gef	mapflag	noteleport
+nguild_pay	mapflag	noteleport
+nguild_prt	mapflag	noteleport
 
 // GvG Arenas ===================
 guild_vs1	mapflag	noteleport
@@ -213,10 +213,10 @@ guild_vs5	mapflag	noteleport
 // Arenas =====================>\\
 arena_room	mapflag	noteleport
 force_1-1	mapflag	noteleport
-//force_2-1	mapflag	noteleport	 // [DESABILITADO]
-//force_3-1	mapflag	noteleport	 // [DESABILITADO]
-//force_4-1	mapflag	noteleport	 // [DESABILITADO]
-//force_5-1	mapflag	noteleport	 // [DESABILITADO]
+force_2-1	mapflag	noteleport
+force_3-1	mapflag	noteleport
+force_4-1	mapflag	noteleport
+force_5-1	mapflag	noteleport
 force_1-2	mapflag	noteleport
 force_1-3	mapflag	noteleport
 sec_in01	mapflag	noteleport
@@ -309,17 +309,17 @@ pvp_2vs2	mapflag	noteleport
 
 //Aldebaran Turbo Track ==========
 turbo_room	mapflag	noteleport
-//turbo_n_1	mapflag	noteleport	 // [DESABILITADO]
-//turbo_n_4	mapflag	noteleport	 // [DESABILITADO]
-//turbo_n_8	mapflag	noteleport	 // [DESABILITADO]
-//turbo_n_16	mapflag	noteleport	 // [DESABILITADO]
-//turbo_e_4	mapflag	noteleport	 // [DESABILITADO]
-//turbo_e_8	mapflag	noteleport	 // [DESABILITADO]
-//turbo_e_16	mapflag	noteleport	 // [DESABILITADO]
+turbo_n_1	mapflag	noteleport
+turbo_n_4	mapflag	noteleport
+turbo_n_8	mapflag	noteleport
+turbo_n_16	mapflag	noteleport
+turbo_e_4	mapflag	noteleport
+turbo_e_8	mapflag	noteleport
+turbo_e_16	mapflag	noteleport
 
 //Monster Races ================
 p_track01	mapflag	noteleport
-//p_track02	mapflag	noteleport	 // [DESABILITADO]
+p_track02	mapflag	noteleport
 
 //Vision of Okolnir ==============
 //que_qsch01	mapflag	noteleport	 // [DESABILITADO]
@@ -344,34 +344,34 @@ p_track01	mapflag	noteleport
 //que_qaru05	mapflag	monster_noteleport	 // [DESABILITADO]
 
 //Sealed Shrine ==================
-//1@cata	mapflag	noteleport	 // [DESABILITADO]
-//1@cata	mapflag	monster_noteleport	 // [DESABILITADO]
-//2@cata	mapflag	noteleport	 // [DESABILITADO]
-//2@cata	mapflag	monster_noteleport	 // [DESABILITADO]
+1@cata	mapflag	noteleport
+1@cata	mapflag	monster_noteleport
+2@cata	mapflag	noteleport
+2@cata	mapflag	monster_noteleport
 
 //Endless Tower ==================
-//e_tower	mapflag	noteleport	 // [DESABILITADO]
-//1@tower	mapflag	noteleport	 // [DESABILITADO]
-//1@tower	mapflag	monster_noteleport	 // [DESABILITADO]
-//2@tower	mapflag	noteleport	 // [DESABILITADO]
-//2@tower	mapflag	monster_noteleport	 // [DESABILITADO]
-//3@tower	mapflag	noteleport	 // [DESABILITADO]
-//3@tower	mapflag	monster_noteleport	 // [DESABILITADO]
-//4@tower	mapflag	noteleport	 // [DESABILITADO]
-//4@tower	mapflag	monster_noteleport	 // [DESABILITADO]
-//5@tower	mapflag	noteleport	 // [DESABILITADO]
-//5@tower	mapflag	monster_noteleport	 // [DESABILITADO]
-//6@tower	mapflag	noteleport	 // [DESABILITADO]
-//6@tower	mapflag	monster_noteleport	 // [DESABILITADO]
+e_tower	mapflag	noteleport
+1@tower	mapflag	noteleport
+1@tower	mapflag	monster_noteleport
+2@tower	mapflag	noteleport
+2@tower	mapflag	monster_noteleport
+3@tower	mapflag	noteleport
+3@tower	mapflag	monster_noteleport
+4@tower	mapflag	noteleport
+4@tower	mapflag	monster_noteleport
+5@tower	mapflag	noteleport
+5@tower	mapflag	monster_noteleport
+6@tower	mapflag	noteleport
+6@tower	mapflag	monster_noteleport
 
 // Battle Grounds ==============
-//bat_c01	mapflag	noteleport	 // [DESABILITADO]
+bat_c01	mapflag	noteleport
 //bat_c02	mapflag	noteleport	 // [DESABILITADO]
 //bat_c03	mapflag	noteleport	 // [DESABILITADO]
-//bat_room	mapflag	noteleport	 // [DESABILITADO]
-//bat_b01	mapflag	noteleport	 // [DESABILITADO]
+bat_room	mapflag	noteleport
+bat_b01	mapflag	noteleport
 //bat_b02	mapflag	noteleport	 // [DESABILITADO]
-//bat_a01	mapflag	noteleport	 // [DESABILITADO]
+bat_a01	mapflag	noteleport
 //bat_a02	mapflag	noteleport	 // [DESABILITADO]
 
 // Episode 13 ====================
@@ -380,7 +380,7 @@ p_track01	mapflag	noteleport
 //que_dan01	mapflag	noteleport	 // [DESABILITADO]
 //que_dan02	mapflag	noteleport	 // [DESABILITADO]
 //schg_que01	mapflag	noteleport	 // [DESABILITADO]
-//arug_que01	mapflag	noteleport	 // [DESABILITADO]
+arug_que01	mapflag	noteleport
 //man_in01	mapflag	noteleport	 // [DESABILITADO]
 //spl_in01	mapflag	noteleport	 // [DESABILITADO]
 //s_atelier	mapflag	noteleport	 // [DESABILITADO]
@@ -388,29 +388,29 @@ p_track01	mapflag	noteleport
 //dic_in01	mapflag	noteleport	 // [DESABILITADO]
 
 // Episode 14 ====================
-//1@mist	mapflag	noteleport	 // [DESABILITADO]
-//1@mist	mapflag	monster_noteleport	 // [DESABILITADO]
+1@mist	mapflag	noteleport
+1@mist	mapflag	monster_noteleport
 //dew_in01	mapflag	noteleport	 // [DESABILITADO]
 //mal_in01	mapflag	noteleport	 // [DESABILITADO]
 //mal_in02	mapflag	noteleport	 // [DESABILITADO]
-//1@cash	mapflag	noteleport	 // [DESABILITADO]
-//1@cash	mapflag	monster_noteleport	 // [DESABILITADO]
-//1@pump	mapflag	noteleport	 // [DESABILITADO]
-//1@pump	mapflag	monster_noteleport	 // [DESABILITADO]
-//2@pump	mapflag	noteleport	 // [DESABILITADO]
-//2@pump	mapflag	monster_noteleport	 // [DESABILITADO]
+1@cash	mapflag	noteleport
+1@cash	mapflag	monster_noteleport
+1@pump	mapflag	noteleport
+1@pump	mapflag	monster_noteleport
+2@pump	mapflag	noteleport
+2@pump	mapflag	monster_noteleport
 //que_lhz	mapflag	noteleport	 // [DESABILITADO]
 //que_lhz	mapflag	monster_noteleport	 // [DESABILITADO]
-//1@lhz	mapflag	noteleport	 // [DESABILITADO]
-//1@lhz	mapflag	monster_noteleport	 // [DESABILITADO]
+1@lhz	mapflag	noteleport
+1@lhz	mapflag	monster_noteleport
 //ma_scene01	mapflag	noteleport	 // [DESABILITADO]
 //ma_in01	mapflag	noteleport	 // [DESABILITADO]
-//1@ma_h	mapflag	noteleport	 // [DESABILITADO]
-//1@ma_h	mapflag	monster_noteleport	 // [DESABILITADO]
-//1@ma_c	mapflag	noteleport	 // [DESABILITADO]
-//1@ma_c	mapflag	monster_noteleport	 // [DESABILITADO]
-//1@ma_b	mapflag	noteleport	 // [DESABILITADO]
-//1@ma_b	mapflag	monster_noteleport	 // [DESABILITADO]
+1@ma_h	mapflag	noteleport
+1@ma_h	mapflag	monster_noteleport
+1@ma_c	mapflag	noteleport
+1@ma_c	mapflag	monster_noteleport
+1@ma_b	mapflag	noteleport
+1@ma_b	mapflag	monster_noteleport
 //ma_zif01	mapflag	noteleport	 // [DESABILITADO]
 //ma_zif02	mapflag	noteleport	 // [DESABILITADO]
 //ma_zif03	mapflag	noteleport	 // [DESABILITADO]
@@ -424,28 +424,28 @@ p_track01	mapflag	noteleport
 //ecl_in02	mapflag	noteleport	 // [DESABILITADO]
 //ecl_in03	mapflag	noteleport	 // [DESABILITADO]
 //ecl_in04	mapflag	noteleport	 // [DESABILITADO]
-//1@ecl	mapflag	noteleport	 // [DESABILITADO]
-//1@ecl	mapflag	monster_noteleport	 // [DESABILITADO]
+1@ecl	mapflag	noteleport
+1@ecl	mapflag	monster_noteleport
 //ecl_hub01	mapflag	noteleport	 // [DESABILITADO]
 
 //Orc's Memory ===================
-//1@orcs	mapflag	noteleport	 // [DESABILITADO]
-//1@orcs	mapflag	monster_noteleport	 // [DESABILITADO]
-//2@orcs	mapflag	noteleport	 // [DESABILITADO]
-//2@orcs	mapflag	monster_noteleport	 // [DESABILITADO]
+1@orcs	mapflag	noteleport
+1@orcs	mapflag	monster_noteleport
+2@orcs	mapflag	noteleport
+2@orcs	mapflag	monster_noteleport
 
 // Yggdrasil Dungeon =============
 //nyd_dun02	mapflag	noteleport	 // [DESABILITADO]
 
 // Nidhoggr's Instance ===========
-//1@nyd	mapflag	noteleport	 // [DESABILITADO]
-//1@nyd	mapflag	monster_noteleport	 // [DESABILITADO]
-//2@nyd	mapflag	noteleport	 // [DESABILITADO]
-//2@nyd	mapflag	monster_noteleport	 // [DESABILITADO]
+1@nyd	mapflag	noteleport
+1@nyd	mapflag	monster_noteleport
+2@nyd	mapflag	noteleport
+2@nyd	mapflag	monster_noteleport
 
 //evt_zombie	mapflag	noteleport
 
 // Poring War ====================
-//poring_w01	mapflag	noteleport	 // [DESABILITADO]
-//poring_w02	mapflag	noteleport	 // [DESABILITADO]
-//poring_w02	mapflag	monster_noteleport	 // [DESABILITADO]
+poring_w01	mapflag	noteleport
+poring_w02	mapflag	noteleport
+poring_w02	mapflag	monster_noteleport

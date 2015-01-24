@@ -204,7 +204,7 @@ yuno_fild06	mapflag	nightenabled
 tha_scene01	mapflag	nightenabled
 hugel	mapflag	nightenabled
 p_track01	mapflag	nightenabled
-//p_track02	mapflag	nightenabled	 // [DESABILITADO]
+p_track02	mapflag	nightenabled
 odin_tem01	mapflag	nightenabled
 odin_tem02	mapflag	nightenabled
 odin_tem03	mapflag	nightenabled
@@ -245,8 +245,8 @@ poring_c01	mapflag	nightenabled
 poring_c02	mapflag	nightenabled
 //nameless_i	mapflag	nightenabled	 // [DESABILITADO]
 //nameless_n	mapflag	nightenabled	 // [DESABILITADO]
-//poring_w01	mapflag	nightenabled	 // [DESABILITADO]
-//poring_w02	mapflag	nightenabled	 // [DESABILITADO]
+poring_w01	mapflag	nightenabled
+poring_w02	mapflag	nightenabled
 //moscovia	mapflag	nightenabled	 // [DESABILITADO]
 //mosk_ship	mapflag	nightenabled	 // [DESABILITADO]
 //mosk_fild01	mapflag	nightenabled	 // [DESABILITADO]
@@ -255,11 +255,11 @@ poring_c02	mapflag	nightenabled
 //mosk_dun02	mapflag	nightenabled	 // [DESABILITADO]
 //mosk_dun03	mapflag	nightenabled	 // [DESABILITADO]
 //que_temsky	mapflag	nightenabled	 // [DESABILITADO]
-//sch_gld	mapflag	nightenabled	 // [DESABILITADO]
+sch_gld	mapflag	nightenabled
 //moc_fild20	mapflag	nightenabled	 // [DESABILITADO]
 //moc_fild21	mapflag	nightenabled	 // [DESABILITADO]
 //moc_fild22	mapflag	nightenabled	 // [DESABILITADO]
-//aru_gld	mapflag	nightenabled	 // [DESABILITADO]
+aru_gld	mapflag	nightenabled
 //que_qsch01	mapflag	nightenabled	 // [DESABILITADO]
 //que_qsch02	mapflag	nightenabled	 // [DESABILITADO]
 //que_qsch03	mapflag	nightenabled	 // [DESABILITADO]
@@ -272,12 +272,12 @@ poring_c02	mapflag	nightenabled
 //que_qaru05	mapflag	nightenabled	 // [DESABILITADO]
 
 // Battle Grounds ==============
-//bat_c01	mapflag	nightenabled	 // [DESABILITADO]
+bat_c01	mapflag	nightenabled
 //bat_c02	mapflag	nightenabled	 // [DESABILITADO]
 //bat_c03	mapflag	nightenabled	 // [DESABILITADO]
 
 //Endless Tower ==================
-//e_tower	mapflag	nightenabled	 // [DESABILITADO]
+e_tower	mapflag	nightenabled
 
 // Episode 13 ====================
 //mid_camp	mapflag	nightenabled	 // [DESABILITADO]
@@ -288,7 +288,7 @@ poring_c02	mapflag	nightenabled
 //moc_fild22b	mapflag	nightenabled	 // [DESABILITADO]
 //que_dan01	mapflag	nightenabled	 // [DESABILITADO]
 //schg_que01	mapflag	nightenabled	 // [DESABILITADO]
-//arug_que01	mapflag	nightenabled	 // [DESABILITADO]
+arug_que01	mapflag	nightenabled
 //nyd_dun01	mapflag	nightenabled	 // [DESABILITADO]
 //nyd_dun02	mapflag	nightenabled	 // [DESABILITADO]
 //manuk	mapflag	nightenabled	 // [DESABILITADO]
