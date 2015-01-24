@@ -366,8 +366,9 @@ struct map_session_data {
 	short catch_target_class; // pet catching, stores a pet class to catch (short now) [zzo]
 	short spiritball, spiritball_old;
 	int spirit_timer[MAX_SPIRITBALL];
-	short spiritcharm[SPIRITS_TYPE_END];
-	int charm_timer[SPIRITS_TYPE_END][MAX_SPIRITCHARM];
+	short charm_count;
+	int charm_type;
+	int charm_timer[MAX_SPIRITCHARM];
 	unsigned char potion_success_counter; //Potion successes in row counter
 	unsigned char mission_count; //Stores the bounty kill count for TK_MISSION
 	short mission_mobid; //Stores the target mob_id for TK_MISSION
@@ -490,10 +491,9 @@ struct map_session_data {
 	int shadowform_id;
 
 	/* [Ind/Hercules] */
-	struct hChSysCh **channels;
+	struct channel_data **channels;
 	unsigned char channel_count;
-	struct hChSysCh *gcbind;
-	bool stealth;
+	struct channel_data *gcbind;
 	unsigned char fontcolor;
 	unsigned int fontcolor_tid;
 	int64 hchsysch_tick;
@@ -599,7 +599,14 @@ struct map_session_data {
 #define pc_isinvisible(sd)    ( (sd)->sc.option&OPTION_INVISIBLE )
 #define pc_is50overweight(sd) ( (sd)->weight*100 >= (sd)->max_weight*battle->bc->natural_heal_weight_rate )
 #define pc_is90overweight(sd) ( (sd)->weight*10 >= (sd)->max_weight*9 )
-#define pc_maxparameter(sd)   ( (((sd)->class_&MAPID_UPPERMASK) == MAPID_KAGEROUOBORO || ((sd)->class_&MAPID_UPPERMASK) == MAPID_REBELLION || ((sd)->class_&MAPID_THIRDMASK) == MAPID_SUPER_NOVICE_E) ? battle->bc->max_extended_parameter : (sd)->class_&JOBL_THIRD ? ((sd)->class_&JOBL_BABY ? battle->bc->max_baby_third_parameter : battle->bc->max_third_parameter) : ((sd)->class_&JOBL_BABY ? battle->bc->max_baby_parameter : battle->bc->max_parameter) )
+#define pc_maxparameter(sd)   ( \
+	( ((sd)->class_&MAPID_UPPERMASK) == MAPID_KAGEROUOBORO \
+	 || ((sd)->class_&MAPID_UPPERMASK) == MAPID_REBELLION \
+	 || ((sd)->class_&MAPID_THIRDMASK) == MAPID_SUPER_NOVICE_E \
+	) ? battle->bc->max_extended_parameter : ((sd)->class_&JOBL_THIRD) ? \
+	    (((sd)->class_&JOBL_BABY) ? battle->bc->max_baby_third_parameter : battle->bc->max_third_parameter ) : \
+	    (((sd)->class_&JOBL_BABY) ? battle->bc->max_baby_parameter : battle->bc->max_parameter) \
+	)
 /// Generic check for mounts
 #define pc_hasmount(sd)       ( (sd)->sc.option&(OPTION_RIDING|OPTION_WUGRIDER|OPTION_DRAGON|OPTION_MADOGEAR) )
 /// Knight classes Peco / Gryphon
@@ -963,8 +970,8 @@ struct pc_interface {
 
 	int (*load_combo) (struct map_session_data *sd);
 
-	int (*add_charm) (struct map_session_data *sd,int interval,int max,int type);
-	int (*del_charm) (struct map_session_data *sd,int count,int type);
+	void (*add_charm) (struct map_session_data *sd, int interval, int max, int type);
+	void (*del_charm) (struct map_session_data *sd, int count, int type);
 
 	void (*baselevelchanged) (struct map_session_data *sd);
 	int (*level_penalty_mod) (int diff, unsigned char race, unsigned short mode, int type);
@@ -1011,6 +1018,8 @@ struct pc_interface {
 	void (*expire_check) (struct map_session_data *sd);
 
 	bool (*db_checkid) (unsigned int class_);
+
+	void (*validate_levels) (void);
 
 	/**
 	 * Autotrade persistency [Ind/Hercules <3]

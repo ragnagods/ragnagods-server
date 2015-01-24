@@ -19,7 +19,7 @@
 
 struct mob_data;
 struct npc_data;
-struct hChSysCh;
+struct channel_data;
 
 enum E_MAPSERVER_ST {
 	MAPSERVER_ST_RUNNING = CORE_ST_LAST,
@@ -283,7 +283,7 @@ enum {
 	RC2_MAX
 };
 
-enum {
+enum elements {
 	ELE_NEUTRAL=0,
 	ELE_WATER,
 	ELE_EARTH,
@@ -297,14 +297,17 @@ enum {
 	ELE_MAX
 };
 
-enum {
-	SPIRITS_TYPE_NONE = 0,
-	SPIRITS_TYPE_CHARM_WATER,
-	SPIRITS_TYPE_CHARM_LAND,
-	SPIRITS_TYPE_CHARM_FIRE,
-	SPIRITS_TYPE_CHARM_WIND,
-	SPIRITS_TYPE_SPHERE,
-	SPIRITS_TYPE_END
+/**
+ * Types of spirit charms.
+ *
+ * Note: Code assumes that this matches the first entries in enum elements.
+ */
+enum spirit_charm_types {
+	CHARM_TYPE_NONE = 0,
+	CHARM_TYPE_WATER,
+	CHARM_TYPE_LAND,
+	CHARM_TYPE_FIRE,
+	CHARM_TYPE_WIND
 };
 
 enum auto_trigger_flag {
@@ -557,6 +560,8 @@ struct map_zone_data {
 	int disabled_skills_count;
 	int *disabled_items;
 	int disabled_items_count;
+	int *cant_disable_items; /** when a zone wants to ensure such a item is never disabled (i.e. gvg zone enables a item that is restricted everywhere else) **/
+	int cant_disable_items_count;
 	char **mapflags;
 	int mapflags_count;
 	struct map_zone_disabled_command_entry **disabled_commands;
@@ -691,7 +696,7 @@ struct map_data {
 	struct map_zone_data *prev_zone;
 
 	/* Hercules Local Chat */
-	struct hChSysCh *channel;
+	struct channel_data *channel;
 
 	/* invincible_time_inc mapflag */
 	unsigned int invincible_time_inc;
@@ -852,12 +857,9 @@ struct map_interface {
 
 	char item_db_db[32];
 	char item_db2_db[32];
-	char item_db_re_db[32];
 	char mob_db_db[32];
-	char mob_db_re_db[32];
 	char mob_db2_db[32];
 	char mob_skill_db_db[32];
-	char mob_skill_db_re_db[32];
 	char mob_skill_db2_db[32];
 	char interreg_db[32];
 	char autotrade_merchants_db[32];
@@ -1079,6 +1081,7 @@ struct map_interface {
 	void (*add_questinfo) (int m, struct questinfo *qi);
 	bool (*remove_questinfo) (int m, struct npc_data *nd);
 	struct map_zone_data *(*merge_zone) (struct map_zone_data *main, struct map_zone_data *other);
+	void (*zone_clear_single) (struct map_zone_data *zone);
 };
 
 struct map_interface *map;

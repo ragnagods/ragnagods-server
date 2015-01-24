@@ -27,7 +27,6 @@ static int inter_mail_fromsql(int char_id, struct mail_data* md)
 {
 	int i, j;
 	struct mail_message *msg;
-	struct item *item;
 	char *data;
 	StringBuf buf;
 
@@ -52,6 +51,7 @@ static int inter_mail_fromsql(int char_id, struct mail_data* md)
 
 	for (i = 0; i < MAIL_MAX_INBOX && SQL_SUCCESS == SQL->NextRow(inter->sql_handle); ++i )
 	{
+		struct item *item;
 		msg = &md->msg[i];
 		SQL->GetData(inter->sql_handle, 0, &data, NULL); msg->id = atoi(data);
 		SQL->GetData(inter->sql_handle, 1, &data, NULL); safestrncpy(msg->send_name, data, NAME_LENGTH);

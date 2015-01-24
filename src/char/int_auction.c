@@ -105,7 +105,7 @@ unsigned int inter_auction_create(struct auction_data *auction)
 	else
 	{
 		struct auction_data *auction_;
-		int64 tick = auction->hours * 3600000;
+		int64 tick = (int64)auction->hours * 3600000;
 
 		auction->item.amount = 1;
 		auction->item.identify = 1;
@@ -175,7 +175,6 @@ void inter_auctions_fromsql(void)
 {
 	int i;
 	struct auction_data *auction;
-	struct item *item;
 	char *data;
 	StringBuf buf;
 	int64 tick = timer->gettick(), endtick;
@@ -193,8 +192,8 @@ void inter_auctions_fromsql(void)
 
 	StrBuf->Destroy(&buf);
 
-	while( SQL_SUCCESS == SQL->NextRow(inter->sql_handle) )
-	{
+	while (SQL_SUCCESS == SQL->NextRow(inter->sql_handle)) {
+		struct item *item;
 		CREATE(auction, struct auction_data, 1);
 		SQL->GetData(inter->sql_handle, 0, &data, NULL); auction->auction_id = atoi(data);
 		SQL->GetData(inter->sql_handle, 1, &data, NULL); auction->seller_id = atoi(data);

@@ -586,7 +586,7 @@ struct guild_skill {
 	int id,lv;
 };
 
-struct hChSysCh;
+struct channel_data;
 struct guild {
 	int guild_id;
 	short guild_lv, connect_member, max_member, average_lv;
@@ -609,7 +609,7 @@ struct guild {
 	short *instance;
 	unsigned short instances;
 
-	struct hChSysCh *channel;
+	struct channel_data *channel;
 
 	/* HPM Custom Struct */
 	struct HPluginData **hdata;

@@ -311,15 +311,18 @@ void setsocketopts(int fd, struct hSockOpt *opt) {
 	// set SO_REAUSEADDR to true, unix only. on windows this option causes
 	// the previous owner of the socket to give up, which is not desirable
 	// in most cases, neither compatible with unix.
-	sSetsockopt(fd,SOL_SOCKET,SO_REUSEADDR,(char *)&yes,sizeof(yes));
+	if (sSetsockopt(fd,SOL_SOCKET,SO_REUSEADDR,(char *)&yes,sizeof(yes)))
+		ShowWarning("setsocketopts: Unable to set SO_REUSEADDR mode for connection #%d!\n", fd);
 #ifdef SO_REUSEPORT
-	sSetsockopt(fd,SOL_SOCKET,SO_REUSEPORT,(char *)&yes,sizeof(yes));
-#endif
-#endif
+	if (sSetsockopt(fd,SOL_SOCKET,SO_REUSEPORT,(char *)&yes,sizeof(yes)))
+		ShowWarning("setsocketopts: Unable to set SO_REUSEPORT mode for connection #%d!\n", fd);
+#endif // SO_REUSEPORT
+#endif // WIN32
 
 	// Set the socket into no-delay mode; otherwise packets get delayed for up to 200ms, likely creating server-side lag.
 	// The RO protocol is mainly single-packet request/response, plus the FIFO model already does packet grouping anyway.
-	sSetsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (char *)&yes, sizeof(yes));
+	if (sSetsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (char *)&yes, sizeof(yes)))
+		ShowWarning("setsocketopts: Unable to set TCP_NODELAY mode for connection #%d!\n", fd);
 
 	if( opt && opt->setTimeo ) {
 		struct timeval timeout;
@@ -327,8 +330,10 @@ void setsocketopts(int fd, struct hSockOpt *opt) {
 		timeout.tv_sec = 5;
 		timeout.tv_usec = 0;
 
-		sSetsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,(char *)&timeout,sizeof(timeout));
-		sSetsockopt(fd,SOL_SOCKET,SO_SNDTIMEO,(char *)&timeout,sizeof(timeout));
+		if (sSetsockopt(fd,SOL_SOCKET,SO_RCVTIMEO,(char *)&timeout,sizeof(timeout)))
+			ShowWarning("setsocketopts: Unable to set SO_RCVTIMEO for connection #%d!\n", fd);
+		if (sSetsockopt(fd,SOL_SOCKET,SO_SNDTIMEO,(char *)&timeout,sizeof(timeout)))
+			ShowWarning("setsocketopts: Unable to set SO_SNDTIMEO for connection #%d!\n", fd);
 	}
 
 	// force the socket into no-wait, graceful-close mode (should be the default, but better make sure)
@@ -339,10 +344,12 @@ void setsocketopts(int fd, struct hSockOpt *opt) {
 		ShowWarning("setsocketopts: Unable to set SO_LINGER mode for connection #%d!\n", fd);
 
 #ifdef TCP_THIN_LINEAR_TIMEOUTS
-    setsockopt(fd, IPPROTO_TCP, TCP_THIN_LINEAR_TIMEOUTS, &yes, sizeof yes);
+    if (sSetsockopt(fd, IPPROTO_TCP, TCP_THIN_LINEAR_TIMEOUTS, (char *)&yes, sizeof(yes)))
+	    ShowWarning("setsocketopts: Unable to set TCP_THIN_LINEAR_TIMEOUTS mode for connection #%d!\n", fd);
 #endif
 #ifdef TCP_THIN_DUPACK
-    setsockopt(fd, IPPROTO_TCP, TCP_THIN_DUPACK, &yes, sizeof yes);
+    if (sSetsockopt(fd, IPPROTO_TCP, TCP_THIN_DUPACK, (char *)&yes, sizeof(yes)))
+	    ShowWarning("setsocketopts: Unable to set TCP_THIN_DUPACK mode for connection #%d!\n", fd);
 #endif
 }
 
@@ -624,7 +631,6 @@ static int create_session(int fd, RecvFunc func_recv, SendFunc func_send, ParseF
 static void delete_session(int fd)
 {
 	if( sockt->session_isValid(fd) ) {
-		unsigned int i;
 #ifdef SHOW_SERVER_STATS
 		socket_data_qi -= session[fd]->rdata_size - session[fd]->rdata_pos;
 		socket_data_qo -= session[fd]->wdata_size;
@@ -633,8 +639,8 @@ static void delete_session(int fd)
 		aFree(session[fd]->wdata);
 		if( session[fd]->session_data )
 			aFree(session[fd]->session_data);
-		if( session[fd]->hdata )
-		{
+		if (session[fd]->hdata) {
+			unsigned int i;
 			for(i = 0; i < session[fd]->hdatac; i++) {
 				if( session[fd]->hdata[i]->flag.free ) {
 					aFree(session[fd]->hdata[i]->data);
@@ -1249,41 +1255,38 @@ int socket_getips(uint32* ips, int max)
 #ifdef WIN32
 	{
 		char fullhost[255];
-		u_long** a;
-		struct hostent* hent;
 
 		// XXX This should look up the local IP addresses in the registry
 		// instead of calling gethostbyname. However, the way IP addresses
 		// are stored in the registry is annoyingly complex, so I'll leave
 		// this as T.B.D. [Meruru]
-		if( gethostname(fullhost, sizeof(fullhost)) == SOCKET_ERROR )
-		{
+		if (gethostname(fullhost, sizeof(fullhost)) == SOCKET_ERROR) {
 			ShowError("socket_getips: No hostname defined!\n");
 			return 0;
-		}
-		else
-		{
-			hent = gethostbyname(fullhost);
+		} else {
+			u_long** a;
+			struct hostent *hent =gethostbyname(fullhost);
 			if( hent == NULL ){
 				ShowError("socket_getips: Cannot resolve our own hostname to an IP address\n");
 				return 0;
 			}
 			a = (u_long**)hent->h_addr_list;
-			for( ; a[num] != NULL && num < max; ++num)
+			for (; num < max && a[num] != NULL; ++num)
 				ips[num] = (uint32)ntohl(*a[num]);
 		}
 	}
 #else // not WIN32
 	{
-		int pos;
 		int fd;
 		char buf[2*16*sizeof(struct ifreq)];
 		struct ifconf ic;
-		struct ifreq* ir;
-		struct sockaddr_in* a;
 		u_long ad;
 
 		fd = sSocket(AF_INET, SOCK_STREAM, 0);
+		if (fd == -1) {
+			ShowError("socket_getips: Unable to create a socket!\n");
+			return 0;
+		}
 
 		memset(buf, 0x00, sizeof(buf));
 
@@ -1291,21 +1294,18 @@ int socket_getips(uint32* ips, int max)
 		// interfaces than will fit in the buffer
 		ic.ifc_len = sizeof(buf);
 		ic.ifc_buf = buf;
-		if( sIoctl(fd, SIOCGIFCONF, &ic) == -1 )
-		{
+		if (sIoctl(fd, SIOCGIFCONF, &ic) == -1) {
 			ShowError("socket_getips: SIOCGIFCONF failed!\n");
 			sClose(fd);
 			return 0;
-		}
-		else
-		{
-			for( pos=0; pos < ic.ifc_len && num < max; )
-			{
-				ir = (struct ifreq*)(buf+pos);
-				a = (struct sockaddr_in*) &(ir->ifr_addr);
-				if( a->sin_family == AF_INET ){
+		} else {
+			int pos;
+			for (pos = 0; pos < ic.ifc_len && num < max; ) {
+				struct ifreq *ir = (struct ifreq*)(buf+pos);
+				struct sockaddr_in *a = (struct sockaddr_in*) &(ir->ifr_addr);
+				if (a->sin_family == AF_INET) {
 					ad = ntohl(a->sin_addr.s_addr);
-					if( ad != INADDR_LOOPBACK && ad != INADDR_ANY )
+					if (ad != INADDR_LOOPBACK && ad != INADDR_ANY)
 						ips[num++] = (uint32)ad;
 				}
 	#if (defined(BSD) && BSD >= 199103) || defined(_AIX) || defined(__APPLE__)

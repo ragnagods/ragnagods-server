@@ -3967,16 +3967,20 @@ if War of Emperium is on and 0 if it isn't.
 ---------------------------------------
 
 *isnight()
+
+This functions will return true or false depending on whether the server is in 
+night mode or day mode:
+
+	if (!isnight()) mes "I only prowl in the night.";
+
 *isday()
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @ /!\ This command is deprecated @
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-These functions will return 1 or 0 depending on whether the server is in 
-night mode or day mode. 'isnight' returns 1 if it's night and 0 if it 
-isn't, 'isday' the other way around. They can be used interchangeably, 
-pick the one you like more:
-
-	// These two are equivalent:
-	if (isday()) mes "I only prowl in the night.";
-	if (isnight()!=1) mes "I only prowl in the night.";
+This command is deprecated and it should not be used in new scripts, as it
+is likely to be removed at a later time. Please consider using !isnight()
+instead.
 
 ---------------------------------------
 
@@ -7117,6 +7121,20 @@ be the NPC with the said name.
 
 ---------------------------------------
 
+*channelmes("<#channel>", "<message>");
+
+This command will send a message to the specified chat channel.
+
+The sent message will not include any character's names.
+
+For special channels, such as #map and #ally, the attached RID's map or guild
+will be used.
+
+If the channel doesn't exist (or, in the case of a character-specific channel,
+no RID is attached), false will be returned. In case of success, true is
+returned.
+
+---------------------------------------
 *rand(<number>{,<number>});
 
 This function returns a number ...
@@ -8024,8 +8042,8 @@ meant to be executed from pet scripts. They will modify the pet AI
 decision-making for the current pet of the invoking character, and will 
 NOT have any independent effect by themselves, which is why only one of 
 them each may be in effect at any time for a specific pet. A pet may 
-have 'petloot', 'petskillbonus', 'petskillattack' OR 'petpetskillattack2' 
-and 'petskillsupport' at the same time.
+have 'petloot', 'petskillbonus', 'petskillattack' and 'petskillsupport' at the
+same time.
 
 *petskillbonus <bonus type>,<value>,<duration>,<delay>;
 
@@ -8056,16 +8074,14 @@ time between activations. The skill numbers are as per
 It's not quite certain who's stats will be used for the skills cast, the 
 character's or the pets. Probably, Skotlex can answer that question.
 
-*petskillattack <skill id>,<skill level>,<rate>,<bonusrate>;
-*petskillattack "<skill name>",<skill level>,<rate>,<bonusrate>;
-*petskillattack2 <skill id>,<damage>,<number of attacks>,<rate>,<bonusrate>;
-*petskillattack2 "<skill name>",<damage>,<number of attacks>,<rate>,<bonusrate>;
+*petskillattack <skill id>,<damage>,<number of attacks>,<rate>,<bonusrate>;
+*petskillattack "<skill name>",<damage>,<number of attacks>,<rate>,<bonusrate>;
 
-These two commands will make the pet cast an attack skill on the enemy the 
-pet's owner is currently fighting. Skill IDs and levels are as per 
-'petskillsupport'. 
-'petskillattack2' will make the pet cast the skill with a fixed amount of 
-damage inflicted and the specified number of attacks.
+This command will make the pet cast an attack skill on the enemy the pet's
+owner is currently fighting. Skill IDs and levels are as per 'petskillsupport'.
+If <number of attacks> is specified different than 0, it will make the pet cast
+the skill with a fixed amount of damage inflicted and the specified number of
+attacks. A value of zero uses the skill's defaults.
 
 All commands with delays and durations will only make the behavior active 
 for the specified duration of seconds, with a delay of the specified 

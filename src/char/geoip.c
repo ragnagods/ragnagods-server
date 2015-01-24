@@ -56,14 +56,13 @@ const char* geoip_getcountry(uint32 ipnum)
 {
 	int depth;
 	unsigned int x;
-	const unsigned char *buf;
 	unsigned int offset = 0;
 
 	if( geoip->data->active == false )
 		return geoip_countryname[0];
 
 	for (depth = 31; depth >= 0; depth--) {
-		buf = geoip->data->cache + (long)6 *offset;
+		const unsigned char *buf = geoip->data->cache + (long)6 *offset;
 		if (ipnum & (1 << depth)) {
 			/* Take the right-hand branch */
 			x =   (buf[3*1 + 0] << (0*8))
@@ -137,7 +136,7 @@ void geoip_init(void)
 		geoip->final(false);
 		return;
 	}
-	geoip->data->cache = aMalloc( (sizeof(geoip->data->cache) * bufa.st_size) );
+	geoip->data->cache = aMalloc(sizeof(unsigned char) * bufa.st_size);
 	if (fread(geoip->data->cache, sizeof(unsigned char), bufa.st_size, db) != bufa.st_size) {
 		ShowError("geoip_cache: Couldn't read all elements!\n");
 		fclose(db);
@@ -158,7 +157,10 @@ void geoip_init(void)
 			}
 			break;
 		} else {
-			fseek(db, -4l, SEEK_CUR);
+			if (fseek(db, -4l, SEEK_CUR) != 0) {
+				db_type = 0;
+				break;
+			}
 		}
 	}
 
