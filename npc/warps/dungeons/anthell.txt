@@ -22,7 +22,7 @@ anthell01,35,267,0	script	ant001	45,1,1,{
 		warp "moc_fild04",213,327;
 	end;
 }
-anthell02,171,169,0	script	ant001	45,1,2,{
+anthell02,171,169,0	script	ant002	45,1,2,{
 	if(!anthell==0)
 		warp "moc_fild15",251,248;
 	else

@@ -7,7 +7,7 @@ OnTouch:
 	if (Izlude_Zone_Quest == 0)
 	{
 		mes "[NPC]";
-		mes "Onde você está indo etc ?"
+		mes "Onde você está indo etc ?";
 		close;
 	}
 	warp "izlude", 212, 129;
