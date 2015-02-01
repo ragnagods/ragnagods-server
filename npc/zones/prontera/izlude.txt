@@ -1,0 +1,92 @@
+// 10043 = EFEITO DE BUFFS NOS MAPAS
+
+izlude_in,148,127,0	script	NewbChckQuest	WARPNPC,5,5,{
+end;
+
+OnTouch:
+	if (Izlude_Zone_Quest == 0)
+	{
+		mes "[NPC]";
+		mes "Onde você está indo etc ?"
+		close;
+	}
+	warp "izlude", 212, 129;
+	end;
+}
+
+izlude_in,175,130,3     script  Erik   4_M_ZONDAOYAJI,{
+	if (Izlude_Zone_Quest == 0)
+	{
+		mes "[Erik]";
+		mes "Seja bem-vind"+(Sex ? "o" : "a")+" ao (NOME DO LUGAR)";
+		Izlude_Zone_Quest = 1;
+        close;
+	}
+	else
+	{
+		mes "Ja tienes la quest se fod";
+		close;
+	}
+}
+
+izlude_in,175,124,3     script  Fridda  4_F_KHELLISIA,{
+	if (Izlude_Zone_Quest == 0)
+	{
+		mes "[Fridda]";
+		mes "Fala com o PRETO DO LADO AI";
+		close;
+	}
+	else
+	{
+        mes "Mefod";
+        close;
+	}
+}
+
+izlude_in,168,134,4     script  Agatha 4_F_SITDOWN,{
+        mes "[Aghata]";
+		mes "Explorar Izlude me deixou muito";
+		mes "cansada, resolvi sentar aqui para";
+		mes "descansar um pouco.";
+        close;
+}
+
+izlude_in,164,128,4     script  DEBOAS  10027,{
+        mes "Suav";
+        close;
+}
+
+-       script  DASDA   -1,{
+end;
+OnInit:
+
+OnSpawn1:       monster "izlude",204,123,"",2400,1,"DASDA::OnKill1";
+OnSpawn2:       monster "izlude",204,120,"",2400,1,"DASDA::OnKill2";
+OnSpawn3:       monster "izlude",215,120,"",2400,1,"DASDA::OnKill3";
+OnSpawn4:       monster "izlude",212,136,"",2400,1,"DASDA::OnKill4";
+OnSpawn5:       monster "izlude",212,139,"",2400,1,"DASDA::OnKill5";
+end;
+
+OnKill1: callsub OnSpawn1; end;
+OnKill2: callsub OnSpawn2; end;
+OnKill3: callsub OnSpawn3; end;
+OnKill4: callsub OnSpawn4; end;
+OnKill5: callsub OnSpawn5; end;
+}
+
+izlude,206,127,4        script  CLIQUE AQUI     4_F_01,{
+        set .@rand_x, rand(2);
+        set .@rand_y, rand(2);
+        set .@rand_x_pos, rand(0,1);
+        set .@rand_y_pos, rand(0,1);
+
+        if (.@rand_x_pos == 1)
+                .@rand_x = -(.@rand_x);
+        if (.@rand_y_pos == 1)
+                .rand_y = -(.@rand_y);
+        mes "ESTOU INDO EMBORA AGORA";
+        close2;
+        warp "izlude_in", 170 + .@rand_x, 127 + .@rand_y;
+        pushpc 6, 0;
+        end;
+}
